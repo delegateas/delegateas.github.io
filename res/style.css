@@ -195,7 +195,7 @@ td.title, thead {
 }
 
 /* Change font sizes for headings etc. */
-#main h1 { font-size: 26pt; margin:10px 0px 15px 0px; font-weight:400; }
+#main h1 { font-size: 28pt; margin:10px 0px 15px 0px; font-weight:400; }
 #main h2 { font-size: 20pt; margin:20px 0px 0px 0px; font-weight:400; }
 #main h3 { font-size: 14pt; margin:15px 0px 0px 0px; font-weight:400; }
 #main p  { font-size: 12pt; margin:5px 0px 15px 0px; }
