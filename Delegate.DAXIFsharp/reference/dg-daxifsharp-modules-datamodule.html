@@ -2,14 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>DAXIF#
-</title>
+    <title>DataModule - DAXIF# v.1.1.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="
-        A framework for automating installation of all kinds of xRM systems.
-        By using simple F# script commands/files one can save a lot of time
-        and effort during this process.
-        ">
+    <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
 
     <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
@@ -35,37 +30,120 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>DAXIF#</h1>
 
-<h2>Delegate Automated Xrm Installation Framework</h2>
 
-<p>A framework for automating installation of all kinds of xRM systems.
-By using simple F# script commands/files one can save a lot of time
-and effort during this process by using Delegate's DAXIF# library.</p>
 
-<h2>Getting started</h2>
+<h1>DataModule</h1>
+<div class="xmldoc">
+</div>
 
-<p>Check out <a href="setup_fsharp.html">F# Setup</a> if you have not used F# before. This
-will instruct you on how you can setup your computer for running these F# scripts.</p>
+<!-- Render nested types and modules, if there are any -->
 
-<p>Afterwards check out the example scripts in the sidebar to review what
-Delegate's DAXIF# library can be used for, and how effective it can be!</p>
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Function or value</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
 
-<h2>Interface documentation</h2>
+          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
+            dataAssociationImport (...)
+          </code>
+          <div class="tip" id="3">
+            <strong>Signature:</strong> wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; ser&#237;alize:SerializeType -&gt; data:Map&lt;String,Map&lt;Guid,Guid&gt;&gt; -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ TODO:
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
 
-<p>Besides what is found in the <a href="reference/index.html">API Reference</a>, here is
-a list of the signature files for each of the available modules in the project 
-with some extra documentation.</p>
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            dataExists (...)
+          </code>
+          <div class="tip" id="10">
+            <strong>Signature:</strong> wsdl:Uri -&gt; entityName:string -&gt; filter:Map&lt;string,obj&gt; -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; Guid<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Checks if a certain entity exist which matches the given `filter`.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
 
-<ul>
-<li><a href="DataModule.html">DataModule</a></li>
-<li><a href="SolutionModule.html">SolutionModule</a></li>
-<li><a href="SerializationModule.html">SerializationModule</a></li>
-<li><a href="TranslationsModule.html">TranslationsModule</a></li>
-<li><a href="WebResourcesModule.html">WebResourcesModule</a></li>
-<li><a href="InfoModule.html">InfoModule</a></li>
-</ul>
+          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
+            dataExport (...)
+          </code>
+          <div class="tip" id="11">
+            <strong>Signature:</strong> wsdl:Uri -&gt; location:string -&gt; entityNames:string [] -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:SerializeType -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Exports entities of a certain type to the given `location`,
+ serializing it into the wanted format.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
 
+          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
+            dataImport (...)
+          </code>
+          <div class="tip" id="12">
+            <strong>Signature:</strong> wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:SerializeType -&gt; extraAttributes:Map&lt;String,&#39;?59249&gt; -&gt; data:Map&lt;String,Map&lt;Guid,Guid&gt;&gt; -&gt; unit<br />
+                          <strong>Type parameters:</strong> '?59249          </div>
+        </td>
+        <td class="xmldoc">
+        
+ Imports entities from files at the given location.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
+            dataMigrate (...)
+          </code>
+          <div class="tip" id="13">
+            <strong>Signature:</strong> wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:SerializeType -&gt; keyValuePairs:Map&lt;String,&#39;?59247&gt; -&gt; unit<br />
+                          <strong>Type parameters:</strong> '?59247          </div>
+        </td>
+        <td class="xmldoc">
+        
+ TODO:
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+            dataUpdateState (...)
+          </code>
+          <div class="tip" id="14">
+            <strong>Signature:</strong> wsdl:Uri -&gt; entityName:string -&gt; filter:Map&lt;string,obj&gt; -&gt; (state:int * int) -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Updates the state of the entities matching the given `filter`.
+</br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
             </div>
             <div class="span3">

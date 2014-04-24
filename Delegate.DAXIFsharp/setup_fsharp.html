@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>DAXIF#
+    <title>F# Setup
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="
@@ -35,36 +35,46 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>DAXIF#</h1>
+<h1>F# Setup</h1>
 
-<h2>Delegate Automated Xrm Installation Framework</h2>
-
-<p>A framework for automating installation of all kinds of xRM systems.
-By using simple F# script commands/files one can save a lot of time
-and effort during this process by using Delegate's DAXIF# library.</p>
-
-<h2>Getting started</h2>
-
-<p>Check out <a href="setup_fsharp.html">F# Setup</a> if you have not used F# before. This
-will instruct you on how you can setup your computer for running these F# scripts.</p>
-
-<p>Afterwards check out the example scripts in the sidebar to review what
-Delegate's DAXIF# library can be used for, and how effective it can be!</p>
-
-<h2>Interface documentation</h2>
-
-<p>Besides what is found in the <a href="reference/index.html">API Reference</a>, here is
-a list of the signature files for each of the available modules in the project 
-with some extra documentation.</p>
+<p>In order to execute these F# script, F# Tools 3.x must be installed. The tools can be downloaded from:</p>
 
 <ul>
-<li><a href="DataModule.html">DataModule</a></li>
-<li><a href="SolutionModule.html">SolutionModule</a></li>
-<li><a href="SerializationModule.html">SerializationModule</a></li>
-<li><a href="TranslationsModule.html">TranslationsModule</a></li>
-<li><a href="WebResourcesModule.html">WebResourcesModule</a></li>
-<li><a href="InfoModule.html">InfoModule</a></li>
+<li><a href="http://go.microsoft.com/fwlink/?LinkId=261286">F# Tools for Visual Studio Express 2012 for Web</a></li>
+<li><a href="http://www.microsoft.com/en-us/download/details.aspx?id=41654">Visual F# Out of Band Release 3.1.1</a></li>
 </ul>
+
+<p>After installation run the following from a <code>cmd.exe</code> (run as Administrator):</p>
+
+<p>F# Tools for Visual Studio Express 2012 for Web (Windows Explorer right-click "Run with F# Interactive..."):</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">reg</span> <span class="i">add</span> <span class="s">&quot;</span><span class="s">HKLM</span><span class="s">\</span><span class="s">SYSTEM</span><span class="s">\</span><span class="s">CurrentControlSet</span><span class="s">\</span><span class="s">Control</span><span class="s">\</span><span class="s">Session</span><span class="s"> </span><span class="s">Manager</span><span class="s">\</span><span class="s">Environment</span><span class="s">&quot;</span> <span class="o">^</span>
+    <span class="o">/</span><span class="i">v</span> <span class="i">Path</span> <span class="o">/</span><span class="i">t</span> <span class="i">REG_SZ</span> <span class="o">/</span><span class="i">d</span> <span class="s">&quot;</span><span class="s">%</span><span class="s">PATH</span><span class="s">%</span><span class="s">;</span><span class="s">C</span><span class="s">:</span><span class="s">\</span><span class="s">Program</span><span class="s"> </span><span class="s">Files</span><span class="s"> </span><span class="s">(</span><span class="s">x86</span><span class="s">)</span><span class="s">\</span><span class="s">Microsoft</span><span class="s"> </span><span class="s">SDKs</span><span class="s">\</span><span class="s">F</span><span class="s">#</span><span class="s">\</span><span class="s">3</span><span class="s">.</span><span class="s">0</span><span class="s">\</span><span class="s">Framework</span><span class="s">\v</span><span class="s">4</span><span class="s">.</span><span class="s">0</span><span class="s">&quot;</span></pre>
+</td>
+</tr>
+</table>
+
+<p>or F# Tools for Visual F# Out of Band Release 3.1.1:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">reg</span> <span class="i">add</span> <span class="s">&quot;</span><span class="s">HKLM</span><span class="s">\</span><span class="s">SYSTEM</span><span class="s">\</span><span class="s">CurrentControlSet</span><span class="s">\</span><span class="s">Control</span><span class="s">\</span><span class="s">Session</span><span class="s"> </span><span class="s">Manager</span><span class="s">\</span><span class="s">Environment</span><span class="s">&quot;</span> <span class="o">^</span>
+    <span class="o">/</span><span class="i">v</span> <span class="i">Path</span> <span class="o">/</span><span class="i">t</span> <span class="i">REG_SZ</span> <span class="o">/</span><span class="i">d</span> <span class="s">&quot;</span><span class="s">%</span><span class="s">PATH</span><span class="s">%</span><span class="s">;</span><span class="s">C</span><span class="s">:</span><span class="s">\</span><span class="s">Program</span><span class="s"> </span><span class="s">Files</span><span class="s"> </span><span class="s">(</span><span class="s">x86</span><span class="s">)</span><span class="s">\</span><span class="s">Microsoft</span><span class="s"> </span><span class="s">SDKs</span><span class="s">\</span><span class="s">F</span><span class="s">#</span><span class="s">\</span><span class="s">3</span><span class="s">.</span><span class="s">1</span><span class="s">\</span><span class="s">Framework</span><span class="s">\v</span><span class="s">4</span><span class="s">.</span><span class="s">0</span><span class="s">&quot;</span></pre>
+</td>
+</tr>
+</table>
+
+<p>and then log off/login and the Register Database will be updated (no need for restart)</p>
 
 
             </div>

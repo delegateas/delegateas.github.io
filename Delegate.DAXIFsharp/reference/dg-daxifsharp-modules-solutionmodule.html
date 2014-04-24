@@ -2,14 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>DAXIF#
-</title>
+    <title>SolutionModule - DAXIF# v.1.1.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="
-        A framework for automating installation of all kinds of xRM systems.
-        By using simple F# script commands/files one can save a lot of time
-        and effort during this process.
-        ">
+    <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
 
     <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
@@ -35,37 +30,135 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>DAXIF#</h1>
 
-<h2>Delegate Automated Xrm Installation Framework</h2>
 
-<p>A framework for automating installation of all kinds of xRM systems.
-By using simple F# script commands/files one can save a lot of time
-and effort during this process by using Delegate's DAXIF# library.</p>
 
-<h2>Getting started</h2>
+<h1>SolutionModule</h1>
+<div class="xmldoc">
+</div>
 
-<p>Check out <a href="setup_fsharp.html">F# Setup</a> if you have not used F# before. This
-will instruct you on how you can setup your computer for running these F# scripts.</p>
+<!-- Render nested types and modules, if there are any -->
 
-<p>Afterwards check out the example scripts in the sidebar to review what
-Delegate's DAXIF# library can be used for, and how effective it can be!</p>
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Function or value</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
 
-<h2>Interface documentation</h2>
+          <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
+            createPublisher (...)
+          </code>
+          <div class="tip" id="6">
+            <strong>Signature:</strong> wsdl:Uri -&gt; name:string -&gt; display:string -&gt; prefix:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Creates a new publisher with the given parameters.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
 
-<p>Besides what is found in the <a href="reference/index.html">API Reference</a>, here is
-a list of the signature files for each of the available modules in the project 
-with some extra documentation.</p>
+          <code onmouseout="hideTip(event, '17', 17)" onmouseover="showTip(event, '17', 17)">
+            createSolution (...)
+          </code>
+          <div class="tip" id="17">
+            <strong>Signature:</strong> wsdl:Uri -&gt; name:string -&gt; display:string -&gt; pubPrefix:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Creates a new solution with the given parameters.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
 
-<ul>
-<li><a href="DataModule.html">DataModule</a></li>
-<li><a href="SolutionModule.html">SolutionModule</a></li>
-<li><a href="SerializationModule.html">SerializationModule</a></li>
-<li><a href="TranslationsModule.html">TranslationsModule</a></li>
-<li><a href="WebResourcesModule.html">WebResourcesModule</a></li>
-<li><a href="InfoModule.html">InfoModule</a></li>
-</ul>
+          <code onmouseout="hideTip(event, '18', 18)" onmouseover="showTip(event, '18', 18)">
+            exportSolution (...)
+          </code>
+          <div class="tip" id="18">
+            <strong>Signature:</strong> wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; managed:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Exports the solution as a zip file to the given location on disk.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
 
+          <code onmouseout="hideTip(event, '19', 19)" onmouseover="showTip(event, '19', 19)">
+            extractSolution (...)
+          </code>
+          <div class="tip" id="19">
+            <strong>Signature:</strong> solution:string -&gt; (exeLocations:string * string) -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; project:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Extracts the solution to the given location.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '20', 20)" onmouseover="showTip(event, '20', 20)">
+            importSolution (...)
+          </code>
+          <div class="tip" id="20">
+            <strong>Signature:</strong> wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; managed:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Imports the solution from the .zip file found at location.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '21', 21)" onmouseover="showTip(event, '21', 21)">
+            packSolution (...)
+          </code>
+          <div class="tip" id="21">
+            <strong>Signature:</strong> solution:string -&gt; exeLocation:string -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Packs the solution to the given location.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
+            updateServiceContext (...)
+          </code>
+          <div class="tip" id="22">
+            <strong>Signature:</strong> wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Updates the service context files at the specified location.
+</br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
             </div>
             <div class="span3">

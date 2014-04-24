@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>DAXIF#
+    <title>SolutionPack
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="
@@ -35,37 +35,103 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>DAXIF#</h1>
+<h1>SolutionPack</h1>
 
-<h2>Delegate Automated Xrm Installation Framework</h2>
+<h2>Libraries</h2>
 
-<p>A framework for automating installation of all kinds of xRM systems.
-By using simple F# script commands/files one can save a lot of time
-and effort during this process by using Delegate's DAXIF# library.</p>
+<p>Load DAXIF#</p>
 
-<h2>Getting started</h2>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="prep">#r</span> <span class="s">@&quot;</span><span class="s">.</span><span class="s">\</span><span class="s">Delegate</span><span class="s">.</span><span class="s">DAXIFsharp</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span></pre>
+</td>
+</tr>
+</table>
 
-<p>Check out <a href="setup_fsharp.html">F# Setup</a> if you have not used F# before. This
-will instruct you on how you can setup your computer for running these F# scripts.</p>
+<p>Open libraries for use</p>
 
-<p>Afterwards check out the example scripts in the sidebar to review what
-Delegate's DAXIF# library can be used for, and how effective it can be!</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">System</span>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">DAXIFsharp</span>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs2', 4)" onmouseover="showTip(event, 'fs2', 4)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 5)" onmouseover="showTip(event, 'fs3', 5)" class="i">DAXIFsharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 6)" onmouseover="showTip(event, 'fs4', 6)" class="i">Modules</span></pre>
+</td>
+</tr>
+</table>
 
-<h2>Interface documentation</h2>
+<p>Config information</p>
 
-<p>Besides what is found in the <a href="reference/index.html">API Reference</a>, here is
-a list of the signature files for each of the available modules in the project 
-with some extra documentation.</p>
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="prep">#load</span> <span class="s">@&quot;</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">.</span><span class="s">XrmSolution</span><span class="s">.</span><span class="s">Config</span><span class="s">.</span><span class="s">fsx</span><span class="s">&quot;</span>
 
-<ul>
-<li><a href="DataModule.html">DataModule</a></li>
-<li><a href="SolutionModule.html">SolutionModule</a></li>
-<li><a href="SerializationModule.html">SerializationModule</a></li>
-<li><a href="TranslationsModule.html">TranslationsModule</a></li>
-<li><a href="WebResourcesModule.html">WebResourcesModule</a></li>
-<li><a href="InfoModule.html">InfoModule</a></li>
-</ul>
+<span class="k">module</span> <span class="i">cfg</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs2', 7)" onmouseover="showTip(event, 'fs2', 7)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 8)" onmouseover="showTip(event, 'fs5', 8)" class="i">XrmOrg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="i">XrmSolution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 10)" onmouseover="showTip(event, 'fs7', 10)" class="i">Config</span></pre>
+</td>
+</tr>
+</table>
 
+<h2>DAXIF# operations</h2>
+
+<p>Pack solution</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 11)" onmouseover="showTip(event, 'fs8', 11)" class="i">ensureFolder</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 12)" onmouseover="showTip(event, 'fs9', 12)" class="i">unmanaged</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs10', 13)" onmouseover="showTip(event, 'fs10', 13)" class="i">sp</span> <span class="o">=</span>  <span class="s">@&quot;</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">\</span><span class="s">_bin</span><span class="s">\</span><span class="s">sp</span><span class="s">\</span><span class="s">SolutionPackager</span><span class="s">.</span><span class="s">exe</span><span class="s">&quot;</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs11', 14)" onmouseover="showTip(event, 'fs11', 14)" class="i">map</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">\</span><span class="s">_conf</span><span class="s">\</span><span class="s">sp_map</span><span class="s">.</span><span class="s">xml</span><span class="s">&quot;</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs12', 15)" onmouseover="showTip(event, 'fs12', 15)" class="i">cms</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">\</span><span class="s">Solution</span><span class="s">\</span><span class="s">_customizations</span><span class="s">&quot;</span>
+
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs13', 16)" onmouseover="showTip(event, 'fs13', 16)" class="i">zip</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 17)" onmouseover="showTip(event, 'fs9', 17)" class="i">unmanaged</span> <span class="o">+</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 18)" onmouseover="showTip(event, 'fs14', 18)" class="i">solution</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">_</span><span class="s">.</span><span class="s">zip</span><span class="s">&quot;</span>
+
+<span onmouseout="hideTip(event, 'fs15', 19)" onmouseover="showTip(event, 'fs15', 19)" class="i">SolutionModule</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 20)" onmouseover="showTip(event, 'fs16', 20)" class="i">packSolution</span>
+    <span class="i">cfg</span><span class="o">.</span><span class="i">solutionWhol</span> <span onmouseout="hideTip(event, 'fs10', 21)" onmouseover="showTip(event, 'fs10', 21)" class="i">sp</span> <span onmouseout="hideTip(event, 'fs13', 22)" onmouseover="showTip(event, 'fs13', 22)" class="i">zip</span> <span onmouseout="hideTip(event, 'fs12', 23)" onmouseover="showTip(event, 'fs12', 23)" class="i">cms</span> <span onmouseout="hideTip(event, 'fs11', 24)" onmouseover="showTip(event, 'fs11', 24)" class="i">map</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 25)" onmouseover="showTip(event, 'fs17', 25)" class="i">log</span></pre>
+</td>
+</tr>
+</table>
+
+<div class="tip" id="fs1">namespace System</div>
+<div class="tip" id="fs2">namespace DG</div>
+<div class="tip" id="fs3">namespace DG.DAXIFsharp</div>
+<div class="tip" id="fs4">namespace DG.DAXIFsharp.Modules</div>
+<div class="tip" id="fs5">namespace DG.XrmOrg</div>
+<div class="tip" id="fs6">namespace DG.XrmOrg.XrmSolution</div>
+<div class="tip" id="fs7">module Config<br /><br />from DG.XrmOrg.XrmSolution</div>
+<div class="tip" id="fs8">val ensureFolder : path:string -&gt; unit<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.ensureFolder<br /><em><br /><br />&#160;Folder function that ensures that a folder is created if it doesn&#39;t exist</em></div>
+<div class="tip" id="fs9">val unmanaged : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.unmanaged</div>
+<div class="tip" id="fs10">val sp : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionPack.sp</div>
+<div class="tip" id="fs11">val map : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionPack.map</div>
+<div class="tip" id="fs12">val cms : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionPack.cms</div>
+<div class="tip" id="fs13">val zip : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionPack.zip</div>
+<div class="tip" id="fs14">val solution : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.solution</div>
+<div class="tip" id="fs15">module SolutionModule<br /><br />from DG.DAXIFsharp.Modules</div>
+<div class="tip" id="fs16">val packSolution : solution:string -&gt; exeLocation:string -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.DAXIFsharp.Modules.SolutionModule.packSolution</div>
+<div class="tip" id="fs17">val log : LogLevel<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.log</div>
 
             </div>
             <div class="span3">
