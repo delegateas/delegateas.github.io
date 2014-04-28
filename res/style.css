@@ -148,7 +148,7 @@ img.logo
 	width: 100px; 
 	height: 100px;
 	margin-right: 10px;
-	display:block;
+	display: block;
 	float: left;
 }
 
@@ -158,16 +158,50 @@ img.logo
   background-color: #f58025;
   overflow: hidden;
 }
-.masthead ul, .masthead li {
-  margin-bottom:0px;
+
+.masthead ul.nav {
+  list-style-type: none;
+  margin-bottom: 0px;
+  margin-top: 1px;
+  float: right;
 }
+
 .masthead .nav li {
-  margin-top: 15px;
-  font-size:110%;
+  font-size:90%;
+  float: left;
+  margin-right: 20px;
+  margin-top: 11px;
 }
-.masthead h3 {
-  margin-bottom:5px;
-  font-size:170%;
+
+.masthead .nav li a {
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  padding-bottom: 1px;
+  margin: -3px;
+  display: inline-block;
+  
+  color: #222299;
+}
+
+.masthead .nav li a:hover {
+  background: #FF9540;
+}
+
+.credits {
+  margin-top: 10px;
+  margin-bottom: -25px;
+  color: #BBBBBB;
+  
+  text-align: center;
+  font-style: italic;
+  font-family: sans-serif;
+  font-size: 80%;
+}
+
+.credits a {
+  color: #777777;
 }
 
 hr {
