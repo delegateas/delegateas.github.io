@@ -41,14 +41,18 @@
 
 <h2>Libraries</h2>
 
-<p>Load DAXIF#</p>
+<p>Config information</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="prep">#r</span> <span class="s">@&quot;</span><span class="s">.</span><span class="s">\</span><span class="s">Delegate</span><span class="s">.</span><span class="s">DAXIFsharp</span><span class="s">.</span><span class="s">dll</span><span class="s">&quot;</span></pre>
+<span class="prep">#load</span> <span class="s">@&quot;</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">.</span><span class="s">XrmSolution</span><span class="s">.</span><span class="s">Config</span><span class="s">.</span><span class="s">fsx</span><span class="s">&quot;</span>
+
+<span class="k">module</span> <span class="i">cfg</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">XrmOrg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">XrmSolution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Config</span></pre>
 </td>
 </tr>
 </table>
@@ -62,25 +66,9 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">System</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">DAXIFsharp</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs2', 4)" onmouseover="showTip(event, 'fs2', 4)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 5)" onmouseover="showTip(event, 'fs3', 5)" class="i">DAXIFsharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 6)" onmouseover="showTip(event, 'fs4', 6)" class="i">Modules</span></pre>
-</td>
-</tr>
-</table>
-
-<p>Config information</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="prep">#load</span> <span class="s">@&quot;</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">.</span><span class="s">XrmSolution</span><span class="s">.</span><span class="s">Config</span><span class="s">.</span><span class="s">fsx</span><span class="s">&quot;</span>
-
-<span class="k">module</span> <span class="i">cfg</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs2', 7)" onmouseover="showTip(event, 'fs2', 7)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 8)" onmouseover="showTip(event, 'fs5', 8)" class="i">XrmOrg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="i">XrmSolution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 10)" onmouseover="showTip(event, 'fs7', 10)" class="i">Config</span></pre>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">System</span>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="i">DAXIFsharp</span>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="i">DAXIFsharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 10)" onmouseover="showTip(event, 'fs7', 10)" class="i">Modules</span></pre>
 </td>
 </tr>
 </table>
@@ -105,13 +93,13 @@
 </tr>
 </table>
 
-<div class="tip" id="fs1">namespace System</div>
-<div class="tip" id="fs2">namespace DG</div>
-<div class="tip" id="fs3">namespace DG.DAXIFsharp</div>
-<div class="tip" id="fs4">namespace DG.DAXIFsharp.Modules</div>
-<div class="tip" id="fs5">namespace DG.XrmOrg</div>
-<div class="tip" id="fs6">namespace DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs7">module Config<br /><br />from DG.XrmOrg.XrmSolution</div>
+<div class="tip" id="fs1">namespace DG</div>
+<div class="tip" id="fs2">namespace DG.XrmOrg</div>
+<div class="tip" id="fs3">namespace DG.XrmOrg.XrmSolution</div>
+<div class="tip" id="fs4">module Config<br /><br />from DG.XrmOrg.XrmSolution</div>
+<div class="tip" id="fs5">namespace System</div>
+<div class="tip" id="fs6">namespace DG.DAXIFsharp</div>
+<div class="tip" id="fs7">namespace DG.DAXIFsharp.Modules</div>
 <div class="tip" id="fs8">module WebResourcesModule<br /><br />from DG.DAXIFsharp.Modules</div>
 <div class="tip" id="fs9">val syncSolutionWebResources : wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; ap:Microsoft.Xrm.Sdk.Client.AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.DAXIFsharp.Modules.WebResourcesModule.syncSolutionWebResources</div>
 <div class="tip" id="fs10">val wsdlDev : Uri<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.wsdlDev</div>
@@ -130,7 +118,7 @@
                     <img src="/Delegate.DAXIFsharp/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.1.1.0.3</li>
+                    <li class="nav-header">DAXIF# v.1.1.0.4</li>
                     <li><a href="/Delegate.DAXIFsharp/index.html">Home page</a></li>
 
                     <li class="divider"></li>
