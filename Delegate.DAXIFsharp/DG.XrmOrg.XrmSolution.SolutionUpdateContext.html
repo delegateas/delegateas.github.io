@@ -94,7 +94,7 @@
 <span onmouseout="hideTip(event, 'fs11', 15)" onmouseover="showTip(event, 'fs11', 15)" class="i">SolutionModule</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 16)" onmouseover="showTip(event, 'fs12', 16)" class="i">updateServiceContext</span>
     <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 17)" onmouseover="showTip(event, 'fs13', 17)" class="i">wsdlDev</span> <span onmouseout="hideTip(event, 'fs10', 18)" onmouseover="showTip(event, 'fs10', 18)" class="i">ctx</span>
         <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 19)" onmouseover="showTip(event, 'fs14', 19)" class="i">authType</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 20)" onmouseover="showTip(event, 'fs15', 20)" class="i">usrDev</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 21)" onmouseover="showTip(event, 'fs16', 21)" class="i">pwdDev</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 22)" onmouseover="showTip(event, 'fs17', 22)" class="i">domainDev</span>
-            <span onmouseout="hideTip(event, 'fs8', 23)" onmouseover="showTip(event, 'fs8', 23)" class="i">csu</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs18', 24)" onmouseover="showTip(event, 'fs18', 24)" class="i">log</span></pre>
+            <span onmouseout="hideTip(event, 'fs8', 23)" onmouseover="showTip(event, 'fs8', 23)" class="i">csu</span> <span onmouseout="hideTip(event, 'fs18', 24)" onmouseover="showTip(event, 'fs18', 24)" class="i">None</span> <span class="c">(* or: &quot;1030 |&gt; Some&quot; for Danish labels *)</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs19', 25)" onmouseover="showTip(event, 'fs19', 25)" class="i">log</span></pre>
 </td>
 </tr>
 </table>
@@ -110,13 +110,14 @@
 <div class="tip" id="fs9">val rootFolder : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.rootFolder</div>
 <div class="tip" id="fs10">val ctx : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionUpdateContext.ctx</div>
 <div class="tip" id="fs11">module SolutionModule<br /><br />from DG.DAXIFsharp.Modules</div>
-<div class="tip" id="fs12">val updateServiceContext : wsdl:Uri -&gt; location:string -&gt; ap:Microsoft.Xrm.Sdk.Client.AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.DAXIFsharp.Modules.SolutionModule.updateServiceContext</div>
+<div class="tip" id="fs12">val updateServiceContext : wsdl:Uri -&gt; location:string -&gt; ap:Microsoft.Xrm.Sdk.Client.AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; lcid:int option -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.DAXIFsharp.Modules.SolutionModule.updateServiceContext</div>
 <div class="tip" id="fs13">val wsdlDev : Uri<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.wsdlDev</div>
 <div class="tip" id="fs14">val authType : Microsoft.Xrm.Sdk.Client.AuthenticationProviderType<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.authType</div>
 <div class="tip" id="fs15">val usrDev : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.usrDev</div>
 <div class="tip" id="fs16">val pwdDev : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.pwdDev</div>
 <div class="tip" id="fs17">val domainDev : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.domainDev</div>
-<div class="tip" id="fs18">val log : LogLevel<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.log</div>
+<div class="tip" id="fs18">union case Option.None: Option&lt;&#39;T&gt;</div>
+<div class="tip" id="fs19">val log : LogLevel<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.log</div>
 
             </div>
             <div class="span3">
@@ -125,7 +126,7 @@
                     <img src="/Delegate.DAXIFsharp/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.1.1.0.16</li>
+                    <li class="nav-header">DAXIF# v.1.1.0.18</li>
                     <li><a href="/Delegate.DAXIFsharp/index.html">Home page</a></li>
 
                     <li class="divider"></li>
