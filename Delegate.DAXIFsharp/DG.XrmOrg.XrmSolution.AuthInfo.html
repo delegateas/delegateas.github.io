@@ -96,24 +96,32 @@ hidden as a sequence of asterix.</p>
 <span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs25', 64)" onmouseover="showTip(event, 'fs25', 64)" class="i">usr</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">usr</span><span class="s">&quot;</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs26', 65)" onmouseover="showTip(event, 'fs26', 65)" class="i">domain</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">domain</span><span class="s">&quot;</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs27', 66)" onmouseover="showTip(event, 'fs27', 66)" class="i">pwd</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs1', 67)" onmouseover="showTip(event, 'fs1', 67)" class="i">rk</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs11', 68)" onmouseover="showTip(event, 'fs11', 68)" class="i">mask</span></pre>
+[&lt;<span onmouseout="hideTip(event, 'fs25', 64)" onmouseover="showTip(event, 'fs25', 64)" class="i">Literal</span>&gt;]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs26', 65)" onmouseover="showTip(event, 'fs26', 65)" class="i">usr</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">usr</span><span class="s">&quot;</span>
+[&lt;<span onmouseout="hideTip(event, 'fs25', 66)" onmouseover="showTip(event, 'fs25', 66)" class="i">Literal</span>&gt;]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs27', 67)" onmouseover="showTip(event, 'fs27', 67)" class="i">domain</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">domain</span><span class="s">&quot;</span>
+[&lt;<span onmouseout="hideTip(event, 'fs25', 68)" onmouseover="showTip(event, 'fs25', 68)" class="i">Literal</span>&gt;]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs28', 69)" onmouseover="showTip(event, 'fs28', 69)" class="i">pwd</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">pwd</span><span class="s">&quot;</span></pre>
 </td>
 </tr>
 </table>
 
-<p>Alternatively use the default password for the auto-scripts, by having:</p>
+<p>Alternatively use the following pwd value where you have to type the password
+each time the script is executed. Remark: This can't be used with the 
+TypeProvider module:</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs28', 69)" onmouseover="showTip(event, 'fs28', 69)" class="i">pwd</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">pwd</span><span class="s">&quot;</span></pre>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs29', 70)" onmouseover="showTip(event, 'fs29', 70)" class="i">pwd</span> <span class="o">=</span> <span class="i">rk</span> <span class="o">|&gt;</span> <span class="i">mask</span></pre>
 </td>
 </tr>
 </table>
@@ -142,10 +150,11 @@ hidden as a sequence of asterix.</p>
 <div class="tip" id="fs22">field System.ConsoleKey.Backspace = 8</div>
 <div class="tip" id="fs23">property System.String.Length: int</div>
 <div class="tip" id="fs24">property System.ConsoleKeyInfo.KeyChar: char</div>
-<div class="tip" id="fs25">val usr : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.usr</div>
-<div class="tip" id="fs26">val domain : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.domain</div>
-<div class="tip" id="fs27">val pwd : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.pwd</div>
-<div class="tip" id="fs28">val pwd : string<br /><br />Full name: DGXrmOrgXrmSolutionAuthInfo.pwd</div>
+<div class="tip" id="fs25">Multiple items<br />type LiteralAttribute =<br />&#160;&#160;inherit Attribute<br />&#160;&#160;new : unit -&gt; LiteralAttribute<br /><br />Full name: Microsoft.FSharp.Core.LiteralAttribute<br /><br />--------------------<br />new : unit -&gt; LiteralAttribute</div>
+<div class="tip" id="fs26">val usr : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.usr</div>
+<div class="tip" id="fs27">val domain : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.domain</div>
+<div class="tip" id="fs28">val pwd : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.pwd</div>
+<div class="tip" id="fs29">val pwd : obj<br /><br />Full name: DGXrmOrgXrmSolutionAuthInfo.pwd</div>
 
             </div>
             <div class="span3">
@@ -154,7 +163,7 @@ hidden as a sequence of asterix.</p>
                     <img src="/Delegate.DAXIFsharp/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.1.3.0.5</li>
+                    <li class="nav-header">DAXIF# v.1.3.0.6</li>
                     <li><a href="/Delegate.DAXIFsharp/index.html">Home page</a></li>
 
                     <li class="divider"></li>
