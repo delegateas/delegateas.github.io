@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.DAXIFsharp/../img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>SolutionImportTest
+    <title>PluginsModule
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="
@@ -37,49 +37,7 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>SolutionImportTest</h1>
-
-<h2>Libraries</h2>
-
-<p>Config information</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="prep">#load</span> <span class="s">@&quot;</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">.</span><span class="s">XrmSolution</span><span class="s">.</span><span class="s">Config</span><span class="s">.</span><span class="s">fsx</span><span class="s">&quot;</span>
-
-<span class="k">module</span> <span class="i">cfg</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">XrmOrg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">XrmSolution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Config</span></pre>
-</td>
-</tr>
-</table>
-
-<p>Open libraries for use</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">System</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="i">DAXIFsharp</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="i">DAXIFsharp</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 10)" onmouseover="showTip(event, 'fs7', 10)" class="i">Modules</span>
-
-<span class="k">module</span> <span class="i">cfg</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs1', 11)" onmouseover="showTip(event, 'fs1', 11)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 12)" onmouseover="showTip(event, 'fs2', 12)" class="i">XrmOrg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 13)" onmouseover="showTip(event, 'fs3', 13)" class="i">XrmSolution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 14)" onmouseover="showTip(event, 'fs4', 14)" class="i">Config</span></pre>
-</td>
-</tr>
-</table>
-
-<h2>DAXIF# operations</h2>
-
-<p>Import Dev</p>
+<h1>PluginsModule</h1>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
@@ -91,34 +49,22 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs8', 15)" onmouseover="showTip(event, 'fs8', 15)" class="i">zip</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 16)" onmouseover="showTip(event, 'fs9', 16)" class="i">unmanaged</span> <span class="o">+</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 17)" onmouseover="showTip(event, 'fs10', 17)" class="i">solution</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">.</span><span class="s">zip</span><span class="s">&quot;</span>
-
-<span onmouseout="hideTip(event, 'fs11', 18)" onmouseover="showTip(event, 'fs11', 18)" class="i">SolutionModule</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 19)" onmouseover="showTip(event, 'fs12', 19)" class="i">importSolution</span>
-    <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 20)" onmouseover="showTip(event, 'fs13', 20)" class="i">wsdlTest&#39;</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 21)" onmouseover="showTip(event, 'fs10', 21)" class="i">solution</span> <span onmouseout="hideTip(event, 'fs8', 22)" onmouseover="showTip(event, 'fs8', 22)" class="i">zip</span> <span class="k">false</span>
-        <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 23)" onmouseover="showTip(event, 'fs14', 23)" class="i">authType</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 24)" onmouseover="showTip(event, 'fs15', 24)" class="i">usrTest</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 25)" onmouseover="showTip(event, 'fs16', 25)" class="i">pwdTest</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 26)" onmouseover="showTip(event, 'fs17', 26)" class="i">domainTest</span> 
-            <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs18', 27)" onmouseover="showTip(event, 'fs18', 27)" class="i">log</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">syncSolutionPlugins</span><span class="o">:</span> 
+    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 4)" onmouseover="showTip(event, 'fs3', 4)" class="i">string</span> <span class="k">-&gt;</span> 
+    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 5)" onmouseover="showTip(event, 'fs4', 5)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 6)" onmouseover="showTip(event, 'fs3', 6)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 7)" onmouseover="showTip(event, 'fs3', 7)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 8)" onmouseover="showTip(event, 'fs3', 8)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 9)" onmouseover="showTip(event, 'fs5', 9)" class="i">LogLevel</span> <span class="k">-&gt;</span>
+    <span onmouseout="hideTip(event, 'fs6', 10)" onmouseover="showTip(event, 'fs6', 10)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
 
-<div class="tip" id="fs1">namespace DG</div>
-<div class="tip" id="fs2">namespace DG.XrmOrg</div>
-<div class="tip" id="fs3">namespace DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs4">module Config<br /><br />from DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs5">namespace System</div>
-<div class="tip" id="fs6">namespace DG.DAXIFsharp</div>
-<div class="tip" id="fs7">namespace DG.DAXIFsharp.Modules</div>
-<div class="tip" id="fs8">val zip : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionImportTest.zip</div>
-<div class="tip" id="fs9">val unmanaged : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.unmanaged</div>
-<div class="tip" id="fs10">val solution : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.solution</div>
-<div class="tip" id="fs11">module SolutionModule<br /><br />from DG.DAXIFsharp.Modules</div>
-<div class="tip" id="fs12">val importSolution : wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; managed:bool -&gt; ap:Microsoft.Xrm.Sdk.Client.AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.DAXIFsharp.Modules.SolutionModule.importSolution</div>
-<div class="tip" id="fs13">val wsdlTest&#39; : Uri<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.wsdlTest&#39;</div>
-<div class="tip" id="fs14">val authType : Microsoft.Xrm.Sdk.Client.AuthenticationProviderType<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.authType</div>
-<div class="tip" id="fs15">val usrTest : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.usrTest</div>
-<div class="tip" id="fs16">val pwdTest : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.pwdTest</div>
-<div class="tip" id="fs17">val domainTest : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.domainTest</div>
-<div class="tip" id="fs18">val log : LogLevel<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.log</div>
+<div class="tip" id="fs1">val syncSolutionPlugins : wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.DAXIFsharp.Modules.PluginsModule.syncSolutionPlugins<br /><em><br /><br />&#160;TODO:</em></div>
+<div class="tip" id="fs2">Multiple items<br />type Uri =<br />&#160;&#160;new : uriString:string -&gt; Uri + 5 overloads<br />&#160;&#160;member AbsolutePath : string<br />&#160;&#160;member AbsoluteUri : string<br />&#160;&#160;member Authority : string<br />&#160;&#160;member DnsSafeHost : string<br />&#160;&#160;member Equals : comparand:obj -&gt; bool<br />&#160;&#160;member Fragment : string<br />&#160;&#160;member GetComponents : components:UriComponents * format:UriFormat -&gt; string<br />&#160;&#160;member GetHashCode : unit -&gt; int<br />&#160;&#160;member GetLeftPart : part:UriPartial -&gt; string<br />&#160;&#160;...<br /><br />Full name: System.Uri<br /><br />--------------------<br />Uri(uriString: string) : unit<br />Uri(uriString: string, uriKind: UriKind) : unit<br />Uri(baseUri: Uri, relativeUri: string) : unit<br />Uri(baseUri: Uri, relativeUri: Uri) : unit</div>
+<div class="tip" id="fs3">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
+<div class="tip" id="fs4">type AuthenticationProviderType =<br />&#160;&#160;| None = 0<br />&#160;&#160;| ActiveDirectory = 1<br />&#160;&#160;| Federation = 2<br />&#160;&#160;| LiveId = 3<br />&#160;&#160;| OnlineFederation = 4<br /><br />Full name: Microsoft.Xrm.Sdk.Client.AuthenticationProviderType</div>
+<div class="tip" id="fs5">type LogLevel =<br />&#160;&#160;|  None  =  0<br />&#160;&#160;|  Info  =  5<br />&#160;&#160;|  Warning  =  6<br />&#160;&#160;|  Error  =  4<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  File  =  31<br /><br />Full name: DG.DAXIFsharp.LogLevel</div>
+<div class="tip" id="fs6">type unit = Unit<br /><br />Full name: Microsoft.FSharp.Core.unit</div>
 
             </div>
             <div class="span3">
