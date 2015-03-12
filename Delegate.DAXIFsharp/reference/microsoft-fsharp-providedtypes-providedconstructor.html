@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.DAXIFsharp/../img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>ProvidedConstructor - DAXIF# v.1.3.0.29</title>
+    <title>ProvidedConstructor - DAXIF# v.1.3.0.30</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -47,10 +47,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '74', 74)" onmouseover="showTip(event, '74', 74)">
+          <code onmouseout="hideTip(event, '77', 77)" onmouseover="showTip(event, '77', 77)">
             new(parameters)
           </code>
-          <div class="tip" id="74">
+          <div class="tip" id="77">
             <strong>Signature:</strong> (parameters:ProvidedParameter list) -&gt; ProvidedConstructor<br />
                       </div>
         </td>
@@ -87,10 +87,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '105', 105)" onmouseover="showTip(event, '105', 105)">
+          <code onmouseout="hideTip(event, '106', 106)" onmouseover="showTip(event, '106', 106)">
             AddObsoleteAttribute(message, ?isError)
           </code>
-          <div class="tip" id="105">
+          <div class="tip" id="106">
             <strong>Signature:</strong> (message:string * isError:bool option) -&gt; unit<br />
                       </div>
         </td>
@@ -103,10 +103,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '106', 106)" onmouseover="showTip(event, '106', 106)">
+          <code onmouseout="hideTip(event, '107', 107)" onmouseover="showTip(event, '107', 107)">
             AddXmlDoc(xmlDoc)
           </code>
-          <div class="tip" id="106">
+          <div class="tip" id="107">
             <strong>Signature:</strong> xmlDoc:string -&gt; unit<br />
                       </div>
         </td>
@@ -119,10 +119,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '107', 107)" onmouseover="showTip(event, '107', 107)">
+          <code onmouseout="hideTip(event, '108', 108)" onmouseover="showTip(event, '108', 108)">
             AddXmlDocComputed(xmlDocFunction)
           </code>
-          <div class="tip" id="107">
+          <div class="tip" id="108">
             <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
                       </div>
         </td>
@@ -135,10 +135,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '108', 108)" onmouseover="showTip(event, '108', 108)">
+          <code onmouseout="hideTip(event, '109', 109)" onmouseover="showTip(event, '109', 109)">
             AddXmlDocDelayed(xmlDocFunction)
           </code>
-          <div class="tip" id="108">
+          <div class="tip" id="109">
             <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
                       </div>
         </td>
@@ -151,10 +151,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '109', 109)" onmouseover="showTip(event, '109', 109)">
+          <code onmouseout="hideTip(event, '110', 110)" onmouseover="showTip(event, '110', 110)">
             BaseConstructorCall()
           </code>
-          <div class="tip" id="109">
+          <div class="tip" id="110">
             <strong>Signature:</strong> unit -&gt; Expr list -&gt; ConstructorInfo * Expr list<br />
                       </div>
         </td>
@@ -167,10 +167,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '110', 110)" onmouseover="showTip(event, '110', 110)">
+          <code onmouseout="hideTip(event, '111', 111)" onmouseover="showTip(event, '111', 111)">
             InvokeCode()
           </code>
-          <div class="tip" id="110">
+          <div class="tip" id="111">
             <strong>Signature:</strong> unit -&gt; Expr list -&gt; Expr<br />
                       </div>
         </td>
@@ -183,29 +183,11 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '111', 111)" onmouseover="showTip(event, '111', 111)">
+          <code onmouseout="hideTip(event, '112', 112)" onmouseover="showTip(event, '112', 112)">
             IsImplicitCtor
           </code>
-          <div class="tip" id="111">
-            <strong>Signature:</strong> bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Set a flag indicating that the constructor acts like an F# implicit constructor, so the
- parameters of the constructor become fields and can be accessed using Expr.GlobalVar with the
- same name.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '112', 112)" onmouseover="showTip(event, '112', 112)">
-            IsImplicitCtor()
-          </code>
           <div class="tip" id="112">
-            <strong>Signature:</strong> unit -&gt; bool<br />
+            <strong>Signature:</strong> bool<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -220,9 +202,27 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '113', 113)" onmouseover="showTip(event, '113', 113)">
-            IsTypeInitializer
+            IsImplicitCtor()
           </code>
           <div class="tip" id="113">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Set a flag indicating that the constructor acts like an F# implicit constructor, so the
+ parameters of the constructor become fields and can be accessed using Expr.GlobalVar with the
+ same name.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '114', 114)" onmouseover="showTip(event, '114', 114)">
+            IsTypeInitializer
+          </code>
+          <div class="tip" id="114">
             <strong>Signature:</strong> bool<br />
                       </div>
         </td>
@@ -233,10 +233,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '114', 114)" onmouseover="showTip(event, '114', 114)">
+          <code onmouseout="hideTip(event, '115', 115)" onmouseover="showTip(event, '115', 115)">
             IsTypeInitializer()
           </code>
-          <div class="tip" id="114">
+          <div class="tip" id="115">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
@@ -254,7 +254,7 @@
                     <img src="/Delegate.DAXIFsharp/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.1.3.0.29</li>
+                    <li class="nav-header">DAXIF# v.1.3.0.30</li>
                     <li><a href="/Delegate.DAXIFsharp/index.html">Home page</a></li>
 
                     <li class="divider"></li>
