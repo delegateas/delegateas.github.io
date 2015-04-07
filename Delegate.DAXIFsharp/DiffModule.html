@@ -4,9 +4,14 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.DAXIFsharp/../img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>ProvidedLiteralField - DAXIF# v.1.3.0.32</title>
+    <title>DiffModule
+</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="
+        A framework for automating installation of all kinds of xRM systems.
+        By using simple F# script commands/files one can save a lot of time
+        and effort during this process.
+        ">
     <meta name="author" content="Delegate A/S">
 
     <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
@@ -32,125 +37,28 @@
         <div class="row">
             <div class="span9" id="main">
                 
+<h1>DiffModule</h1>
 
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">solutionDiff</span><span class="o">:</span> 
+    <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">source</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 3)" onmouseover="showTip(event, 'fs2', 3)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">target</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 4)" onmouseover="showTip(event, 'fs2', 4)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 5)" onmouseover="showTip(event, 'fs3', 5)" class="i">LogLevel</span> <span class="k">-&gt;</span>
+    <span onmouseout="hideTip(event, 'fs4', 6)" onmouseover="showTip(event, 'fs4', 6)" class="i">unit</span></pre>
+</td>
+</tr>
+</table>
 
-
-<h1>ProvidedLiteralField</h1>
-<div class="xmldoc">
-</div>
-  <h3>Constructors</h3>
-  <table class="table table-bordered member-list">
-    <thead>
-      <tr><td>Constructor</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '71', 71)" onmouseover="showTip(event, '71', 71)">
-            new(fieldName, fieldType, literalValue)
-          </code>
-          <div class="tip" id="71">
-            <strong>Signature:</strong> (fieldName:string * fieldType:Type * literalValue:obj) -&gt; ProvidedLiteralField<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Create a new provided field. It is not initially associated with any specific provided type definition.
-</br>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>Instance members</h3>
-  <table class="table table-bordered member-list">
-    <thead>
-      <tr><td>Instance member</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '84', 84)" onmouseover="showTip(event, '84', 84)">
-            AddDefinitionLocation(...)
-          </code>
-          <div class="tip" id="84">
-            <strong>Signature:</strong> (line:int * column:int * filePath:string) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add definition location information to the provided field.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '91', 91)" onmouseover="showTip(event, '91', 91)">
-            AddObsoleteAttribute(message, ?isError)
-          </code>
-          <div class="tip" id="91">
-            <strong>Signature:</strong> (message:string * isError:bool option) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add a 'System.Obsolete' attribute to this provided field
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '92', 92)" onmouseover="showTip(event, '92', 92)">
-            AddXmlDoc(xmlDoc)
-          </code>
-          <div class="tip" id="92">
-            <strong>Signature:</strong> xmlDoc:string -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided field
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '93', 93)" onmouseover="showTip(event, '93', 93)">
-            AddXmlDocComputed(xmlDocFunction)
-          </code>
-          <div class="tip" id="93">
-            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided field, where the computation of the documentation is delayed until necessary
- The documentation is re-computed  every time it is required.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '94', 94)" onmouseover="showTip(event, '94', 94)">
-            AddXmlDocDelayed(xmlDocFunction)
-          </code>
-          <div class="tip" id="94">
-            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided field, where the computation of the documentation is delayed until necessary
-</br>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="tip" id="fs1">val solutionDiff : exeLocation:string -&gt; source:string -&gt; target:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.DAXIFsharp.Modules.DiffModule.solutionDiff<br /><em><br /><br />&#160;TODO:</em></div>
+<div class="tip" id="fs2">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
+<div class="tip" id="fs3">type LogLevel =<br />&#160;&#160;|  None  =  0<br />&#160;&#160;|  Info  =  5<br />&#160;&#160;|  Warning  =  6<br />&#160;&#160;|  Error  =  4<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  File  =  31<br /><br />Full name: DG.DAXIFsharp.LogLevel</div>
+<div class="tip" id="fs4">type unit = Unit<br /><br />Full name: Microsoft.FSharp.Core.unit</div>
 
             </div>
             <div class="span3">

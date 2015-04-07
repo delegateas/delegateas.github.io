@@ -93,12 +93,19 @@ hidden as a sequence of asterix.</p>
 <p>Finally the variables for user, password and domain are set.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
@@ -107,7 +114,14 @@ hidden as a sequence of asterix.</p>
 [&lt;<span onmouseout="hideTip(event, 'fs25', 66)" onmouseover="showTip(event, 'fs25', 66)" class="i">Literal</span>&gt;]
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs27', 67)" onmouseover="showTip(event, 'fs27', 67)" class="i">domain</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">domain</span><span class="s">&quot;</span>
 [&lt;<span onmouseout="hideTip(event, 'fs25', 68)" onmouseover="showTip(event, 'fs25', 68)" class="i">Literal</span>&gt;]
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs28', 69)" onmouseover="showTip(event, 'fs28', 69)" class="i">pwd</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">pwd</span><span class="s">&quot;</span></pre>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs28', 69)" onmouseover="showTip(event, 'fs28', 69)" class="i">pwd</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">pwd</span><span class="s">&quot;</span>
+
+[&lt;<span onmouseout="hideTip(event, 'fs25', 70)" onmouseover="showTip(event, 'fs25', 70)" class="i">Literal</span>&gt;]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs29', 71)" onmouseover="showTip(event, 'fs29', 71)" class="i">usr&#39;</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">usr</span><span class="s">&quot;</span>
+[&lt;<span onmouseout="hideTip(event, 'fs25', 72)" onmouseover="showTip(event, 'fs25', 72)" class="i">Literal</span>&gt;]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs30', 73)" onmouseover="showTip(event, 'fs30', 73)" class="i">domain&#39;</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">domain</span><span class="s">&quot;</span>
+[&lt;<span onmouseout="hideTip(event, 'fs25', 74)" onmouseover="showTip(event, 'fs25', 74)" class="i">Literal</span>&gt;]
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs31', 75)" onmouseover="showTip(event, 'fs31', 75)" class="i">pwd&#39;</span> <span class="o">=</span> <span class="s">@&quot;</span><span class="s">pwd</span><span class="s">&quot;</span></pre>
 </td>
 </tr>
 </table>
@@ -121,7 +135,7 @@ TypeProvider module:</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs29', 70)" onmouseover="showTip(event, 'fs29', 70)" class="i">pwd</span> <span class="o">=</span> <span class="i">rk</span> <span class="o">|&gt;</span> <span class="i">mask</span></pre>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs32', 76)" onmouseover="showTip(event, 'fs32', 76)" class="i">pwd</span> <span class="o">=</span> <span class="i">rk</span> <span class="o">|&gt;</span> <span class="i">mask</span></pre>
 </td>
 </tr>
 </table>
@@ -154,7 +168,10 @@ TypeProvider module:</p>
 <div class="tip" id="fs26">val usr : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.usr</div>
 <div class="tip" id="fs27">val domain : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.domain</div>
 <div class="tip" id="fs28">val pwd : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.pwd</div>
-<div class="tip" id="fs29">val pwd : obj<br /><br />Full name: DGXrmOrgXrmSolutionAuthInfo.pwd</div>
+<div class="tip" id="fs29">val usr&#39; : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.usr&#39;</div>
+<div class="tip" id="fs30">val domain&#39; : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.domain&#39;</div>
+<div class="tip" id="fs31">val pwd&#39; : string<br /><br />Full name: DG.XrmOrg.XrmSolution.AuthInfo.pwd&#39;</div>
+<div class="tip" id="fs32">val pwd : obj<br /><br />Full name: DGXrmOrgXrmSolutionAuthInfo.pwd</div>
 
             </div>
             <div class="span3">
@@ -163,7 +180,7 @@ TypeProvider module:</p>
                     <img src="/Delegate.DAXIFsharp/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.1.3.0.31</li>
+                    <li class="nav-header">DAXIF# v.1.3.0.32</li>
                     <li><a href="/Delegate.DAXIFsharp/index.html">Home page</a></li>
 
                     <li class="divider"></li>
