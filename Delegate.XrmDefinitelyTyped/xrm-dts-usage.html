@@ -35,12 +35,14 @@
 <h1><a name="Xrm-Object-Model" class="anchor" href="#Xrm-Object-Model">Xrm Object Model</a></h1>
 
 <p>The <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> can be accessed from web resources in your solution.
-To start using it, one can drag in a reference to <code>base.d.ts</code> which is located in
-the <code>typings/XRM/</code> folder. This contains the description of the API.</p>
+To start using the declaration files, one can drag in a reference to <code>base.d.ts</code> 
+which is located in the <code>typings/XRM/</code> folder. 
+This contains the base description of the API.</p>
 
 <p>The Xrm object model also allows access to entity specific attributes 
-and controls, when it is used on a entity specific page (such as a form). 
-The following will show an example of this usage on an Account entity form.</p>
+and controls when it is used on a entity-specific page (such as a form).</p>
+
+<p>The following section will show an example of this usage on an Contact entity form.</p>
 
 <h2><a name="Contact-Form-Example" class="anchor" href="#Contact-Form-Example">Contact Form Example</a></h2>
 
@@ -49,8 +51,8 @@ be found in the <code>typings/Xrm/IPage/</code> folder. By simply adding this, y
 access to the entire Xrm object model API for the contact entity on your form page!</p>
 
 <p>Below is an example of the initial setup for your code file. We just need to tell
-the compiler what page we are currently on, by casting the <code>Xrm.Page</code> the the wanted
-<code>IPage.Contact</code> interface:</p>
+the compiler what page we are currently on, which is done by casting the 
+<code>Xrm.Page</code> to the wanted <code>IPage.Contact</code> interface:</p>
 
 <table class="pre"><tr><td><pre lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/IPage/contact.d.ts" /&gt;</span>
 
