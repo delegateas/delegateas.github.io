@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <link rel="shortcut icon" href="/Delegate.XrmDefinitelyTyped/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>The Rest API
+    <title>Xrm Object Model
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM client-side coding."/>
@@ -32,38 +32,48 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="The-Rest-API" class="anchor" href="#The-Rest-API">The Rest API</a></h1>
+<h1><a name="Xrm-Object-Model" class="anchor" href="#Xrm-Object-Model">Xrm Object Model</a></h1>
 
-<p>To work with the you will need to reference the rest API matching your CRM solution,
-which can be found at <code>typings/XRM/rest.d.ts</code>.</p>
+<p>The <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> can be accessed from web resources in your solution.
+To start using it, one can drag in a reference to <code>base.d.ts</code> which is located in
+the <code>typings/XRM/</code> folder. This contains the description of the API.</p>
 
-<p>To work further with specific entities you can also reference these, which are 
-located in the <code>typings/XRM/Entity/</code> folder:</p>
+<p>The Xrm object model also allows access to entity specific attributes 
+and controls, when it is used on a entity specific page (such as a form). 
+The following will show an example of this usage on an Account entity form.</p>
 
-<table class="pre"><tr><td><pre lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/rest.d.ts" /&gt;</span>
-<span class="c">/// &lt;reference path="../../typings/XRM/Entity/account.d.ts" /&gt;</span>
+<h2><a name="Contact-Form-Example" class="anchor" href="#Contact-Form-Example">Contact Form Example</a></h2>
 
-SDK.REST.retrieveRecord(<span class="s">"&lt;SomeGuid&gt;"</span>,
-    <span class="s">"Account"</span>, <span class="c">// Entity type</span>
-    <span class="s">""</span>, <span class="c">// Select string</span>
-    <span class="s">""</span>, <span class="c">// Expand string</span>
-    <span class="k">function</span> (account) { <span class="c">// Success callback</span>
+<p>First off one needs to reference the "Contact Page" declaration file. This can 
+be found in the <code>typings/Xrm/IPage/</code> folder. By simply adding this, you get
+access to the entire Xrm object model API for the contact entity on your form page!</p>
+
+<p>Below is an example of the initial setup for your code file. We just need to tell
+the compiler what page we are currently on, by casting the <code>Xrm.Page</code> the the wanted
+<code>IPage.Contact</code> interface:</p>
+
+<table class="pre"><tr><td><pre lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/IPage/contact.d.ts" /&gt;</span>
+
+<span class="k">module</span> DG.Contact {
+    <span class="k">var</span> Page <span class="o">=</span> &lt;IPage.Contact&gt; Xrm.Page;
+
+    <span class="k">export</span> <span class="k">function</span> onLoad() {
         <span class="c">// Code here..</span>
-    },
-    <span class="k">function</span> (error) { <span class="c">// Error callback</span>
-
     }
-);
+}
 </pre></td></tr></table>
 
-<p>From the given entity type in the function call, the TypeScript compiler can
-figure out that it is an Account entity result that should be expected in the
-success callback handler.</p>
+<blockquote>
+  <p>Note when using modules, you need export any functions you want to call outside of it.
+In this case the <code>onLoad</code> function needs to be used by CRM, and therefore needs to be exported.</p>
+</blockquote>
 
-<p>By knowing this, it can provide full intellisense for the retrieved account record
-and all of its attributes and relations!</p>
+<p>In your desired IDE, you will now get intellisense for the contact form:</p>
 
 <img src="img/attribute-intellisense.gif" class="code" />
+
+<p>Each attribute and control on the form will also have the correct type, which gives
+you type safety on the values.</p>
 
 
         </div>
