@@ -50,9 +50,17 @@ and controls when it is used on a entity-specific page (such as a form).</p>
 be found in the <code>typings/Xrm/IPage/</code> folder. By simply adding this, you get
 access to the entire Xrm object model API for the contact entity on your form page!</p>
 
-<p>Below is an example of the initial setup for your code file. We just need to tell
-the compiler what page we are currently on, which is done by casting the 
-<code>Xrm.Page</code> to the wanted <code>IPage.Contact</code> interface:</p>
+<p>We just need to tell the compiler what page we are currently on (<code>IPage.Contact</code>)
+, which can be done in two ways:</p>
+
+<table class="pre"><tr><td><pre lang="typescript"><span class="c">// Either declare the Xrm variable to be of the wanted type</span>
+<span class="k">declare</span> <span class="k">var</span> Xrm: Xrm&lt;IPage.Contact&gt;;
+
+<span class="c">// .. or just cast the page itself in a new variable</span>
+<span class="k">var</span> Page <span class="o">=</span> &lt;IPage.Contact&gt; Xrm.Page;
+</pre></td></tr></table>
+
+<p>Below is an example of an initial setup for your code file.</p>
 
 <table class="pre"><tr><td><pre lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/IPage/contact.d.ts" /&gt;</span>
 
@@ -67,7 +75,7 @@ the compiler what page we are currently on, which is done by casting the
 
 <blockquote>
   <p>Note when using modules, you need export any functions you want to call outside of it.
-In this case the <code>onLoad</code> function needs to be used by CRM, and therefore needs to be exported.</p>
+In this case the <code>onLoad()</code> function needs to be used by CRM, and therefore needs to be exported.</p>
 </blockquote>
 
 <p>In your desired IDE, you will now get intellisense for the contact form:</p>
