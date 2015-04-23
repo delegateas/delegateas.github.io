@@ -35,7 +35,17 @@
 <h1><a name="Usage-of-XrmDefinitelyTyped" class="anchor" href="#Usage-of-XrmDefinitelyTyped">Usage of XrmDefinitelyTyped</a></h1>
 
 <p>The executable can be used from a command prompt, but also directly from code, 
-if you want the generation of the declaration files to be a part of your workflow.</p>
+if you want the generation of the declaration files to be a part of your 
+workflow.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> The executable must be able to find the assemblies it depends on.
+This can be solved by having them placed in the same folder.
+It also needs either <code>FSharp.Core.dll</code> or F# installed on the computer.</p>
+</blockquote>
+
+<p>It generates declaration files which are compliant with TypeScript >=1.0, 
+since 1.0 is the latest version supported by VS2012</p>
 
 <h2><a name="Command-prompt" class="anchor" href="#Command-prompt">Command prompt</a></h2>
 
@@ -48,7 +58,8 @@ Example usage from a command prompt:</p>
 
 <h2><a name="Simple-Generation-Example-in-F" class="anchor" href="#Simple-Generation-Example-in-F">Simple Generation Example in F#</a></h2>
 
-<p>It can also be run through code by referencing the executable and calling the <code>GetContext</code> function.</p>
+<p>It can also be run through code by referencing the executable and calling the 
+<code>GetContext</code> function.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
