@@ -40,21 +40,36 @@ it, which can be found at <code>typings/XRM/rest.d.ts</code>.</p>
 <p>To work on further with specific entities you should reference these as well.
 They are located in the <code>typings/XRM/Entity/</code> folder:</p>
 
-<table class="pre"><tr><td><pre lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/rest.d.ts" /&gt;</span>
-<span class="c">/// &lt;reference path="../../typings/XRM/Entity/account.d.ts" /&gt;</span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="typescript">/// &lt;reference path="../../typings/XRM/rest.d.ts" /&gt;
+/// &lt;reference path="../../typings/XRM/Entity/account.d.ts" /&gt;
 
-SDK.REST.retrieveRecord(<span class="s">"&lt;SomeGuid&gt;"</span>,
-    <span class="s">"Account"</span>, <span class="c">// Entity type</span>
-    <span class="s">""</span>, <span class="c">// Select string</span>
-    <span class="s">""</span>, <span class="c">// Expand string</span>
-    <span class="k">function</span> (account) { <span class="c">// Success callback</span>
-        <span class="c">// Code here..</span>
+SDK.REST.retrieveRecord("&lt;SomeGuid&gt;",
+    "Account", // Entity type
+    "", // Select string
+    "", // Expand string
+    function (account) { // Success callback
+        // Code here..
     },
-    <span class="k">function</span> (error) { <span class="c">// Error callback</span>
+    function (error) { // Error callback
 
     }
 );
-</pre></td></tr></table>
+</code></pre></td></tr></table>
 
 <p>From the given entity type in the function call, the TypeScript compiler can
 figure out that it is an Account entity result that should be expected in the

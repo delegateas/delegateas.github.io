@@ -44,7 +44,7 @@ This can be solved by having them placed in the same folder.
 It also needs either <code>FSharp.Core.dll</code> or F# installed on the computer.</p>
 </blockquote>
 
-<p>It generates declaration files which are compliant with TypeScript >=1.0, 
+<p>It generates declaration files which are compliant with TypeScript &gt;=1.0, 
 since 1.0 is the latest version supported by VS2012</p>
 
 <h2><a name="Command-prompt" class="anchor" href="#Command-prompt">Command prompt</a></h2>
@@ -52,35 +52,34 @@ since 1.0 is the latest version supported by VS2012</p>
 <p>The arguments are similar to those given to the <a href="https://msdn.microsoft.com/en-us/library/gg327844.aspx">CrmSvcUtil</a> tool. 
 Example usage from a command prompt:</p>
 
-<table class="pre"><tr><td><pre lang="bash">XrmDefinitelyTyped.exe /url:http://&lt;serverName&gt;/&lt;organizationName&gt;/XRMServices/2011/Organization.svc  
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="bash">XrmDefinitelyTyped.exe /url:http://&lt;serverName&gt;/&lt;organizationName&gt;/XRMServices/2011/Organization.svc  
         /out:WebResources\typings\XRM /username:&lt;username&gt; /password:&lt;password&gt; /domain:&lt;domainName&gt;
-</pre></td></tr></table>
+</code></pre></td></tr></table>
 
 <h2><a name="Simple-Generation-Example-in-F" class="anchor" href="#Simple-Generation-Example-in-F">Simple Generation Example in F#</a></h2>
 
 <p>It can also be run through code by referencing the executable and calling the 
 <code>GetContext</code> function.</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
 <span class="l">5: </span>
 <span class="l">6: </span>
 <span class="l">7: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Microsoft</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Xrm</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">Sdk</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Client</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Microsoft</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Xrm</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">Sdk</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Client</span>
 <span class="k">open</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">XrmDefinitelyTyped</span>
 
 <span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="t">XrmDefinitelyTyped</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="f">GetContext</span>(
   <span class="s">&quot;http://&lt;serverName&gt;/&lt;organizationName&gt;/XRMServices/2011/Organization.svc&quot;</span>, 
   <span class="s">&quot;username&quot;</span>, <span class="s">&quot;password&quot;</span>, 
   <span class="i">out</span> <span class="o">=</span> <span class="s">@&quot;WebResources\typings\XRM&quot;</span>)
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
