@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/../img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>Solution - DAXIF# v.2.0.0.2</title>
+    <title>Solution - DAXIF# v.2.0.0.3</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -50,26 +50,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
-            createPublisher (...)
+          <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
+            create (...)
           </code>
-          <div class="tip" id="3">
-            <strong>Signature:</strong> wsdl:Uri -&gt; name:string -&gt; display:string -&gt; prefix:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Creates a new publisher with the given parameters.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
-            createSolution (...)
-          </code>
-          <div class="tip" id="7">
+          <div class="tip" id="5">
             <strong>Signature:</strong> wsdl:Uri -&gt; name:string -&gt; display:string -&gt; pubPrefix:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
                       </div>
         </td>
@@ -82,10 +66,26 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
-            deleteSolution (...)
+          <code onmouseout="hideTip(event, '21', 21)" onmouseover="showTip(event, '21', 21)">
+            createPublisher (...)
           </code>
-          <div class="tip" id="8">
+          <div class="tip" id="21">
+            <strong>Signature:</strong> wsdl:Uri -&gt; name:string -&gt; display:string -&gt; prefix:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Creates a new publisher with the given parameters.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '22', 22)" onmouseover="showTip(event, '22', 22)">
+            delete (...)
+          </code>
+          <div class="tip" id="22">
             <strong>Signature:</strong> wsdl:Uri -&gt; solution:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
                       </div>
         </td>
@@ -98,10 +98,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
-            exportSolution (...)
+          <code onmouseout="hideTip(event, '23', 23)" onmouseover="showTip(event, '23', 23)">
+            export (...)
           </code>
-          <div class="tip" id="9">
+          <div class="tip" id="23">
             <strong>Signature:</strong> wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; managed:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
                       </div>
         </td>
@@ -114,10 +114,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
-            extractSolution (...)
+          <code onmouseout="hideTip(event, '24', 24)" onmouseover="showTip(event, '24', 24)">
+            extract (...)
           </code>
-          <div class="tip" id="10">
+          <div class="tip" id="24">
             <strong>Signature:</strong> solution:string -&gt; (exeLocations:string * string option) -&gt; repo:Repository -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; project:string -&gt; logLevel:LogLevel -&gt; unit<br />
                       </div>
         </td>
@@ -130,10 +130,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '11', 11)" onmouseover="showTip(event, '11', 11)">
-            importSolution (...)
+          <code onmouseout="hideTip(event, '25', 25)" onmouseover="showTip(event, '25', 25)">
+            import (...)
           </code>
-          <div class="tip" id="11">
+          <div class="tip" id="25">
             <strong>Signature:</strong> wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; managed:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
                       </div>
         </td>
@@ -146,10 +146,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '12', 12)" onmouseover="showTip(event, '12', 12)">
-            packSolution (...)
+          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
+            pack (...)
           </code>
-          <div class="tip" id="12">
+          <div class="tip" id="26">
             <strong>Signature:</strong> solution:string -&gt; exeLocation:string -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; logLevel:LogLevel -&gt; unit<br />
                       </div>
         </td>
@@ -162,10 +162,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
-            pluginStepsSolution (...)
+          <code onmouseout="hideTip(event, '27', 27)" onmouseover="showTip(event, '27', 27)">
+            pluginSteps (...)
           </code>
-          <div class="tip" id="13">
+          <div class="tip" id="27">
             <strong>Signature:</strong> wsdl:Uri -&gt; solution:string -&gt; enable:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
                       </div>
         </td>
@@ -178,10 +178,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '14', 14)" onmouseover="showTip(event, '14', 14)">
+          <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
             updateServiceContext (...)
           </code>
-          <div class="tip" id="14">
+          <div class="tip" id="28">
             <strong>Signature:</strong> wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; lcid:int option -&gt; logLevel:LogLevel -&gt; unit<br />
                       </div>
         </td>
@@ -194,10 +194,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '15', 15)" onmouseover="showTip(event, '15', 15)">
+          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
             updateTypeScriptContext (...)
           </code>
-          <div class="tip" id="15">
+          <div class="tip" id="29">
             <strong>Signature:</strong> wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; unit<br />
                       </div>
         </td>
@@ -217,7 +217,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.0.0.2</li>
+                    <li class="nav-header">DAXIF# v.2.0.0.3</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
