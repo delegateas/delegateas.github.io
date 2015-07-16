@@ -61,14 +61,10 @@
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">System</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 6)" onmouseover="showTip(event, 'fs1', 6)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="i">Daxif</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 8)" onmouseover="showTip(event, 'fs1', 8)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="i">Daxif</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 10)" onmouseover="showTip(event, 'fs7', 10)" class="i">Modules</span></pre>
+<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="i">Daxif</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="i">Modules</span></pre>
 </td>
 </tr>
 </table>
@@ -90,25 +86,21 @@
 <span class="l">10: </span>
 <span class="l">11: </span>
 <span class="l">12: </span>
-<span class="l">13: </span>
-<span class="l">14: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 11)" onmouseover="showTip(event, 'fs8', 11)" class="i">ensureFolder</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 12)" onmouseover="showTip(event, 'fs9', 12)" class="i">unmanaged</span>
+<span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="i">ensureFolder</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 9)" onmouseover="showTip(event, 'fs8', 9)" class="i">unmanaged</span>
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs10', 13)" onmouseover="showTip(event, 'fs10', 13)" class="i">tfpt</span> <span class="o">=</span>  <span class="s">@&quot;</span><span class="s">C</span><span class="s">:</span><span class="s">\</span><span class="s">Program</span><span class="s"> </span><span class="s">Files</span><span class="s"> </span><span class="s">(</span><span class="s">x86</span><span class="s">)</span><span class="s">\</span><span class="s">Microsoft</span><span class="s"> </span><span class="s">Team</span><span class="s"> </span><span class="s">Foundation</span><span class="s"> </span><span class="s">Server</span><span class="s"> </span><span class="s">2013</span><span class="s"> </span><span class="s">Power</span><span class="s"> </span><span class="s">Tools</span><span class="s">\</span><span class="s">TFPT</span><span class="s">.</span><span class="s">EXE</span><span class="s">&quot;</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs11', 14)" onmouseover="showTip(event, 'fs11', 14)" class="i">sp</span> <span class="o">=</span>    <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 15)" onmouseover="showTip(event, 'fs12', 15)" class="i">rootFolder</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">Tools</span><span class="s">\</span><span class="s">MS</span><span class="s">\</span><span class="s">SolutionPackager</span><span class="s">\</span><span class="s">SolutionPackager</span><span class="s">.</span><span class="s">exe</span><span class="s">&quot;</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs13', 16)" onmouseover="showTip(event, 'fs13', 16)" class="i">map</span> <span class="o">=</span>   <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 17)" onmouseover="showTip(event, 'fs12', 17)" class="i">rootFolder</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">Solution</span><span class="s">\</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">.</span><span class="s">XrmSolution</span><span class="s">.</span><span class="s">xml</span><span class="s">&quot;</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs14', 18)" onmouseover="showTip(event, 'fs14', 18)" class="i">cms</span> <span class="o">=</span>   <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 19)" onmouseover="showTip(event, 'fs12', 19)" class="i">rootFolder</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">Solution</span><span class="s">\</span><span class="s">customizations</span><span class="s">&quot;</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs15', 20)" onmouseover="showTip(event, 'fs15', 20)" class="i">vsSol</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 21)" onmouseover="showTip(event, 'fs12', 21)" class="i">rootFolder</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">Solution</span><span class="s">\</span><span class="s">Solution</span><span class="s">.</span><span class="s">csproj</span><span class="s">&quot;</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs9', 10)" onmouseover="showTip(event, 'fs9', 10)" class="i">map</span> <span class="o">=</span>   <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 11)" onmouseover="showTip(event, 'fs10', 11)" class="i">rootFolder</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">Solution</span><span class="s">\</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">.</span><span class="s">XrmSolution</span><span class="s">.</span><span class="s">xml</span><span class="s">&quot;</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs11', 12)" onmouseover="showTip(event, 'fs11', 12)" class="i">cms</span> <span class="o">=</span>   <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 13)" onmouseover="showTip(event, 'fs10', 13)" class="i">rootFolder</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">Solution</span><span class="s">\</span><span class="s">customizations</span><span class="s">&quot;</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs12', 14)" onmouseover="showTip(event, 'fs12', 14)" class="i">vsSol</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 15)" onmouseover="showTip(event, 'fs10', 15)" class="i">rootFolder</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">Solution</span><span class="s">\</span><span class="s">Solution</span><span class="s">.</span><span class="s">csproj</span><span class="s">&quot;</span>
 
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs16', 22)" onmouseover="showTip(event, 'fs16', 22)" class="i">zip</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 23)" onmouseover="showTip(event, 'fs9', 23)" class="i">unmanaged</span> <span class="o">+</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 24)" onmouseover="showTip(event, 'fs17', 24)" class="i">solution</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">.</span><span class="s">zip</span><span class="s">&quot;</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs13', 16)" onmouseover="showTip(event, 'fs13', 16)" class="i">zip</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 17)" onmouseover="showTip(event, 'fs8', 17)" class="i">unmanaged</span> <span class="o">+</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 18)" onmouseover="showTip(event, 'fs14', 18)" class="i">solution</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">.</span><span class="s">zip</span><span class="s">&quot;</span>
 
-<span onmouseout="hideTip(event, 'fs18', 25)" onmouseover="showTip(event, 'fs18', 25)" class="i">Solution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs19', 26)" onmouseover="showTip(event, 'fs19', 26)" class="i">extract</span>
-    <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 27)" onmouseover="showTip(event, 'fs17', 27)" class="i">solution</span>
-        (<span onmouseout="hideTip(event, 'fs11', 28)" onmouseover="showTip(event, 'fs11', 28)" class="i">sp</span>,<span onmouseout="hideTip(event, 'fs10', 29)" onmouseover="showTip(event, 'fs10', 29)" class="i">tfpt</span> <span class="o">|&gt;</span> <span onmouseout="hideTip(event, 'fs20', 30)" onmouseover="showTip(event, 'fs20', 30)" class="i">Some</span>) <span onmouseout="hideTip(event, 'fs21', 31)" onmouseover="showTip(event, 'fs21', 31)" class="i">Repository</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs22', 32)" onmouseover="showTip(event, 'fs22', 32)" class="i">TFS</span> <span onmouseout="hideTip(event, 'fs16', 33)" onmouseover="showTip(event, 'fs16', 33)" class="i">zip</span> <span onmouseout="hideTip(event, 'fs14', 34)" onmouseover="showTip(event, 'fs14', 34)" class="i">cms</span> <span onmouseout="hideTip(event, 'fs13', 35)" onmouseover="showTip(event, 'fs13', 35)" class="i">map</span> <span onmouseout="hideTip(event, 'fs15', 36)" onmouseover="showTip(event, 'fs15', 36)" class="i">vsSol</span>
-            <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs23', 37)" onmouseover="showTip(event, 'fs23', 37)" class="i">log</span></pre>
+<span onmouseout="hideTip(event, 'fs15', 19)" onmouseover="showTip(event, 'fs15', 19)" class="i">Solution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 20)" onmouseover="showTip(event, 'fs16', 20)" class="i">extract</span>
+    <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 21)" onmouseover="showTip(event, 'fs14', 21)" class="i">solution</span>
+        <span onmouseout="hideTip(event, 'fs13', 22)" onmouseover="showTip(event, 'fs13', 22)" class="i">zip</span> <span onmouseout="hideTip(event, 'fs11', 23)" onmouseover="showTip(event, 'fs11', 23)" class="i">cms</span> <span onmouseout="hideTip(event, 'fs9', 24)" onmouseover="showTip(event, 'fs9', 24)" class="i">map</span> <span onmouseout="hideTip(event, 'fs12', 25)" onmouseover="showTip(event, 'fs12', 25)" class="i">vsSol</span>
+            <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 26)" onmouseover="showTip(event, 'fs17', 26)" class="i">log</span></pre>
 </td>
 </tr>
 </table>
@@ -117,25 +109,19 @@
 <div class="tip" id="fs2">namespace DG.XrmOrg</div>
 <div class="tip" id="fs3">namespace DG.XrmOrg.XrmSolution</div>
 <div class="tip" id="fs4">module Config<br /><br />from DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs5">namespace System</div>
-<div class="tip" id="fs6">namespace DG.Daxif</div>
-<div class="tip" id="fs7">namespace DG.Daxif.Modules</div>
-<div class="tip" id="fs8">val ensureFolder : path:string -&gt; unit<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.ensureFolder<br /><em><br /><br />&#160;Folder function that ensures that a folder is created if it doesn&#39;t exist</em></div>
-<div class="tip" id="fs9">val unmanaged : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.unmanaged</div>
-<div class="tip" id="fs10">val tfpt : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.tfpt</div>
-<div class="tip" id="fs11">val sp : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.sp</div>
-<div class="tip" id="fs12">val rootFolder : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.rootFolder</div>
-<div class="tip" id="fs13">val map : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.map</div>
-<div class="tip" id="fs14">val cms : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.cms</div>
-<div class="tip" id="fs15">val vsSol : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.vsSol</div>
-<div class="tip" id="fs16">val zip : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.zip</div>
-<div class="tip" id="fs17">val solution : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.solution</div>
-<div class="tip" id="fs18">module Solution<br /><br />from DG.Daxif.Modules</div>
-<div class="tip" id="fs19">val extract : solution:string -&gt; exeLocations:string * string option -&gt; repo:Repository -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; project:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.extract</div>
-<div class="tip" id="fs20">union case Option.Some: Value: &#39;T -&gt; Option&lt;&#39;T&gt;</div>
-<div class="tip" id="fs21">type Repository =<br />&#160;&#160;|  GIT  =  0<br />&#160;&#160;|  TFS  =  1<br /><br />Full name: DG.Daxif.Repository</div>
-<div class="tip" id="fs22">Repository.TFS: Repository = 1</div>
-<div class="tip" id="fs23">val log : LogLevel<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.log</div>
+<div class="tip" id="fs5">namespace DG.Daxif</div>
+<div class="tip" id="fs6">namespace DG.Daxif.Modules</div>
+<div class="tip" id="fs7">val ensureFolder : path:string -&gt; unit<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.ensureFolder<br /><em><br /><br />&#160;Folder function that ensures that a folder is created if it doesn&#39;t exist</em></div>
+<div class="tip" id="fs8">val unmanaged : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.unmanaged</div>
+<div class="tip" id="fs9">val map : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.map</div>
+<div class="tip" id="fs10">val rootFolder : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.rootFolder</div>
+<div class="tip" id="fs11">val cms : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.cms</div>
+<div class="tip" id="fs12">val vsSol : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.vsSol</div>
+<div class="tip" id="fs13">val zip : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionExtract.zip</div>
+<div class="tip" id="fs14">val solution : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.solution</div>
+<div class="tip" id="fs15">module Solution<br /><br />from DG.Daxif.Modules</div>
+<div class="tip" id="fs16">val extract : solution:string -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; project:string -&gt; logLevel:Daxif.LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.extract</div>
+<div class="tip" id="fs17">val log : Daxif.LogLevel<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.log</div>
 
             </div>
             <div class="span3">
@@ -144,7 +130,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.0.0.5</li>
+                    <li class="nav-header">DAXIF# v.2.1.0.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
@@ -155,6 +141,7 @@
 
                     <li class="nav-header">Setup Instructions</li>
                     <li><a href="/Delegate.Daxif/setup_fsharp.html">F# Setup</a></li>
+                    <li><a href="/Delegate.Daxif/plugin-reg-setup.html">Plugin Synchronization Setup</a></li>
 
                     <li class="nav-header">Example Scripts</li>
                         <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.html">EnsureAssemblies</a></li>
