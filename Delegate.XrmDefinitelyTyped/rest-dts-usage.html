@@ -55,17 +55,17 @@ They are located in the <code>typings/XRM/Entity/</code> folder:</p>
 <span class="l">13: </span>
 <span class="l">14: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="typescript">/// &lt;reference path="../../typings/XRM/rest.d.ts" /&gt;
-/// &lt;reference path="../../typings/XRM/Entity/account.d.ts" /&gt;
+<td class="snippet"><pre class="fssnip highlighted"><code lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/rest.d.ts" /&gt;</span>
+<span class="c">/// &lt;reference path="../../typings/XRM/Entity/account.d.ts" /&gt;</span>
 
-SDK.REST.retrieveRecord("&lt;SomeGuid&gt;",
-    "Account", // Entity type
-    "", // Select string
-    "", // Expand string
-    function (account) { // Success callback
-        // Code here..
+SDK.REST.retrieveRecord(<span class="s">"&lt;SomeGuid&gt;"</span>,
+    <span class="s">"Account"</span>, <span class="c">// Entity type</span>
+    <span class="s">""</span>, <span class="c">// Select string</span>
+    <span class="s">""</span>, <span class="c">// Expand string</span>
+    <span class="k">function</span> (account) { <span class="c">// Success callback</span>
+        <span class="c">// Code here..</span>
     },
-    function (error) { // Error callback
+    <span class="k">function</span> (error) { <span class="c">// Error callback</span>
 
     }
 );

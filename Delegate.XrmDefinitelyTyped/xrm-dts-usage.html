@@ -64,11 +64,11 @@ you get access to the entire Xrm object model API for the current form page!</p>
 <span class="l">4: </span>
 <span class="l">5: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="typescript">// Either declare the Xrm variable to be of the wanted type
-declare var Xrm: Xrm&lt;Form.contact.Main.Information&gt;;
+<td class="snippet"><pre class="fssnip highlighted"><code lang="typescript"><span class="c">// Either declare the Xrm variable to be of the wanted type</span>
+<span class="k">declare</span> <span class="k">var</span> Xrm: Xrm&lt;Form.contact.Main.Information&gt;;
 
-// .. or just cast the page itself in a new variable
-var Page = &lt;Form.contact.Main.Information&gt; Xrm.Page;
+<span class="c">// .. or just cast the page itself in a new variable</span>
+<span class="k">var</span> Page <span class="o">=</span> &lt;Form.contact.Main.Information&gt; Xrm.Page;
 </code></pre></td></tr></table>
 
 <p>Below is an example of an initial setup for your code file.</p>
@@ -83,13 +83,13 @@ var Page = &lt;Form.contact.Main.Information&gt; Xrm.Page;
 <span class="l">8: </span>
 <span class="l">9: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip"><code lang="typescript">/// &lt;reference path="../../typings/XRM/Form/contact/Main/Information.d.ts" /&gt;
+<td class="snippet"><pre class="fssnip highlighted"><code lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/Form/contact/Main/Information.d.ts" /&gt;</span>
 
-module DG.Contact {
-    declare var Xrm: Xrm&lt;Form.contact.Main.Information&gt;;
+<span class="k">module</span> DG.Contact {
+    <span class="k">declare</span> <span class="k">var</span> Xrm: Xrm&lt;Form.contact.Main.Information&gt;;
 
-    export function onLoad() {
-        // Code here..
+    <span class="k">export</span> <span class="k">function</span> onLoad() {
+        <span class="c">// Code here..</span>
     }
 }
 </code></pre></td></tr></table>
