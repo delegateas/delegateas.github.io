@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/../img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>Namespaces - DAXIF# v.2.1.1.0</title>
+    <title>Workflow - DAXIF# v.2.1.1.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -33,289 +33,38 @@
             <div class="span9" id="main">
                 
 
-<h1>DAXIF# v.2.1.1.0</h1>
 
-  <h2>DG.Daxif Namespace</h2>
-  <div>
-      <table class="table table-bordered type-list">
+
+<h1>Workflow</h1>
+<div class="xmldoc">
+</div>
+
+<!-- Render nested types and modules, if there are any -->
+
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Type</td><td>Description</td></tr>
+      <tr><td>Function or value</td><td>Description</td></tr>
     </thead>
     <tbody>
-        <tr>
-          <td class="type-name">
-            <a href="dg-daxif-crmreleases.html">CrmReleases</a>
-          </td>
-          <td class="xmldoc">
- CRM Releases
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="dg-daxif-loglevel.html">LogLevel</a>
-          </td>
-          <td class="xmldoc">
- Defines the level of logging which should be done for specific message.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="dg-daxif-serialize.html">Serialize</a>
-          </td>
-          <td class="xmldoc">
- Represents what type of serialization should be done to encode/decode files
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="dg-daxif-serializetype.html">SerializeType</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="dg-daxif-webresourcetype.html">WebResourceType</a>
-          </td>
-          <td class="xmldoc">
- Matches CRM2011/2013 OptionSet values
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="dg-daxif-xrmprovider.html">XrmProvider</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '13', 13)" onmouseover="showTip(event, '13', 13)">
+            syncSolution (...)
+          </code>
+          <div class="tip" id="13">
+            <strong>Signature:</strong> wsdl:Uri -&gt; solution:string -&gt; dll:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ TODO:
+</br>
+        </td>
+      </tr>
     </tbody>
   </table>
-
-  </div>
-  <h2>DG.Daxif.Modules Namespace</h2>
-  <div>
-      <table class="table table-bordered module-list">
-    <thead>
-      <tr><td>Module</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td class="module-name">
-            <a href="dg-daxif-modules-data.html">Data</a>
-          </td>
-          <td class="xmldoc">
- Implements data manipulation functions.
-</br></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="dg-daxif-modules-diff.html">Diff</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="dg-daxif-modules-info.html">Info</a>
-          </td>
-          <td class="xmldoc">
- Implements functions to get information about the CRM
-</br></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="dg-daxif-modules-plugins.html">Plugins</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="dg-daxif-modules-serialization.html">Serialization</a>
-          </td>
-          <td class="xmldoc">
- Contains several functions to help the serialization process of data.
-</br></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="dg-daxif-modules-solution.html">Solution</a>
-          </td>
-          <td class="xmldoc">
- Implements functions which allows you to manipulate solutions
-</br></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="dg-daxif-modules-translations.html">Translations</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="dg-daxif-modules-webresources.html">WebResources</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="module-name">
-            <a href="dg-daxif-modules-workflow.html">Workflow</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-  <h2>DG.Daxif.Modules.TypeProvider Namespace</h2>
-  <div>
-      <table class="table table-bordered type-list">
-    <thead>
-      <tr><td>Type</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td class="type-name">
-            <a href="dg-daxif-modules-typeprovider-xrmprovider.html">XrmProvider</a>
-          </td>
-          <td class="xmldoc">
- Basic and simple/read-only F# xRM TypeProvider (F# 3.0)
-</br></td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
-  <h2>Microsoft.FSharp.ProvidedTypes Namespace</h2>
-  <div>
-      <table class="table table-bordered type-list">
-    <thead>
-      <tr><td>Type</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedassembly.html">ProvidedAssembly</a>
-          </td>
-          <td class="xmldoc">
- A provided generated assembly
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedconstructor.html">ProvidedConstructor</a>
-          </td>
-          <td class="xmldoc">
- Represents an erased provided constructor.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedevent.html">ProvidedEvent</a>
-          </td>
-          <td class="xmldoc">
- Represents an erased provided property.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedfield.html">ProvidedField</a>
-          </td>
-          <td class="xmldoc">
- Represents an erased provided field.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedliteralfield.html">ProvidedLiteralField</a>
-          </td>
-          <td class="xmldoc">
- Represents an erased provided field.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedmeasurebuilder.html">ProvidedMeasureBuilder</a>
-          </td>
-          <td class="xmldoc">
- Helps create erased provided unit-of-measure annotations.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedmethod.html">ProvidedMethod</a>
-          </td>
-          <td class="xmldoc"></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedparameter.html">ProvidedParameter</a>
-          </td>
-          <td class="xmldoc">
- Represents an erased provided parameter
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedproperty.html">ProvidedProperty</a>
-          </td>
-          <td class="xmldoc">
- Represents an erased provided property.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedstaticparameter.html">ProvidedStaticParameter</a>
-          </td>
-          <td class="xmldoc">
- Represents a provided static parameter.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedsymboltype.html">ProvidedSymbolType</a>
-          </td>
-          <td class="xmldoc">
- FSharp.Data addition: ProvidedSymbolType is used by AssemblyReplacer.fs
- Represents an array or other symbolic type involving a provided type as the argument.
- See the type provider spec for the methods that must be implemented.
- Note that the type provider specification does not require us to implement pointer-equality for provided types.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedtypebuilder.html">ProvidedTypeBuilder</a>
-          </td>
-          <td class="xmldoc">
- Provides symbolic provided types
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedtypedefinition.html">ProvidedTypeDefinition</a>
-          </td>
-          <td class="xmldoc">
- Represents a provided type definition.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-symbolkind.html">SymbolKind</a>
-          </td>
-          <td class="xmldoc">
- FSharp.Data addition: SymbolKind is used by AssemblyReplacer.fs
- Represents the type constructor in a provided symbol type.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-typeproviderfornamespaces.html">TypeProviderForNamespaces</a>
-          </td>
-          <td class="xmldoc">
- A base type providing default implementations of type provider functionality when all provided 
- types are of type ProvidedTypeDefinition.
-</br></td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
 
             </div>
             <div class="span3">
