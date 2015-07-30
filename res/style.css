@@ -89,7 +89,7 @@ pre {
 	word-wrap: inherit;
 }
 
-a, a:hover, a:visited
+a, a:visited
 {
     text-decoration: none;
     color: #f58025;
@@ -152,17 +152,11 @@ img.logo
 	float: left;
 }
 
-img.code
-{
-	margin: 10px 20px 20px 20px;
-}
-
 
 /* Format the heading - nicer spacing etc. */
 .masthead {
   background-color: #f58025;
   overflow: hidden;
-  margin-bottom: 2em;
 }
 
 .masthead ul.nav {
@@ -230,7 +224,6 @@ td.title, thead {
   font-size:12pt;
   color:#606060;
   margin-top:20px;
-  text-transform: none;
 }
 
 #menu li {
