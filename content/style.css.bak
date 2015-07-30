@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Gudea:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono|Open+Sans:400,600,700);
 
 /*-------------------------------------------------------------------------- 
   Formatting for F# code snippets 
@@ -80,136 +80,30 @@ table.pre td.lines {
 /*--------------------------------------------------------------------------*/
 
 body {
-  font-family: Gudea, serif;
+  font-family: 'Open Sans', serif;
   padding-top: 0px;
   padding-bottom: 40px;
 }
 
 pre {
-	word-wrap: inherit;
+    word-wrap: inherit;
 }
-
-a, a:hover, a:visited
-{
-    text-decoration: none;
-    color: #f58025;
-}
-
-a.hlink
-{
-	font-weight: bold;
-	line-height: 150%;
-	font-size: 32pt;
-	font-weight: 400;
-	text-decoration: none;
-	vertical-align: middle;
-	font-family: "Segoe UI Light", "Helvetica Neue", 'RobotoLight', "Segoe UI", "Segoe WP", sans-serif;
-}
-
-a.hlink:hover 
-{
-    color: white; 
-    background: #f58025
-}
-
-ul.projects
-{
-	list-style-type: none;
-	padding: 0;
-	margin-top: 20px;
-	margin-left: -20px;
-	text-align: center;
-	display: inline-block;
-}
-
-ul.projects li
-{
-	font-size: 12pt;
-	padding: 20px;
-	height: 6.4em;
-}
-
-ul.projects li + li
-{
-	border-top: thin dashed #f58025;
-}
-
-h1.headline
-{
-	text-align:center;
-	padding: 20px;
-	font-size: 40pt;
-	font-weight: 400;
-	border-bottom: thin solid black;
-}
-
-img.logo
-{
-	width: 100px; 
-	height: 100px;
-	margin-right: 10px;
-	display: block;
-	float: left;
-}
-
-img.code
-{
-	margin: 10px 20px 20px 20px;
-}
-
 
 /* Format the heading - nicer spacing etc. */
 .masthead {
-  background-color: #f58025;
   overflow: hidden;
-  margin-bottom: 2em;
 }
-
-.masthead ul.nav {
-  list-style-type: none;
-  margin-bottom: 0px;
-  margin-top: 1px;
-  float: right;
+.masthead ul, .masthead li {
+  margin-bottom:0px;
 }
-
 .masthead .nav li {
-  font-size:90%;
-  float: left;
-  margin-right: 20px;
-  margin-top: 11px;
+  margin-top: 15px;
+  font-size:110%;
 }
-
-.masthead .nav li a {
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  padding-left: 3px;
-  padding-right: 3px;
-  padding-bottom: 1px;
-  margin: -3px;
-  display: inline-block;
-  
-  color: #222299;
+.masthead h3 {
+  margin-bottom:5px;
+  font-size:170%;
 }
-
-.masthead .nav li a:hover {
-  background: #FF9540;
-}
-
-.credits {
-  margin-top: 10px;
-  margin-bottom: -25px;
-  color: #BBBBBB;
-  
-  text-align: center;
-  font-style: italic;
-  font-family: sans-serif;
-  font-size: 80%;
-}
-
-.credits a {
-  color: #777777;
-}
-
 hr {
   margin:0px 0px 20px 0px;
 }
@@ -230,7 +124,6 @@ td.title, thead {
   font-size:12pt;
   color:#606060;
   margin-top:20px;
-  text-transform: none;
 }
 
 #menu li {
@@ -238,12 +131,12 @@ td.title, thead {
 }
 
 /* Change font sizes for headings etc. */
-#main h1 { font-size: 28pt; margin:10px 0px 15px 0px; font-weight:400; }
+#main h1 { font-size: 26pt; margin:10px 0px 15px 0px; font-weight:400; }
 #main h2 { font-size: 20pt; margin:20px 0px 0px 0px; font-weight:400; }
-#main h3 { font-size: 14pt; margin:15px 0px 0px 0px; font-weight:400; }
-#main p  { font-size: 12pt; margin:5px 0px 15px 0px; }
-#main ul { font-size: 12pt; margin-top:10px; }
-#main li { font-size: 12pt; margin: 5px 0px 5px 0px; }
+#main h3 { font-size: 14pt; margin:15px 0px 0px 0px; font-weight:600; }
+#main p  { font-size: 11pt; margin:5px 0px 15px 0px; }
+#main ul { font-size: 11pt; margin-top:10px; }
+#main li { font-size: 11pt; margin: 5px 0px 5px 0px; }
 #main strong { font-weight:700; }
 
 /*-------------------------------------------------------------------------- 
@@ -265,6 +158,19 @@ td.title, thead {
   font-size:12pt;
   margin:10px 0px 0px 0px;
 }
+.github-link {
+  float:right;
+  text-decoration:none;
+}
+.github-link img {
+  border-style:none;
+  margin-left:10px;
+}
+.github-link .hover { display:none; }
+.github-link:hover .hover { display:block; }
+.github-link .normal { display: block; }
+.github-link:hover .normal { display: none; }
+
 /*-------------------------------------------------------------------------- 
   Additional formatting for the homepage 
 /*--------------------------------------------------------------------------*/
@@ -284,13 +190,4 @@ td.title, thead {
   border-style:none;
   color: #e0e0e0;
   margin-top:15px;
-}
-
-/* Hide snippets on the home page snippet & nicely format table */
-#hp-snippet td.lines {
-  display: none;
-}
-#hp-snippet .table {
-  width:80%;
-  margin-left:30px;
 }
