@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <link rel="shortcut icon" href="/Delegate.XrmDefinitelyTyped/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>Xrm Query
+    <title>XrmQuery
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM client-side coding."/>
@@ -32,9 +32,65 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="Xrm-Query" class="anchor" href="#Xrm-Query">Xrm Query</a></h1>
+<h1><a name="XrmQuery" class="anchor" href="#XrmQuery">XrmQuery</a></h1>
 
-<p><em>Description coming soon</em></p>
+<p>With XrmQuery you can get intellisense for creating your query to the CRM dynamics database!
+Simply add a reference to the declaration file <code>typings/XRM/dg.xrmquery.d.ts</code>, and be sure 
+to include the javascript code for XrmQuery on the page/form you want to use it on.</p>
+
+<p>A minified version of the necessary javascript code of XrmQuery can be <a href="[libs/dg.xrmquery.min.js]">found here</a>. 
+The code is also included in the NuGet package.</p>
+
+<p>With the javascript in place, you can write the following code with full intellisense on 
+the entity and all of its attributes and relationships! It also provides helper functions which 
+create the filter string for the query correctly based on the types given. XrmQuery provides intellisense
+and helper functions for all the options one can query with for <a href="[https://msdn.microsoft.com/en-us/library/gg309461.aspx]">OData on CRM</a>.</p>
+
+<p>Here is a small example where a complex filter is applied to a RetrieveMultiple on accounts:</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+<span class="l">15: </span>
+<span class="l">16: </span>
+<span class="l">17: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="typescript"><span class="c">/// &lt;reference path="../../typings/xrm/dg.xrmquery.d.ts" /&gt;</span>
+<span class="c">/// &lt;reference path="../../typings/xrm/entity/account.d.ts" /&gt;</span>
+
+XrmQuery.retrieveMultipleRecords(x <span class="o">=</span><span class="o">&gt;</span> x.Account)
+    .select(acc <span class="o">=</span><span class="o">&gt;</span> [acc.Name, acc.EMailAddress1])
+    .filter(acc <span class="o">=</span><span class="o">&gt;</span>
+        Filter.and(
+            Filter.or(
+                Filter.equals(acc.Address1_ShippingMethodCode.Value, 23),
+                Filter.greaterThan(acc.CreditLimit.Value, 1000)
+            ),
+            Filter.equals(acc.PrimaryContactId.Id, Filter.makeGuid(<span class="s">"0000-SOME-GUID"</span>))
+        ))
+    .execute(records <span class="o">=</span><span class="o">&gt;</span> {
+        <span class="c">// Success callback function for the accounts.</span>
+        console.log(records)
+    });
+</code></pre></td></tr></table>
+
+<p>The execute function also has the possibility to add a callback handler for errors and onComplete, 
+like the standard SDK.REST API. These have been made optional, since they aren't necessary for a
+succesful run of the function.</p>
+
+<p>Check out the generated declaration file at <code>typings/XRM/dg.xrmquery.d.ts</code> to see what can be 
+accomplished with XrmQuery!</p>
 
 
         </div>
@@ -58,6 +114,7 @@
             <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
             <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
             <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the REST API</a></li>
+            <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-usage.html">Using XrmQuery</a></li>
             <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
           </ul>
           
