@@ -47,7 +47,7 @@
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">solutionDiff</span><span class="o">:</span> 
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">solution</span><span class="o">:</span> 
     <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">source</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 3)" onmouseover="showTip(event, 'fs2', 3)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">target</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 4)" onmouseover="showTip(event, 'fs2', 4)" class="i">string</span> <span class="k">-&gt;</span>
     <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 5)" onmouseover="showTip(event, 'fs3', 5)" class="i">LogLevel</span> <span class="k">-&gt;</span>
     <span onmouseout="hideTip(event, 'fs4', 6)" onmouseover="showTip(event, 'fs4', 6)" class="i">unit</span></pre>
@@ -55,9 +55,9 @@
 </tr>
 </table>
 
-<div class="tip" id="fs1">val solutionDiff : exeLocation:string -&gt; source:string -&gt; target:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Diff.solutionDiff<br /><em><br /><br />&#160;TODO:</em></div>
+<div class="tip" id="fs1">val solution : exeLocation:string -&gt; source:string -&gt; target:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Diff.solution<br /><em><br /><br />&#160;TODO:</em></div>
 <div class="tip" id="fs2">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
-<div class="tip" id="fs3">type LogLevel =<br />&#160;&#160;|  None  =  0<br />&#160;&#160;|  Info  =  5<br />&#160;&#160;|  Warning  =  6<br />&#160;&#160;|  Error  =  4<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  File  =  31<br /><br />Full name: DG.Daxif.LogLevel</div>
+<div class="tip" id="fs3">type LogLevel =<br />&#160;&#160;|  None  =  0<br />&#160;&#160;|  Info  =  1<br />&#160;&#160;|  Warning  =  3<br />&#160;&#160;|  Error  =  7<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  Debug  =  31<br />&#160;&#160;|  File  =  63<br /><br />Full name: DG.Daxif.LogLevel</div>
 <div class="tip" id="fs4">type unit = Unit<br /><br />Full name: Microsoft.FSharp.Core.unit</div>
 
             </div>
@@ -67,7 +67,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.0.0.1</li>
+                    <li class="nav-header">DAXIF# v.2.1.1.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
@@ -78,6 +78,7 @@
 
                     <li class="nav-header">Setup Instructions</li>
                     <li><a href="/Delegate.Daxif/setup_fsharp.html">F# Setup</a></li>
+                    <li><a href="/Delegate.Daxif/plugin-reg-setup.html">Plugin Synchronization Setup</a></li>
 
                     <li class="nav-header">Example Scripts</li>
                         <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.html">EnsureAssemblies</a></li>
@@ -94,6 +95,7 @@
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateContext.html">SolutionUpdateContext</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateTsContext.html">SolutionUpdateTsContext</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WebResourcesSyncDev.html">WebResourcesSyncDev</a></li>
+                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WorkflowSyncDev.html">WorkflowSyncDev</a></li>
 
                     <li class="nav-header">Documentation</li>
                     <li><a href="/Delegate.Daxif/reference/index.html">API Reference</a></li>
