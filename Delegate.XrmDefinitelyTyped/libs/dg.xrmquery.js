@@ -1,17 +1,17 @@
 /// <reference path="base.d.ts" />
 var Filter;
 (function (Filter) {
-    function equals(val1, val2) { return XQC.Comp(val1, "eq", val2); }
+    function equals(v1, v2) { return XQC.Comp(v1, "eq", v2); }
     Filter.equals = equals;
-    function notEquals(val1, val2) { return XQC.Comp(val1, "ne", val2); }
+    function notEquals(v1, v2) { return XQC.Comp(v1, "ne", v2); }
     Filter.notEquals = notEquals;
-    function greaterThan(val1, val2) { return XQC.Comp(val1, "gt", val2); }
+    function greaterThan(v1, v2) { return XQC.Comp(v1, "gt", v2); }
     Filter.greaterThan = greaterThan;
-    function greaterThanOrEqual(val1, val2) { return XQC.Comp(val1, "ge", val2); }
+    function greaterThanOrEqual(v1, v2) { return XQC.Comp(v1, "ge", v2); }
     Filter.greaterThanOrEqual = greaterThanOrEqual;
-    function lessThan(val1, val2) { return XQC.Comp(val1, "lt", val2); }
+    function lessThan(v1, v2) { return XQC.Comp(v1, "lt", v2); }
     Filter.lessThan = lessThan;
-    function lessThanOrEqual(val1, val2) { return XQC.Comp(val1, "le", val2); }
+    function lessThanOrEqual(v1, v2) { return XQC.Comp(v1, "le", v2); }
     Filter.lessThanOrEqual = lessThanOrEqual;
     function and(f1, f2) { return XQC.BiFilter(f1, "and", f2); }
     Filter.and = and;
@@ -140,18 +140,6 @@ var XQC;
     /**
      * @internal
      */
-    function ensure(input, name, checkSingle) {
-        if (!checkSingle && input.length == undefined) {
-            throw "Function in '" + name + "' needs to return an array of attributes";
-        }
-        else if (checkSingle && input.__str == undefined) {
-            throw "Function in '" + name + "' needs to return a single attribute";
-        }
-        return input;
-    }
-    /**
-     * @internal
-     */
     var NoOp = function () { };
     /**
      * Contains information about a Retrieve query
@@ -170,16 +158,19 @@ var XQC;
             this.id = id;
         }
         RetrieveRecord.prototype.select = function (vars) {
-            this.selects = ensure(taggedExec(vars), "select");
+            this.selects = this.selects.concat(taggedExec(vars));
             return this;
         };
-        RetrieveRecord.prototype.expand = function (vars) {
-            this.expands = ensure(taggedExec(vars), "expand");
+        RetrieveRecord.prototype.expand = function (exps, vars) {
+            var expName = taggedExec(exps).toString();
+            this.expands.push(expName);
+            if (vars)
+                this.selects = this.selects.concat(taggedExec(vars).map(function (a) { return expName + "." + a; }));
             return this;
         };
         RetrieveRecord.prototype.execute = function (successCallback, errorCallback) {
             var eCb = (errorCallback) ? errorCallback : function () { };
-            SDK.REST.retrieveRecord(this.id, this.logicalName, (this.selects) ? this.selects.join(",") : null, (this.expands) ? this.expands.join(",") : null, successCallback, errorCallback ? errorCallback : NoOp);
+            SDK.REST.retrieveRecord(this.id, this.logicalName, (this.selects.length > 0) ? this.selects.join(",") : null, (this.expands.length > 0) ? this.expands.join(",") : null, successCallback, errorCallback ? errorCallback : NoOp);
         };
         return RetrieveRecord;
     })();
@@ -189,6 +180,14 @@ var XQC;
      */
     var RetrieveMultipleRecords = (function () {
         function RetrieveMultipleRecords(entityPicker) {
+            /**
+             * @internal
+             */
+            this.selects = [];
+            /**
+             * @internal
+             */
+            this.expands = [];
             /**
              * @internal
              */
@@ -204,11 +203,14 @@ var XQC;
             this.logicalName = taggedExec(entityPicker).toString();
         }
         RetrieveMultipleRecords.prototype.select = function (vars) {
-            this.selects = ensure(taggedExec(vars), "select");
+            this.selects = this.selects.concat(taggedExec(vars));
             return this;
         };
-        RetrieveMultipleRecords.prototype.expand = function (vars) {
-            this.expands = ensure(taggedExec(vars), "expand");
+        RetrieveMultipleRecords.prototype.expand = function (exps, vars) {
+            var expName = taggedExec(exps).toString();
+            this.expands.push(expName);
+            if (vars)
+                this.selects = this.selects.concat(taggedExec(vars).map(function (a) { return expName + "." + a; }));
             return this;
         };
         RetrieveMultipleRecords.prototype.filter = function (filter) {
@@ -219,14 +221,14 @@ var XQC;
          * @internal
          */
         RetrieveMultipleRecords.prototype.order = function (vars, by) {
-            this.ordering.push(ensure(taggedExec(vars), "order" + by, true) + " " + by.toLowerCase());
+            this.ordering.push(taggedExec(vars) + " " + by);
             return this;
         };
         RetrieveMultipleRecords.prototype.orderAsc = function (vars) {
-            return this.order(vars, "Asc");
+            return this.order(vars, "asc");
         };
         RetrieveMultipleRecords.prototype.orderDesc = function (vars) {
-            return this.order(vars, "Desc");
+            return this.order(vars, "desc");
         };
         RetrieveMultipleRecords.prototype.skip = function (amount) {
             this.skipAmount = amount;
@@ -244,10 +246,10 @@ var XQC;
          */
         RetrieveMultipleRecords.prototype.getOptions = function () {
             var options = [];
-            if (this.selects) {
+            if (this.selects.length > 0) {
                 options.push("$select=" + this.selects.join(","));
             }
-            if (this.expands) {
+            if (this.expands.length > 0) {
                 options.push("$expand=" + this.expands.join(","));
             }
             if (this.filters) {
