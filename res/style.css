@@ -147,9 +147,17 @@ h1.headline
 {
   text-align:center;
   padding: 20px;
+  border-bottom: thin solid #f58025;
+
+  color: #f58025; 
+  font-weight: bold;
+  line-height: 150%;
   font-size: 40pt;
   font-weight: 400;
-  border-bottom: thin solid black;
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: "Segoe UI Light", "Helvetica Neue", 'RobotoLight', "Segoe UI", "Segoe WP", sans-serif;
+
 }
 
 img.logo
