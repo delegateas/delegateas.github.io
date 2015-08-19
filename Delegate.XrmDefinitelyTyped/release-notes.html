@@ -34,6 +34,17 @@
           
 <h1><a name="Release-Notes" class="anchor" href="#Release-Notes">Release Notes</a></h1>
 
+<h3><a name="1-5-0-August-19-2015" class="anchor" href="#1-5-0-August-19-2015">1.5.0 - August 19 2015</a></h3>
+
+<ul>
+<li>Now generates declaration files for the newest TypeScript version</li>
+<li>New argument <code>tsversion</code> to specify which TypeScript version it should generate files for (newest version is default)</li>
+<li>All word characters are now allowed in declaration names</li>
+<li>Added check for empty string declarations, outputting <code>_Unknown</code> instead</li>
+<li>Eliminated duplicates of global enums and removed the obsolete file <code>optionsets.d.ts</code></li>
+<li>Fixed escape of string literals that contained single/double quotes</li>
+</ul>
+
 <h3><a name="1-4-4-August-11-2015" class="anchor" href="#1-4-4-August-11-2015">1.4.4 - August 11 2015</a></h3>
 
 <ul>
