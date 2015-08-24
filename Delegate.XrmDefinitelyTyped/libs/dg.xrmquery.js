@@ -62,9 +62,10 @@ var XQC;
     function getVal(v) {
         if (v == null)
             return "null";
-        if (typeof (v) === "string") {
+        if (typeof (v) === "string")
             return "'" + v + "'";
-        }
+        if (v instanceof Date)
+            return "DateTime'" + v.format('yyyy-MM-ddTHH:mm:ss') + "'";
         return v.toString();
     }
     /**
