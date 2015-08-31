@@ -64,7 +64,7 @@ var XQC;
             return "null";
         if (typeof (v) === "string")
             return "'" + v + "'";
-        if (v instanceof Date)
+        if (Object.prototype.toString.call(v) === "[object Date]")
             return "DateTime'" + v.format('yyyy-MM-ddTHH:mm:ss') + "'";
         return v.toString();
     }
