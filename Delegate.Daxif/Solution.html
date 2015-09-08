@@ -131,6 +131,29 @@ to the solution with the unique name <code>solution</code>.</p>
 </tr>
 </table>
 
+<p>Enables (<code>enable</code> true) or disables (<code>disable</code> false) the workflows related
+to the solution with the unique name <code>solution</code>.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs11', 42)" onmouseover="showTip(event, 'fs11', 42)" class="i">workflow</span><span class="o">:</span> 
+    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 43)" onmouseover="showTip(event, 'fs2', 43)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 44)" onmouseover="showTip(event, 'fs3', 44)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">enable</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs10', 45)" onmouseover="showTip(event, 'fs10', 45)" class="i">bool</span> <span class="k">-&gt;</span>
+    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 46)" onmouseover="showTip(event, 'fs4', 46)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 47)" onmouseover="showTip(event, 'fs3', 47)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 48)" onmouseover="showTip(event, 'fs3', 48)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 49)" onmouseover="showTip(event, 'fs3', 49)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 50)" onmouseover="showTip(event, 'fs5', 50)" class="i">LogLevel</span> <span class="k">-&gt;</span>
+    <span onmouseout="hideTip(event, 'fs6', 51)" onmouseover="showTip(event, 'fs6', 51)" class="i">unit</span></pre>
+</td>
+</tr>
+</table>
+
 <p>Exports the given <code>solution</code> as a .zip file to the wanted 
 <code>location</code> on your local disk.</p>
 
@@ -144,12 +167,12 @@ to the solution with the unique name <code>solution</code>.</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs11', 42)" onmouseover="showTip(event, 'fs11', 42)" class="i">export</span><span class="o">:</span> 
-    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 43)" onmouseover="showTip(event, 'fs2', 43)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 44)" onmouseover="showTip(event, 'fs3', 44)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 45)" onmouseover="showTip(event, 'fs3', 45)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">managed</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs10', 46)" onmouseover="showTip(event, 'fs10', 46)" class="i">bool</span> <span class="k">-&gt;</span> 
-    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 47)" onmouseover="showTip(event, 'fs4', 47)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 48)" onmouseover="showTip(event, 'fs3', 48)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 49)" onmouseover="showTip(event, 'fs3', 49)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 50)" onmouseover="showTip(event, 'fs3', 50)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 51)" onmouseover="showTip(event, 'fs5', 51)" class="i">LogLevel</span> <span class="k">-&gt;</span>
-    <span onmouseout="hideTip(event, 'fs6', 52)" onmouseover="showTip(event, 'fs6', 52)" class="i">unit</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs12', 52)" onmouseover="showTip(event, 'fs12', 52)" class="i">export</span><span class="o">:</span> 
+    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 53)" onmouseover="showTip(event, 'fs2', 53)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 54)" onmouseover="showTip(event, 'fs3', 54)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 55)" onmouseover="showTip(event, 'fs3', 55)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">managed</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs10', 56)" onmouseover="showTip(event, 'fs10', 56)" class="i">bool</span> <span class="k">-&gt;</span> 
+    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 57)" onmouseover="showTip(event, 'fs4', 57)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 58)" onmouseover="showTip(event, 'fs3', 58)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 59)" onmouseover="showTip(event, 'fs3', 59)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 60)" onmouseover="showTip(event, 'fs3', 60)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 61)" onmouseover="showTip(event, 'fs5', 61)" class="i">LogLevel</span> <span class="k">-&gt;</span>
+    <span onmouseout="hideTip(event, 'fs6', 62)" onmouseover="showTip(event, 'fs6', 62)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -168,12 +191,12 @@ to the solution with the unique name <code>solution</code>.</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs12', 53)" onmouseover="showTip(event, 'fs12', 53)" class="i">import</span> <span class="o">:</span> 
-    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 54)" onmouseover="showTip(event, 'fs2', 54)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 55)" onmouseover="showTip(event, 'fs3', 55)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 56)" onmouseover="showTip(event, 'fs3', 56)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">managed</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs10', 57)" onmouseover="showTip(event, 'fs10', 57)" class="i">bool</span> <span class="k">-&gt;</span>  
-    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 58)" onmouseover="showTip(event, 'fs4', 58)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 59)" onmouseover="showTip(event, 'fs3', 59)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 60)" onmouseover="showTip(event, 'fs3', 60)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 61)" onmouseover="showTip(event, 'fs3', 61)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 62)" onmouseover="showTip(event, 'fs5', 62)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
-    <span onmouseout="hideTip(event, 'fs6', 63)" onmouseover="showTip(event, 'fs6', 63)" class="i">unit</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs13', 63)" onmouseover="showTip(event, 'fs13', 63)" class="i">import</span> <span class="o">:</span> 
+    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 64)" onmouseover="showTip(event, 'fs2', 64)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 65)" onmouseover="showTip(event, 'fs3', 65)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 66)" onmouseover="showTip(event, 'fs3', 66)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">managed</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs10', 67)" onmouseover="showTip(event, 'fs10', 67)" class="i">bool</span> <span class="k">-&gt;</span>  
+    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 68)" onmouseover="showTip(event, 'fs4', 68)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 69)" onmouseover="showTip(event, 'fs3', 69)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 70)" onmouseover="showTip(event, 'fs3', 70)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 71)" onmouseover="showTip(event, 'fs3', 71)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 72)" onmouseover="showTip(event, 'fs5', 72)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
+    <span onmouseout="hideTip(event, 'fs6', 73)" onmouseover="showTip(event, 'fs6', 73)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -192,12 +215,12 @@ to the solution with the unique name <code>solution</code>.</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs13', 64)" onmouseover="showTip(event, 'fs13', 64)" class="i">extract</span> <span class="o">:</span>
-    <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 65)" onmouseover="showTip(event, 'fs3', 65)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 66)" onmouseover="showTip(event, 'fs3', 66)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">customizations</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 67)" onmouseover="showTip(event, 'fs3', 67)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">map</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 68)" onmouseover="showTip(event, 'fs3', 68)" class="i">string</span> <span class="k">-&gt;</span> 
-    <span class="i">project</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 69)" onmouseover="showTip(event, 'fs3', 69)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 70)" onmouseover="showTip(event, 'fs5', 70)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
-    <span onmouseout="hideTip(event, 'fs6', 71)" onmouseover="showTip(event, 'fs6', 71)" class="i">unit</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs14', 74)" onmouseover="showTip(event, 'fs14', 74)" class="i">extract</span> <span class="o">:</span>
+    <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 75)" onmouseover="showTip(event, 'fs3', 75)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 76)" onmouseover="showTip(event, 'fs3', 76)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">customizations</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 77)" onmouseover="showTip(event, 'fs3', 77)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">map</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 78)" onmouseover="showTip(event, 'fs3', 78)" class="i">string</span> <span class="k">-&gt;</span> 
+    <span class="i">project</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 79)" onmouseover="showTip(event, 'fs3', 79)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 80)" onmouseover="showTip(event, 'fs5', 80)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
+    <span onmouseout="hideTip(event, 'fs6', 81)" onmouseover="showTip(event, 'fs6', 81)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -215,11 +238,11 @@ to the solution with the unique name <code>solution</code>.</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs14', 72)" onmouseover="showTip(event, 'fs14', 72)" class="i">pack</span> <span class="o">:</span>
-    <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 73)" onmouseover="showTip(event, 'fs3', 73)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 74)" onmouseover="showTip(event, 'fs3', 74)" class="i">string</span> <span class="k">-&gt;</span> 
-    <span class="i">customizations</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 75)" onmouseover="showTip(event, 'fs3', 75)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">map</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 76)" onmouseover="showTip(event, 'fs3', 76)" class="i">string</span> <span class="k">-&gt;</span> 
-    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 77)" onmouseover="showTip(event, 'fs5', 77)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
-    <span onmouseout="hideTip(event, 'fs6', 78)" onmouseover="showTip(event, 'fs6', 78)" class="i">unit</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs15', 82)" onmouseover="showTip(event, 'fs15', 82)" class="i">pack</span> <span class="o">:</span>
+    <span class="i">solution</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 83)" onmouseover="showTip(event, 'fs3', 83)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 84)" onmouseover="showTip(event, 'fs3', 84)" class="i">string</span> <span class="k">-&gt;</span> 
+    <span class="i">customizations</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 85)" onmouseover="showTip(event, 'fs3', 85)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">map</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 86)" onmouseover="showTip(event, 'fs3', 86)" class="i">string</span> <span class="k">-&gt;</span> 
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 87)" onmouseover="showTip(event, 'fs5', 87)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
+    <span onmouseout="hideTip(event, 'fs6', 88)" onmouseover="showTip(event, 'fs6', 88)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -239,14 +262,14 @@ to the solution with the unique name <code>solution</code>.</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs15', 79)" onmouseover="showTip(event, 'fs15', 79)" class="i">updateServiceContext</span> <span class="o">:</span> 
-    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 80)" onmouseover="showTip(event, 'fs2', 80)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 81)" onmouseover="showTip(event, 'fs3', 81)" class="i">string</span> <span class="k">-&gt;</span>   
-    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 82)" onmouseover="showTip(event, 'fs4', 82)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 83)" onmouseover="showTip(event, 'fs3', 83)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 84)" onmouseover="showTip(event, 'fs3', 84)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 85)" onmouseover="showTip(event, 'fs3', 85)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 86)" onmouseover="showTip(event, 'fs3', 86)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">lcid</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs16', 87)" onmouseover="showTip(event, 'fs16', 87)" class="i">int</span> <span onmouseout="hideTip(event, 'fs17', 88)" onmouseover="showTip(event, 'fs17', 88)" class="i">option</span> <span class="k">-&gt;</span>
-    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 89)" onmouseover="showTip(event, 'fs5', 89)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
-    <span onmouseout="hideTip(event, 'fs6', 90)" onmouseover="showTip(event, 'fs6', 90)" class="i">unit</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs16', 89)" onmouseover="showTip(event, 'fs16', 89)" class="i">updateServiceContext</span> <span class="o">:</span> 
+    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 90)" onmouseover="showTip(event, 'fs2', 90)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 91)" onmouseover="showTip(event, 'fs3', 91)" class="i">string</span> <span class="k">-&gt;</span>   
+    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 92)" onmouseover="showTip(event, 'fs4', 92)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 93)" onmouseover="showTip(event, 'fs3', 93)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 94)" onmouseover="showTip(event, 'fs3', 94)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 95)" onmouseover="showTip(event, 'fs3', 95)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 96)" onmouseover="showTip(event, 'fs3', 96)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">lcid</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs17', 97)" onmouseover="showTip(event, 'fs17', 97)" class="i">int</span> <span onmouseout="hideTip(event, 'fs18', 98)" onmouseover="showTip(event, 'fs18', 98)" class="i">option</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 99)" onmouseover="showTip(event, 'fs5', 99)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
+    <span onmouseout="hideTip(event, 'fs6', 100)" onmouseover="showTip(event, 'fs6', 100)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -265,13 +288,13 @@ to the solution with the unique name <code>solution</code>.</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs18', 91)" onmouseover="showTip(event, 'fs18', 91)" class="i">updateTypeScriptContext</span> <span class="o">:</span> 
-    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 92)" onmouseover="showTip(event, 'fs2', 92)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 93)" onmouseover="showTip(event, 'fs3', 93)" class="i">string</span> <span class="k">-&gt;</span>   
-    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 94)" onmouseover="showTip(event, 'fs4', 94)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 95)" onmouseover="showTip(event, 'fs3', 95)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 96)" onmouseover="showTip(event, 'fs3', 96)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 97)" onmouseover="showTip(event, 'fs3', 97)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 98)" onmouseover="showTip(event, 'fs3', 98)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 99)" onmouseover="showTip(event, 'fs5', 99)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
-    <span onmouseout="hideTip(event, 'fs6', 100)" onmouseover="showTip(event, 'fs6', 100)" class="i">unit</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs19', 101)" onmouseover="showTip(event, 'fs19', 101)" class="i">updateTypeScriptContext</span> <span class="o">:</span> 
+    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 102)" onmouseover="showTip(event, 'fs2', 102)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 103)" onmouseover="showTip(event, 'fs3', 103)" class="i">string</span> <span class="k">-&gt;</span>   
+    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 104)" onmouseover="showTip(event, 'fs4', 104)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 105)" onmouseover="showTip(event, 'fs3', 105)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 106)" onmouseover="showTip(event, 'fs3', 106)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 107)" onmouseover="showTip(event, 'fs3', 107)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 108)" onmouseover="showTip(event, 'fs3', 108)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 109)" onmouseover="showTip(event, 'fs5', 109)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
+    <span onmouseout="hideTip(event, 'fs6', 110)" onmouseover="showTip(event, 'fs6', 110)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -286,14 +309,15 @@ to the solution with the unique name <code>solution</code>.</p>
 <div class="tip" id="fs8">val delete : wsdl:Uri -&gt; solution:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.delete<br /><em><br /><br />&#160;Deletes a solution with the given parameters.</em></div>
 <div class="tip" id="fs9">val pluginSteps : wsdl:Uri -&gt; solution:string -&gt; enable:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.pluginSteps<br /><em><br /><br />&#160;Enables or disables plug-in steps for a solution with the given parameters.</em></div>
 <div class="tip" id="fs10">type bool = Boolean<br /><br />Full name: Microsoft.FSharp.Core.bool</div>
-<div class="tip" id="fs11">val export : wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; managed:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.export<br /><em><br /><br />&#160;Exports the solution as a zip file to the given location on disk.</em></div>
-<div class="tip" id="fs12">val import : wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; managed:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.import<br /><em><br /><br />&#160;Imports the solution from the .zip file found at location.</em></div>
-<div class="tip" id="fs13">val extract : solution:string -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; project:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.extract<br /><em><br /><br />&#160;Extracts the solution to the given location.</em></div>
-<div class="tip" id="fs14">val pack : solution:string -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.pack<br /><em><br /><br />&#160;Packs the solution to the given location.</em></div>
-<div class="tip" id="fs15">val updateServiceContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; lcid:int option -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateServiceContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
-<div class="tip" id="fs16">Multiple items<br />val int : value:&#39;T -&gt; int (requires member op_Explicit)<br /><br />Full name: Microsoft.FSharp.Core.Operators.int<br /><br />--------------------<br />type int = int32<br /><br />Full name: Microsoft.FSharp.Core.int<br /><br />--------------------<br />type int&lt;&#39;Measure&gt; = int<br /><br />Full name: Microsoft.FSharp.Core.int&lt;_&gt;</div>
-<div class="tip" id="fs17">type &#39;T option = Option&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Core.option&lt;_&gt;</div>
-<div class="tip" id="fs18">val updateTypeScriptContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateTypeScriptContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
+<div class="tip" id="fs11">val workflow : wsdl:Uri -&gt; solution:string -&gt; enable:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.workflow<br /><em><br /><br />&#160;Enables or disables workflows for a solution with the given parameters.</em></div>
+<div class="tip" id="fs12">val export : wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; managed:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.export<br /><em><br /><br />&#160;Exports the solution as a zip file to the given location on disk.</em></div>
+<div class="tip" id="fs13">val import : wsdl:Uri -&gt; solution:string -&gt; location:string -&gt; managed:bool -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.import<br /><em><br /><br />&#160;Imports the solution from the .zip file found at location.</em></div>
+<div class="tip" id="fs14">val extract : solution:string -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; project:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.extract<br /><em><br /><br />&#160;Extracts the solution to the given location.</em></div>
+<div class="tip" id="fs15">val pack : solution:string -&gt; location:string -&gt; customizations:string -&gt; map:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.pack<br /><em><br /><br />&#160;Packs the solution to the given location.</em></div>
+<div class="tip" id="fs16">val updateServiceContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; lcid:int option -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateServiceContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
+<div class="tip" id="fs17">Multiple items<br />val int : value:&#39;T -&gt; int (requires member op_Explicit)<br /><br />Full name: Microsoft.FSharp.Core.Operators.int<br /><br />--------------------<br />type int = int32<br /><br />Full name: Microsoft.FSharp.Core.int<br /><br />--------------------<br />type int&lt;&#39;Measure&gt; = int<br /><br />Full name: Microsoft.FSharp.Core.int&lt;_&gt;</div>
+<div class="tip" id="fs18">type &#39;T option = Option&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Core.option&lt;_&gt;</div>
+<div class="tip" id="fs19">val updateTypeScriptContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateTypeScriptContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
 
             </div>
             <div class="span3">
@@ -302,7 +326,7 @@ to the solution with the unique name <code>solution</code>.</p>
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.1.1.2</li>
+                    <li class="nav-header">DAXIF# v.2.1.1.5</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
@@ -321,6 +345,7 @@ to the solution with the unique name <code>solution</code>.</p>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.Config.html">Config</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.PluginsSyncDev.html">PluginsSyncDev</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionCreateDev.html">SolutionCreateDev</a></li>
+                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionDiff.html">SolutionDiff</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExportDev.html">SolutionExportDev</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExportTest.html">SolutionExportTest</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExtract.html">SolutionExtract</a></li>
