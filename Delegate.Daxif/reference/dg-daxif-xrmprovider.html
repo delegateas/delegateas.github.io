@@ -4,14 +4,9 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/../img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>SolutionUpdateContext
-</title>
+    <title>XrmProvider - DAXIF# v.2.1.1.6</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="
-        A framework for automating installation of all kinds of xRM systems.
-        By using simple F# script commands/files one can save a lot of time
-        and effort during this process.
-        ">
+    <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
 
     <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
@@ -37,83 +32,12 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>SolutionUpdateContext</h1>
 
-<h2>Libraries</h2>
 
-<p>Config information</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="prep">#load</span> <span class="s">@&quot;</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">.</span><span class="s">XrmSolution</span><span class="s">.</span><span class="s">Config</span><span class="s">.</span><span class="s">fsx</span><span class="s">&quot;</span>
-
-<span class="k">module</span> <span class="i">cfg</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">XrmOrg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">XrmSolution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Config</span></pre>
-</td>
-</tr>
-</table>
-
-<p>Open libraries for use</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="i">Daxif</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="i">Modules</span></pre>
-</td>
-</tr>
-</table>
-
-<h2>DAXIF# operations</h2>
-
-<p>Generate System Context</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
-<span class="l">7: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="i">csu</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 9)" onmouseover="showTip(event, 'fs8', 9)" class="i">tools</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">\</span><span class="s">MS</span><span class="s">\</span><span class="s">CrmSvcUtil</span><span class="s">\</span><span class="s">CrmSvcUtil</span><span class="s">.</span><span class="s">exe</span><span class="s">&quot;</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs9', 10)" onmouseover="showTip(event, 'fs9', 10)" class="i">ctx</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 11)" onmouseover="showTip(event, 'fs10', 11)" class="i">rootFolder</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">.</span><span class="s">.</span><span class="s">\</span><span class="s">BusinessDomain</span><span class="s">&quot;</span>
-
-<span onmouseout="hideTip(event, 'fs11', 12)" onmouseover="showTip(event, 'fs11', 12)" class="i">Solution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 13)" onmouseover="showTip(event, 'fs12', 13)" class="i">updateServiceContext</span>
-    <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 14)" onmouseover="showTip(event, 'fs13', 14)" class="i">wsdlDev&#39;</span> <span onmouseout="hideTip(event, 'fs9', 15)" onmouseover="showTip(event, 'fs9', 15)" class="i">ctx</span>
-        <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 16)" onmouseover="showTip(event, 'fs14', 16)" class="i">authType</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 17)" onmouseover="showTip(event, 'fs15', 17)" class="i">usrDev</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 18)" onmouseover="showTip(event, 'fs16', 18)" class="i">pwdDev</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 19)" onmouseover="showTip(event, 'fs17', 19)" class="i">domainDev</span>
-            <span onmouseout="hideTip(event, 'fs7', 20)" onmouseover="showTip(event, 'fs7', 20)" class="i">csu</span> <span onmouseout="hideTip(event, 'fs18', 21)" onmouseover="showTip(event, 'fs18', 21)" class="i">None</span> <span class="c">(* or: &quot;1030 |&gt; Some&quot; for Danish labels *)</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs19', 22)" onmouseover="showTip(event, 'fs19', 22)" class="i">log</span></pre>
-</td>
-</tr>
-</table>
-
-<div class="tip" id="fs1">namespace DG</div>
-<div class="tip" id="fs2">namespace DG.XrmOrg</div>
-<div class="tip" id="fs3">namespace DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs4">module Config<br /><br />from DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs5">namespace DG.Daxif</div>
-<div class="tip" id="fs6">namespace DG.Daxif.Modules</div>
-<div class="tip" id="fs7">val csu : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionUpdateContext.csu</div>
-<div class="tip" id="fs8">val tools : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.tools</div>
-<div class="tip" id="fs9">val ctx : string<br /><br />Full name: DG.XrmOrg.XrmSolution.SolutionUpdateContext.ctx</div>
-<div class="tip" id="fs10">val rootFolder : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.rootFolder</div>
-<div class="tip" id="fs11">module Solution<br /><br />from DG.Daxif.Modules</div>
-<div class="tip" id="fs12">val updateServiceContext : wsdl:System.Uri -&gt; location:string -&gt; ap:Microsoft.Xrm.Sdk.Client.AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; lcid:int option -&gt; logLevel:Daxif.LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateServiceContext</div>
-<div class="tip" id="fs13">val wsdlDev&#39; : System.Uri<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.wsdlDev&#39;</div>
-<div class="tip" id="fs14">val authType : Microsoft.Xrm.Sdk.Client.AuthenticationProviderType<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.authType</div>
-<div class="tip" id="fs15">val usrDev : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.usrDev</div>
-<div class="tip" id="fs16">val pwdDev : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.pwdDev</div>
-<div class="tip" id="fs17">val domainDev : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.domainDev</div>
-<div class="tip" id="fs18">union case Option.None: Option&lt;&#39;T&gt;</div>
-<div class="tip" id="fs19">val log : Daxif.LogLevel<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.log</div>
+<h1>XrmProvider</h1>
+<div class="xmldoc">
+</div>
 
             </div>
             <div class="span3">
