@@ -31,6 +31,25 @@
       <div class="row">
         <div class="span9" id="main">
           
+<h3><a name="1-5-0-1-Sep-30-2015" class="anchor" href="#1-5-0-1-Sep-30-2015">1.5.0.1 - Sep 30 2015</a></h3>
+
+<ul>
+<li>Added AssemblyInfo to the library (no file version)</li>
+</ul>
+
+<h3><a name="1-5-0-0-July-30-2015" class="anchor" href="#1-5-0-0-July-30-2015">1.5.0.0 - July 30 2015</a></h3>
+
+<ul>
+<li>Major code refactoring (less code, more awesomeness)</li>
+<li>Fixed critical security permission issue (unmanaged code could be invoked in sandbox)</li>
+<li>Fixed issue with No code optimization in Release mode</li>
+<li>Fixed issue with Unit tests. See Delegate.Sandbox.Tests project</li>
+<li>Added support for nested sandboxes. Ex: <code>sandbox{ return sandbox{ return 42 } }</code></li>
+<li>Thanks to nested sandboxes, it's now possible to ensure that a library is 100%
+I/O side-effects safe if <code>FSharp.Compiler.Services</code> are used in combination with
+Post-Build F# script (will be made available in v.2.0.0.0)</li>
+</ul>
+
 <h3><a name="1-0-0-0-July-30-2015" class="anchor" href="#1-0-0-0-July-30-2015">1.0.0.0 - July 30 2015</a></h3>
 
 <ul>
