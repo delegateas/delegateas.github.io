@@ -92,7 +92,7 @@ pre {
 a, a:visited
 {
     text-decoration: none;
-    color: #f58025;
+    color: #373F4C;
 }
 
 a.hlink
@@ -109,7 +109,7 @@ a.hlink
 a.hlink:hover 
 {
     color: white; 
-    background: #f58025
+    background: #373F4C
 }
 
 ul.projects
@@ -134,7 +134,7 @@ ul.projects li
 
 ul.projects li
 {
-  border-top: thin dashed #f58025;
+  border-top: thin dashed #373F4C;
 }
 
 
@@ -147,9 +147,9 @@ h1.headline
 {
   text-align:center;
   padding: 20px;
-  border-bottom: thin solid #f58025;
+  border-bottom: thin solid #373F4C;
 
-  color: #f58025; 
+  color: #373F4C; 
   font-weight: bold;
   line-height: 150%;
   font-size: 40pt;
@@ -171,7 +171,6 @@ img.logo
 
 /* Format the heading - nicer spacing etc. */
 .masthead {
-  background-color: #f58025;
   overflow: hidden;
 }
 
