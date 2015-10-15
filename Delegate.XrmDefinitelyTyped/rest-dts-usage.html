@@ -7,7 +7,7 @@
     <title>The REST API
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM client-side coding."/>
+    <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM dynamics client-side coding."/>
     <meta name="author" content="Delegate A/S"/>
 
     <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
@@ -34,13 +34,28 @@
           
 <h1><a name="The-REST-API" class="anchor" href="#The-REST-API">The REST API</a></h1>
 
-<p>To work with the REST API you will need to reference the declaration file for it 
-which can be found at <code>typings/XRM/rest.d.ts</code>.</p>
+<p>To work with the REST API you will need to reference the declaration file for 
+it, which can be found at <code>typings/XRM/rest.d.ts</code>.</p>
 
 <p>To work on further with specific entities you should reference these as well.
 They are located in the <code>typings/XRM/Entity/</code> folder:</p>
 
-<table class="pre"><tr><td><pre lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/rest.d.ts" /&gt;</span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+<span class="l">12: </span>
+<span class="l">13: </span>
+<span class="l">14: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/rest.d.ts" /&gt;</span>
 <span class="c">/// &lt;reference path="../../typings/XRM/Entity/account.d.ts" /&gt;</span>
 
 SDK.REST.retrieveRecord(<span class="s">"&lt;SomeGuid&gt;"</span>,
@@ -54,14 +69,14 @@ SDK.REST.retrieveRecord(<span class="s">"&lt;SomeGuid&gt;"</span>,
 
     }
 );
-</pre></td></tr></table>
+</code></pre></td></tr></table>
 
 <p>From the given entity type in the function call, the TypeScript compiler can
 figure out that it is an Account entity result that should be expected in the
 success callback handler.</p>
 
-<p>By knowing this, it can provide full intellisense for the retrieved account record
-and all of its attributes and relations!</p>
+<p>By knowing this, it can provide full intellisense for the retrieved account 
+record and all of its attributes and relations!</p>
 
 <img src="img/intellisense-example.png" class="code" />
 
@@ -72,23 +87,22 @@ and all of its attributes and relations!</p>
           <a href="/Delegate.XrmDefinitelyTyped/index.html">
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-            <li class="nav-header">XrmDefinitelyTyped</li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
+            <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+                <li class="nav-header">XrmDefinitelyTyped v.1.5.5</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
+                <li class="divider"></li>
+                <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
 
-            <li class="divider"></li>
-
-            <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
-            
-            <li class="nav-header">Getting Started</li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the Rest API</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
-          </ul>
+                <li class="nav-header">Getting Started</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-usage.html">Using XrmQuery</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the REST API</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
+            </ul>
           
           <div class="credits">
             <hr />
@@ -97,5 +111,6 @@ and all of its attributes and relations!</p>
         </div>
       </div>
     </div>
+    <a href="http://github.com/delegateas/Delegate.XrmDefinitelyTyped"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
   </body>
   </html>

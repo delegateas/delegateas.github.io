@@ -7,7 +7,7 @@
     <title>Usage of XrmDefinitelyTyped
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM client-side coding."/>
+    <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM dynamics client-side coding."/>
     <meta name="author" content="Delegate A/S"/>
 
     <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
@@ -35,41 +35,48 @@
 <h1><a name="Usage-of-XrmDefinitelyTyped" class="anchor" href="#Usage-of-XrmDefinitelyTyped">Usage of XrmDefinitelyTyped</a></h1>
 
 <p>The executable can be used from a command prompt, but also directly from code, 
-if you want the generation of the declaration files to be a part of your workflow.</p>
+if you want the generation of the declaration files to be a part of your 
+workflow.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> The executable must be able to find the assemblies it depends on.
+This can be solved by having them placed in the same folder.
+It also needs either <code>FSharp.Core.dll</code> or F# installed on the computer.</p>
+</blockquote>
 
 <h2><a name="Command-prompt" class="anchor" href="#Command-prompt">Command prompt</a></h2>
 
 <p>The arguments are similar to those given to the <a href="https://msdn.microsoft.com/en-us/library/gg327844.aspx">CrmSvcUtil</a> tool. 
 Example usage from a command prompt:</p>
 
-<table class="pre"><tr><td><pre lang="bash">XrmDefinitelyTyped.exe /url:http://&lt;serverName&gt;/&lt;organizationName&gt;/XRMServices/2011/Organization.svc  
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip"><code lang="bash">XrmDefinitelyTyped.exe /url:http://&lt;serverName&gt;/&lt;organizationName&gt;/XRMServices/2011/Organization.svc  
         /out:WebResources\typings\XRM /username:&lt;username&gt; /password:&lt;password&gt; /domain:&lt;domainName&gt;
-</pre></td></tr></table>
+</code></pre></td></tr></table>
 
 <h2><a name="Simple-Generation-Example-in-F" class="anchor" href="#Simple-Generation-Example-in-F">Simple Generation Example in F#</a></h2>
 
-<p>It can also be run through code by referencing the executable and calling the <code>GetContext</code> function.</p>
+<p>It can also be run through code by referencing the executable and calling the 
+<code>GetContext</code> function.</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
 <span class="l">4: </span>
 <span class="l">5: </span>
 <span class="l">6: </span>
 <span class="l">7: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Microsoft</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Xrm</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">Sdk</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Client</span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Microsoft</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Xrm</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">Sdk</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Client</span>
 <span class="k">open</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">XrmDefinitelyTyped</span>
 
 <span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="t">XrmDefinitelyTyped</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="f">GetContext</span>(
   <span class="s">&quot;http://&lt;serverName&gt;/&lt;organizationName&gt;/XRMServices/2011/Organization.svc&quot;</span>, 
   <span class="s">&quot;username&quot;</span>, <span class="s">&quot;password&quot;</span>, 
   <span class="i">out</span> <span class="o">=</span> <span class="s">@&quot;WebResources\typings\XRM&quot;</span>)
-</pre>
-</td>
+</code></pre></td>
 </tr>
 </table>
 
@@ -79,8 +86,8 @@ Example usage from a command prompt:</p>
 <div class="tip" id="fs4">namespace Microsoft.Xrm.Sdk.Client</div>
 <div class="tip" id="fs5">namespace DG</div>
 <div class="tip" id="fs6">namespace DG.XrmDefinitelyTyped</div>
-<div class="tip" id="fs7">type XrmDefinitelyTyped =<br />&#160;&#160;private new : unit -&gt; XrmDefinitelyTyped<br />&#160;&#160;static member GetContext : xrmAuth:XrmAuthentication * out:string option -&gt; unit<br />&#160;&#160;static member GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string -&gt; unit<br /><br />Full name: DG.XrmDefinitelyTyped.XrmDefinitelyTyped</div>
-<div class="tip" id="fs8">static member XrmDefinitelyTyped.GetContext : xrmAuth:XrmAuthentication * out:string option -&gt; unit<br />static member XrmDefinitelyTyped.GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string -&gt; unit</div>
+<div class="tip" id="fs7">type XrmDefinitelyTyped =<br />&#160;&#160;private new : unit -&gt; XrmDefinitelyTyped<br />&#160;&#160;static member GetContext : xrmAuth:XrmAuthentication * out:string option * tsv:(int * int) option -&gt; unit<br />&#160;&#160;static member GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string * ?tsv:(int * int) -&gt; unit<br /><br />Full name: DG.XrmDefinitelyTyped.XrmDefinitelyTyped</div>
+<div class="tip" id="fs8">static member XrmDefinitelyTyped.GetContext : xrmAuth:GeneratorLogic.XrmAuthentication * out:string option * tsv:(int * int) option -&gt; unit<br />static member XrmDefinitelyTyped.GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string * ?tsv:(int * int) -&gt; unit</div>
 
         </div>
         <div class="span3">
@@ -88,23 +95,22 @@ Example usage from a command prompt:</p>
           <a href="/Delegate.XrmDefinitelyTyped/index.html">
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-            <li class="nav-header">XrmDefinitelyTyped</li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
+            <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+                <li class="nav-header">XrmDefinitelyTyped v.1.5.5</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
+                <li class="divider"></li>
+                <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
 
-            <li class="divider"></li>
-
-            <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
-            
-            <li class="nav-header">Getting Started</li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the Rest API</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
-          </ul>
+                <li class="nav-header">Getting Started</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-usage.html">Using XrmQuery</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the REST API</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
+            </ul>
           
           <div class="credits">
             <hr />
@@ -113,5 +119,6 @@ Example usage from a command prompt:</p>
         </div>
       </div>
     </div>
+    <a href="http://github.com/delegateas/Delegate.XrmDefinitelyTyped"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
   </body>
   </html>

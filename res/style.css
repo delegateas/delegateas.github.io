@@ -28,18 +28,18 @@ span.fsi { color:#808080; }
 
 /* omitted */
 span.omitted { 
-	background:#3c4e52;
+  background:#3c4e52;
   border-radius:5px;
-	color:#808080;
-	padding:0px 0px 1px 0px;
+  color:#808080;
+  padding:0px 0px 1px 0px;
 }
 /* tool tip */
 div.tip {
-	background:#475b5f;
+  background:#475b5f;
   border-radius:4px;
   font:11pt 'Droid Sans', arial, sans-serif;
-	padding:6px 8px 6px 8px;
-	display:none;
+  padding:6px 8px 6px 8px;
+  display:none;
   color:#d1d1d1;
 }
 table.pre pre {
@@ -86,76 +86,91 @@ body {
 }
 
 pre {
-	word-wrap: inherit;
+  word-wrap: inherit;
 }
 
 a, a:visited
 {
     text-decoration: none;
-    color: #f58025;
+    color: #373F4C;
 }
 
 a.hlink
 {
-	font-weight: bold;
-	line-height: 150%;
-	font-size: 32pt;
-	font-weight: 400;
-	text-decoration: none;
-	vertical-align: middle;
-	font-family: "Segoe UI Light", "Helvetica Neue", 'RobotoLight', "Segoe UI", "Segoe WP", sans-serif;
+  font-weight: bold;
+  line-height: 150%;
+  font-size: 32pt;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: "Segoe UI Light", "Helvetica Neue", 'RobotoLight', "Segoe UI", "Segoe WP", sans-serif;
 }
 
 a.hlink:hover 
 {
     color: white; 
-    background: #f58025
+    background: #373F4C
 }
 
 ul.projects
 {
-	list-style-type: none;
-	padding: 0;
-	margin-top: 20px;
-	margin-left: -20px;
-	text-align: center;
-	display: inline-block;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+  margin-left: -20px;
+  text-align: center;
+  display: inline-block;
+  columns:2; 
+  -webkit-columns: 2; 
+  -moz-columns:2
 }
 
 ul.projects li
 {
-	font-size: 12pt;
-	padding: 20px;
-	height: 6.4em;
+  font-size: 12pt;
+  padding: 20px;
+  height: 6.4em;
 }
 
-ul.projects li + li
+ul.projects li
 {
-	border-top: thin dashed #f58025;
+  border-top: thin dashed #373F4C;
+}
+
+
+ul.projects li:nth-child(1),
+ul.projects li:nth-child(4) {
+  border-top: none;
 }
 
 h1.headline
 {
-	text-align:center;
-	padding: 20px;
-	font-size: 40pt;
-	font-weight: 400;
-	border-bottom: thin solid black;
+  text-align:center;
+  padding: 20px;
+  border-bottom: thin solid #373F4C;
+
+  color: #373F4C; 
+  font-weight: bold;
+  line-height: 150%;
+  font-size: 40pt;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: "Segoe UI Light", "Helvetica Neue", 'RobotoLight', "Segoe UI", "Segoe WP", sans-serif;
+
 }
 
 img.logo
 {
-	width: 100px; 
-	height: 100px;
-	margin-right: 10px;
-	display: block;
-	float: left;
+  width: 100px; 
+  height: 100px;
+  margin-right: 10px;
+  display: block;
+  float: left;
 }
-
 
 /* Format the heading - nicer spacing etc. */
 .masthead {
-  background-color: #f58025;
   overflow: hidden;
 }
 

@@ -7,7 +7,7 @@
     <title>Xrm Object Model
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM client-side coding."/>
+    <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM dynamics client-side coding."/>
     <meta name="author" content="Delegate A/S"/>
 
     <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
@@ -34,48 +34,85 @@
           
 <h1><a name="Xrm-Object-Model" class="anchor" href="#Xrm-Object-Model">Xrm Object Model</a></h1>
 
-<p>The <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> can be accessed from web resources in your solution.
-To start using the declaration files, one can drag in a reference to <code>base.d.ts</code> 
-which is located in the <code>typings/XRM/</code> folder. 
+<p>The <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> can be accessed from web resources in your 
+solution. To start using the declaration files, one can drag in a reference to 
+<code>base.d.ts</code> which is located in the root folder, <code>typings/XRM/</code>. 
 This contains the base description of the API.</p>
 
 <p>The Xrm object model also allows access to entity specific attributes 
-and controls when it is used on a entity-specific page (such as a form).</p>
+and controls when it is used on a entity-specific page (such as a form). 
+The following section will show an example of this usage on a specific
+Contact entity form.</p>
 
-<p>The following section will show an example of this usage on an Contact entity form.</p>
+<h2><a name="Specific-Contact-Form-Example" class="anchor" href="#Specific-Contact-Form-Example">Specific Contact Form Example</a></h2>
 
-<h2><a name="Contact-Form-Example" class="anchor" href="#Contact-Form-Example">Contact Form Example</a></h2>
+<p>First off you need to reference the declaration file which matches the form 
+you want to add some client-side code to. These declaration files can be found 
+at <code>typings/XRM/Form/&lt;EntityType&gt;/&lt;FormType&gt;/&lt;FormName&gt;.d.ts</code>.</p>
 
-<p>First off one needs to reference the "Contact Page" declaration file. This can 
-be found in the <code>typings/Xrm/IPage/</code> folder. By simply adding this, you get
-access to the entire Xrm object model API for the contact entity on your form page!</p>
+<p>In this example, we want to add code to the standard Contact form called 
+'Information', which is of the 'Main' form type. This can be found at 
+<code>typings/XRM/Form/contact/Main/Information.d.ts</code>. Simply by adding this, 
+you get access to the entire Xrm object model API for the current form page!</p>
 
-<p>Below is an example of the initial setup for your code file. We just need to tell
-the compiler what page we are currently on, which is done by casting the 
-<code>Xrm.Page</code> to the wanted <code>IPage.Contact</code> interface:</p>
+<p>We just need to tell the compiler what page we are currently on 
+(<code>Form.contact.Main.Information</code>), which can be done in two ways:</p>
 
-<table class="pre"><tr><td><pre lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/IPage/contact.d.ts" /&gt;</span>
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="typescript"><span class="c">// Either declare the Xrm variable to be of the wanted type</span>
+<span class="k">declare</span> <span class="k">var</span> Xrm: Xrm&lt;Form.contact.Main.Information&gt;;
+
+<span class="c">// .. or just cast the page itself in a new variable</span>
+<span class="k">var</span> Page <span class="o">=</span> &lt;Form.contact.Main.Information&gt; Xrm.Page;
+</code></pre></td></tr></table>
+
+<p>Below is an example of an initial setup for your code file.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
+<span class="l">2: </span>
+<span class="l">3: </span>
+<span class="l">4: </span>
+<span class="l">5: </span>
+<span class="l">6: </span>
+<span class="l">7: </span>
+<span class="l">8: </span>
+<span class="l">9: </span>
+</pre></td>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/Form/contact/Main/Information.d.ts" /&gt;</span>
 
 <span class="k">module</span> DG.Contact {
-    <span class="k">var</span> Page <span class="o">=</span> &lt;IPage.Contact&gt; Xrm.Page;
+    <span class="k">declare</span> <span class="k">var</span> Xrm: Xrm&lt;Form.contact.Main.Information&gt;;
 
     <span class="k">export</span> <span class="k">function</span> onLoad() {
         <span class="c">// Code here..</span>
     }
 }
-</pre></td></tr></table>
+</code></pre></td></tr></table>
 
 <blockquote>
-  <p>Note when using modules, you need export any functions you want to call outside of it.
-In this case the <code>onLoad</code> function needs to be used by CRM, and therefore needs to be exported.</p>
+  <p>Note when using modules, you need to export all functions you want to call 
+outside of it. In this case the <code>onLoad()</code> function needs to be used by CRM, 
+and therefore needs to be exported.</p>
 </blockquote>
 
-<p>In your desired IDE, you will now get intellisense for the contact form:</p>
+<p>In your desired IDE, you will now get intellisense for that specific 
+contact form, with all of its attributes, controls, tabs and sections:</p>
 
-<img src="img/attribute-intellisense.gif" class="code" />
+<img src="img/control-intellisense.gif" class="code" />
 
-<p>Each attribute and control on the form will also have the correct type, which gives
-you type safety on the values.</p>
+<p>Each attribute and control on the form will have the correct type, which 
+gives you type safety on the following values and functions!</p>
+
+<p>In case an invalid string is entered as an argument to one of the 
+string-specific functions, it will return an empty interface with no
+functionality. This makes it easy to see if a string has been entered 
+incorrectly, or if you are trying to access an element that is not present 
+on the form.</p>
 
 
         </div>
@@ -84,23 +121,22 @@ you type safety on the values.</p>
           <a href="/Delegate.XrmDefinitelyTyped/index.html">
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-            <li class="nav-header">XrmDefinitelyTyped</li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
+            <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+                <li class="nav-header">XrmDefinitelyTyped v.1.5.5</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
+                <li class="divider"></li>
+                <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
 
-            <li class="divider"></li>
-
-            <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
-            
-            <li class="nav-header">Getting Started</li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the Rest API</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
-          </ul>
+                <li class="nav-header">Getting Started</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-usage.html">Using XrmQuery</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the REST API</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
+            </ul>
           
           <div class="credits">
             <hr />
@@ -109,5 +145,6 @@ you type safety on the values.</p>
         </div>
       </div>
     </div>
+    <a href="http://github.com/delegateas/Delegate.XrmDefinitelyTyped"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
   </body>
   </html>

@@ -7,7 +7,7 @@
     <title>XrmDefinitelyTyped
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM client-side coding."/>
+    <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM dynamics client-side coding."/>
     <meta name="author" content="Delegate A/S"/>
 
     <script src="https://code.jquery.com/jquery-1.8.0.js"></script>
@@ -38,7 +38,10 @@
   <div class="span1"></div>
   <div class="span6">
     <div class="well well-small" id="nuget">
-      The XrmDefinitelyTyped library can be <a href="https://nuget.org/packages/Delegate.XrmDefinitelyTyped">installed from NuGet</a>:
+      The XrmDefinitelyTyped executable can be 
+      <a href="https://nuget.org/packages/Delegate.XrmDefinitelyTyped">
+        installed from NuGet
+      </a>:
       <pre>PM> Install-Package Delegate.XrmDefinitelyTyped</pre>
     </div>
   </div>
@@ -47,38 +50,49 @@
 
 <h2><a name="What-is-it" class="anchor" href="#What-is-it">What is it?</a></h2>
 
-<p>XrmDefinitelyTyped generates <a href="http://www.typescriptlang.org/">TypeScript</a> declaration files (<code>*.d.ts</code>) based on <em>your</em> Microsoft CRM/xRM solution.</p>
+<p>XrmDefinitelyTyped generates <a href="http://www.typescriptlang.org/">TypeScript</a> 
+declaration files (<code>*.d.ts</code>) based on <em>your</em> Microsoft CRM/xRM solution.</p>
 
 <p>It is the TypeScript equivalent of <a href="https://msdn.microsoft.com/en-us/library/gg327844.aspx">CrmSvcUtil</a>, but instead of 
 generating early-bound .NET classes for server-side code, it generates 
-TypeScript classes and APIs for client-side code.</p>
+TypeScript interfaces for all your client-side coding.</p>
 
 <p>It generates data-specific declaration files for:</p>
 
 <ul>
 <li>Entity types and attributes</li>
 <li>Global and entity-specific option sets</li>
-<li>The <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> for client-side programming of forms and custom pages.</li>
+<li>The <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> for client-side programming of forms and custom 
+pages</li>
 <li>The standard <a href="https://msdn.microsoft.com/en-us/library/gg334427.aspx#BKMK_SDKREST">SDK.REST.js</a> API for querying CRM via <a href="http://www.odata.org/documentation/odata-version-2-0/uri-conventions/">OData</a>.</li>
+<li>The standard <a href="https://msdn.microsoft.com/en-us/library/gg594428.aspx">SDK.MetaData.js</a> API for querying the metadata of 
+CRM.</li>
+<li>The query API <a href="xrmquery-usage.html">XrmQuery</a>, which uses the generated metadata to help
+make type-safe queries to CRM.</li>
 </ul>
 
-<p>Both the <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> and the <a href="https://msdn.microsoft.com/en-us/library/gg334427.aspx#BKMK_SDKREST">SDK.REST.js</a> API incorporate the produced 
-entity types and attributes.
+<p>Both the <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> and the <a href="https://msdn.microsoft.com/en-us/library/gg334427.aspx#BKMK_SDKREST">SDK.REST.js</a> API incorporate 
+the produced entity types and attributes.
 This further improves your coding efficiency, by only allowing valid
-data strings to be entered into the APIs, as well as providing entity and attribute types everywhere.</p>
+data strings to be entered into the APIs, as well as providing entity and 
+attribute types everywhere.</p>
 
-<p>All this makes it possible to <strong>catch bugs at compile-time</strong> in your IDE (instead of at runtime on the CRM server), 
-as well as providing <strong>full intellisense</strong> for the APIs and entities, which greatly enhances the coding experience!</p>
+<p>All this makes it possible to <strong>catch bugs at compile-time</strong> in your IDE 
+(instead of at runtime on the CRM server), as well as providing 
+<strong>full intellisense</strong> for the APIs and entities, which greatly enhances 
+the coding experience!</p>
 
 <h2><a name="Getting-Started" class="anchor" href="#Getting-Started">Getting Started</a></h2>
 
 <p>Check out the how to <a href="tool-usage.html">generate the declaration files</a>.</p>
 
-<p>Then depending on what you need to do, see how the different parts work in your code:</p>
+<p>Then depending on what you need to do, see how the different parts work in your 
+code:</p>
 
 <ul>
 <li><a href="xrm-dts-usage.html">Xrm object model</a></li>
-<li><a href="rest-dts-usage.html">Rest API</a></li>
+<li><a href="xrmquery-usage.html">XrmQuery</a></li>
+<li><a href="rest-dts-usage.html">REST API</a></li>
 <li><a href="os-dts-usage.html">Option sets</a></li>
 </ul>
 
@@ -89,23 +103,22 @@ as well as providing <strong>full intellisense</strong> for the APIs and entitie
           <a href="/Delegate.XrmDefinitelyTyped/index.html">
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
-          <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-            <li class="nav-header">XrmDefinitelyTyped</li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
+            <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
+                <li class="nav-header">XrmDefinitelyTyped v.1.5.5</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
+                <li class="divider"></li>
+                <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
 
-            <li class="divider"></li>
-
-            <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
-            
-            <li class="nav-header">Getting Started</li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the Rest API</a></li>
-            <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
-          </ul>
+                <li class="nav-header">Getting Started</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-usage.html">Using XrmQuery</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the REST API</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
+            </ul>
           
           <div class="credits">
             <hr />
@@ -114,5 +127,6 @@ as well as providing <strong>full intellisense</strong> for the APIs and entitie
         </div>
       </div>
     </div>
+    <a href="http://github.com/delegateas/Delegate.XrmDefinitelyTyped"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
   </body>
   </html>
