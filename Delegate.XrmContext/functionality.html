@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <link rel="shortcut icon" href="/Delegate.XrmContext/img/favicon.png" />
 
-    <title>Functionality
+    <title>Functionality compared to CrmSvcUtil
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="description" content="Tool to generate TypeScript declaration files for MS CRM dynamics client-side coding."/>
@@ -32,7 +32,101 @@
       <div class="row">
         <div class="span9" id="main">
           
-<h1><a name="Functionality" class="anchor" href="#Functionality">Functionality</a></h1>
+<h1><a name="Functionality-compared-to-CrmSvcUtil" class="anchor" href="#Functionality-compared-to-CrmSvcUtil">Functionality compared to CrmSvcUtil</a></h1>
+
+<p>List of functionality that differentiates XrmContext from CrmSvcUtil.</p>
+
+<h2><a name="Generated-code-takes-up-less-disk-space" class="anchor" href="#Generated-code-takes-up-less-disk-space">Generated code takes up less disk space</a></h2>
+
+<p><strong>CrmSvcUtil</strong> generates all types with their full namespace declaration, and has a lot of repeated code
+chunks. This usually leads to the generated code files being quite large, and this can cause issues
+when trying to upload it to a CRM system that has a limit on how big assemblies are allowed.</p>
+
+<p>With <strong>XrmContext</strong> the full namespace declarations for types has been removed by just having them imported 
+at the top of the generated code instead.
+Besides this, all of the repeated code chunks have been moved into a new parent class named <code>ExtendedEntity</code>, such
+that the generated entity code takes up much less space.</p>
+
+<h2><a name="Entity-and-solution-based-filtering" class="anchor" href="#Entity-and-solution-based-filtering">Entity- and solution-based filtering</a></h2>
+
+<p>For CrmSvcUtil it was possible to write an extension that could <a href="http://erikpool.blogspot.dk/2011/03/filtering-generated-entities-with.html">filter the generated code</a>.</p>
+
+<p>In XrmContext, this feature comes out-of-the-box for entities. When the code is run, you can specify which
+entities it should include with the <code>entities</code> argument (see <a href="tool-usage.html">Usage</a>).</p>
+
+<p>To further help, you also have the option to automatically include all entities contained in given solutions 
+with the <code>solutions</code> argument.</p>
+
+<h2><a name="Option-sets-as-enums" class="anchor" href="#Option-sets-as-enums">Option sets as enums</a></h2>
+
+<p>All necessary option sets are now generated as enumerations. For CrmSvcUtil this could also be achieved,
+but it had done with <a href="https://msdn.microsoft.com/en-us/library/00533626-2587-4bb2-ad82-98560024794e#Generate_Enums">an extension to the program</a>.</p>
+
+<h2><a name="Difference-in-attribute-types" class="anchor" href="#Difference-in-attribute-types">Difference in attribute types</a></h2>
+
+<p>To ensure coding correctness, as well as making it more straight-forward to make sensible code, 
+some abstractions have been made to the types of certain attributes in CRM.</p>
+
+<ul>
+<li><strong>OptionSetValue</strong>: is now the corresponding <strong>enum</strong> for the option set (nullable)</li>
+<li><strong>Money</strong>: is now the money value itself (<code>decimal</code>)</li>
+<li><strong>EntityCollection</strong>: is now simplified to an <code>IEnumerable&lt;Entity&gt;</code></li>
+</ul>
+
+<p>Especially the abstraction made with option sets by XrmContext makes for more robust and readable code.
+Below is a comparison of how option set values are handled in plugin/workflow code with different 
+levels of abstraction.</p>
+
+<p>First off is the standard way to do it with out-of-the-box <strong>CrmSvcUtil</strong>, which just uses 
+the <code>OptionSetValue</code> class with integers (and hopefully comments) to indicate which 
+option set value is desired:</p>
+
+<img src="img/osv-c1.png" class="code" />
+
+<p>With the added enumerations from the <strong>CrmSvcUtil</strong> extension, it becomes a bit more sensible code:</p>
+
+<img src="img/osv-c2.png" class="code" />
+
+<p>The problem here is that the <code>OptionSetValue</code> encapsulates the actual integer value, 
+which means we have no way of knowing what values that attribute is actually allowed to take.</p>
+
+<p>This is where <strong>XrmContext</strong> performs abstractions behind-the-scenes, such that
+we can arrive at a much more optimal way of writing it:</p>
+
+<img src="img/osv-c3.png" class="code" />
+
+<p>When it is typed like this, you <strong><em>can only</em></strong> write correct option set values, and thus the code is way more 
+robust and easier to read. And you even get intellisense for the necessary enum when you arrive at that 
+part of the code.</p>
+
+<blockquote>
+  <p>Note: Of course you <em>can</em> bypass the enum restriction by doing some clever casting, 
+but if you get to that point, you may want to reconsider what you are trying to code.</p>
+</blockquote>
+
+<h2><a name="Additional-helper-functions" class="anchor" href="#Additional-helper-functions">Additional helper functions</a></h2>
+
+<p>Additional functions have been made that makes it easier to code correctly and
+adds shortcut-methods for often-used functionality:</p>
+
+<ul>
+<li>Load a property directly: <code>&lt;context&gt;.Load(..)</code></li>
+<li>Load an enumeration (i.e. related entities): <code>&lt;context&gt;.LoadEnumeration(..)</code></li>
+<li>Set state of entity: <code>&lt;context&gt;.SetState(..)</code> <em>or</em> <code>&lt;entity&gt;.SetState(..)</code></li>
+</ul>
+
+<h2><a name="Deprecation-prefix" class="anchor" href="#Deprecation-prefix">Deprecation prefix</a></h2>
+
+<p>Simple deprecation of attributes/fields by giving them a prefix to their Display Name in CRM. 
+This prefix is specified with the <code>deprecatedprefix</code> argument to this program.</p>
+
+<p>Attributes found that have the given prefix will be marked with an <a href="https://msdn.microsoft.com/en-us/library/22kk2b44(v=vs.90).aspx">Obsolete flag</a>,
+which makes warnings appear in your build when such an attribute is actively used in your code.</p>
+
+<h2><a name="DebuggerDisplay-attribute" class="anchor" href="#DebuggerDisplay-attribute">DebuggerDisplay attribute</a></h2>
+
+<p>Added <a href="https://msdn.microsoft.com/en-us/library/x810d419.aspx">DebuggerDisplay</a> attributes to each entity that shows a more detailed
+description of the object, instead of just "Entity".</p>
 
 
         </div>
@@ -42,7 +136,7 @@
             <img src="/Delegate.XrmContext/img/delegate_xrmcontext_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmContext v.1.0.0</li>
+                <li class="nav-header">XrmContext v.1.0.1</li>
                 <li><a href="/Delegate.XrmContext/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmContext">Get Executable via NuGet</a></li>
