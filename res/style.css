@@ -139,7 +139,7 @@ ul.projects li
 
 
 ul.projects li:nth-child(1),
-ul.projects li:nth-child(4) {
+ul.projects li:nth-child(5) {
   border-top: none;
 }
 
