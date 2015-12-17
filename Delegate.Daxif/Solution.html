@@ -274,7 +274,38 @@ to the solution with the unique name <code>solution</code>.</p>
 </tr>
 </table>
 
-<p>Updates/creates TypeScript context files, to the given 
+<p>Updates/creates the custom service context files, at the given 
+<code>location</code> with the XrmContext provided by Delegate A/S.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs19', 101)" onmouseover="showTip(event, 'fs19', 101)" class="i">updateCustomServiceContext</span> <span class="o">:</span> 
+    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 102)" onmouseover="showTip(event, 'fs2', 102)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 103)" onmouseover="showTip(event, 'fs3', 103)" class="i">string</span> <span class="k">-&gt;</span>   
+    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 104)" onmouseover="showTip(event, 'fs4', 104)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 105)" onmouseover="showTip(event, 'fs3', 105)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 106)" onmouseover="showTip(event, 'fs3', 106)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 107)" onmouseover="showTip(event, 'fs3', 107)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 108)" onmouseover="showTip(event, 'fs3', 108)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 109)" onmouseover="showTip(event, 'fs5', 109)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
+    <span class="i">solutions</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs3', 110)" onmouseover="showTip(event, 'fs3', 110)" class="i">string</span> <span onmouseout="hideTip(event, 'fs20', 111)" onmouseover="showTip(event, 'fs20', 111)" class="i">list</span> <span class="k">-&gt;</span>
+    <span class="i">entities</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs3', 112)" onmouseover="showTip(event, 'fs3', 112)" class="i">string</span> <span onmouseout="hideTip(event, 'fs20', 113)" onmouseover="showTip(event, 'fs20', 113)" class="i">list</span> <span class="k">-&gt;</span>
+    <span class="i">extraArgs</span><span class="o">:</span> (<span onmouseout="hideTip(event, 'fs3', 114)" onmouseover="showTip(event, 'fs3', 114)" class="i">string</span> <span class="o">*</span> <span onmouseout="hideTip(event, 'fs3', 115)" onmouseover="showTip(event, 'fs3', 115)" class="i">string</span>) <span onmouseout="hideTip(event, 'fs20', 116)" onmouseover="showTip(event, 'fs20', 116)" class="i">list</span> <span class="k">-&gt;</span>
+    <span onmouseout="hideTip(event, 'fs6', 117)" onmouseover="showTip(event, 'fs6', 117)" class="i">unit</span></pre>
+</td>
+</tr>
+</table>
+
+<p>Updates/creates TypeScript context files, at the given 
 <code>location</code> with the XrmDefinitelyTyped.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
@@ -288,13 +319,13 @@ to the solution with the unique name <code>solution</code>.</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs19', 101)" onmouseover="showTip(event, 'fs19', 101)" class="i">updateTypeScriptContext</span> <span class="o">:</span> 
-    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 102)" onmouseover="showTip(event, 'fs2', 102)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 103)" onmouseover="showTip(event, 'fs3', 103)" class="i">string</span> <span class="k">-&gt;</span>   
-    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 104)" onmouseover="showTip(event, 'fs4', 104)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 105)" onmouseover="showTip(event, 'fs3', 105)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 106)" onmouseover="showTip(event, 'fs3', 106)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 107)" onmouseover="showTip(event, 'fs3', 107)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 108)" onmouseover="showTip(event, 'fs3', 108)" class="i">string</span> <span class="k">-&gt;</span>
-    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 109)" onmouseover="showTip(event, 'fs5', 109)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
-    <span onmouseout="hideTip(event, 'fs6', 110)" onmouseover="showTip(event, 'fs6', 110)" class="i">unit</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs21', 118)" onmouseover="showTip(event, 'fs21', 118)" class="i">updateTypeScriptContext</span> <span class="o">:</span> 
+    <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 119)" onmouseover="showTip(event, 'fs2', 119)" class="i">Uri</span> <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 120)" onmouseover="showTip(event, 'fs3', 120)" class="i">string</span> <span class="k">-&gt;</span>   
+    <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 121)" onmouseover="showTip(event, 'fs4', 121)" class="i">AuthenticationProviderType</span> <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 122)" onmouseover="showTip(event, 'fs3', 122)" class="i">string</span> <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 123)" onmouseover="showTip(event, 'fs3', 123)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 124)" onmouseover="showTip(event, 'fs3', 124)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 125)" onmouseover="showTip(event, 'fs3', 125)" class="i">string</span> <span class="k">-&gt;</span>
+    <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 126)" onmouseover="showTip(event, 'fs5', 126)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
+    <span onmouseout="hideTip(event, 'fs6', 127)" onmouseover="showTip(event, 'fs6', 127)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -317,7 +348,9 @@ to the solution with the unique name <code>solution</code>.</p>
 <div class="tip" id="fs16">val updateServiceContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; lcid:int option -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateServiceContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
 <div class="tip" id="fs17">Multiple items<br />val int : value:&#39;T -&gt; int (requires member op_Explicit)<br /><br />Full name: Microsoft.FSharp.Core.Operators.int<br /><br />--------------------<br />type int = int32<br /><br />Full name: Microsoft.FSharp.Core.int<br /><br />--------------------<br />type int&lt;&#39;Measure&gt; = int<br /><br />Full name: Microsoft.FSharp.Core.int&lt;_&gt;</div>
 <div class="tip" id="fs18">type &#39;T option = Option&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Core.option&lt;_&gt;</div>
-<div class="tip" id="fs19">val updateTypeScriptContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateTypeScriptContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
+<div class="tip" id="fs19">val updateCustomServiceContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; solutions:string list -&gt; entities:string list -&gt; extraArgs:(string * string) list -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateCustomServiceContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
+<div class="tip" id="fs20">type &#39;T list = List&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.list&lt;_&gt;</div>
+<div class="tip" id="fs21">val updateTypeScriptContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateTypeScriptContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
 
             </div>
             <div class="span3">
@@ -326,7 +359,7 @@ to the solution with the unique name <code>solution</code>.</p>
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.1.2.2</li>
+                    <li class="nav-header">DAXIF# v.2.1.2.3</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
@@ -353,6 +386,7 @@ to the solution with the unique name <code>solution</code>.</p>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionImportTest.html">SolutionImportTest</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionPack.html">SolutionPack</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateContext.html">SolutionUpdateContext</a></li>
+                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateCustomContext.html">SolutionUpdateCustomContext</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateTsContext.html">SolutionUpdateTsContext</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WebResourcesSyncDev.html">WebResourcesSyncDev</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WebUI.html">WebUI</a></li>
