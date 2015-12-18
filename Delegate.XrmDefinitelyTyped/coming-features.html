@@ -38,18 +38,21 @@
 <li><strong>Query</strong>
 <ul>
 <li>Support for <code>associateRecords</code> and <code>disassociateRecords</code></li>
-<li><p>Support for SOAP exclusive actions such as <code>SetState</code>, <code>Assign</code>, etc.</p></li>
+<li>Support for SOAP exclusive actions such as <code>SetState</code>, <code>Assign</code>, etc.</li>
+<li><p>Use of <a href="https://github.com/Microsoft/TypeScript/pull/5185">string literals</a> 
+instead of function calls to indicate attributes etc.</p></li>
+</ul></li>
+<li><strong>Xrm object model:</strong>
+<ul>
+<li><a href="https://github.com/Microsoft/TypeScript/pull/5185">String literals</a> 
+(or <a href="https://github.com/Microsoft/TypeScript/issues/1206#issuecomment-131001547">enums</a>)
+for accessing attributes/controls/etc</li>
+<li><p>Possibly more specific collections for some objects (i.e. controls on attribute)</p></li>
 </ul></li>
 <li><strong>SDK.REST.js:</strong>
 <ul>
 <li><p>Intellisense for the <code>relationshipName</code> string used by <code>associateRecords</code> 
 and <code>disassociateRecords</code></p></li>
-</ul></li>
-<li><strong>Xrm object model:</strong>
-<ul>
-<li>A <em>Query</em>-like way of accessing attributes/controls</li>
-<li>String enums for accessing attributes/controls</li>
-<li><p>Possibly more specific collections for some objects (i.e. controls on attribute)</p></li>
 </ul></li>
 <li><strong>Misc:</strong>
 <ul>
@@ -67,7 +70,7 @@ very practical with NuGet.</li>
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.1.6.0</li>
+                <li class="nav-header">XrmDefinitelyTyped v.1.7.0</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
