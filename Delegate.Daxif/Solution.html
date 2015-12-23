@@ -275,7 +275,7 @@ to the solution with the unique name <code>solution</code>.</p>
 </table>
 
 <p>Updates/creates the custom service context files, at the given 
-<code>location</code> with the XrmContext provided by Delegate A/S.</p>
+<code>location</code> with the XrmContext executable provided by Delegate A/S.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l"> 1: </span>
@@ -306,16 +306,19 @@ to the solution with the unique name <code>solution</code>.</p>
 </table>
 
 <p>Updates/creates TypeScript context files, at the given 
-<code>location</code> with the XrmDefinitelyTyped.</p>
+<code>location</code> with the XrmDefinitelyTyped executable provided by Delegate A/S.</p>
 
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
-<span class="l">7: </span>
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
@@ -325,7 +328,10 @@ to the solution with the unique name <code>solution</code>.</p>
     <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 124)" onmouseover="showTip(event, 'fs3', 124)" class="i">string</span> <span class="k">-&gt;</span>
     <span class="i">exeLocation</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 125)" onmouseover="showTip(event, 'fs3', 125)" class="i">string</span> <span class="k">-&gt;</span>
     <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs5', 126)" onmouseover="showTip(event, 'fs5', 126)" class="i">LogLevel</span> <span class="k">-&gt;</span> 
-    <span onmouseout="hideTip(event, 'fs6', 127)" onmouseover="showTip(event, 'fs6', 127)" class="i">unit</span></pre>
+    <span class="i">solutions</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs3', 127)" onmouseover="showTip(event, 'fs3', 127)" class="i">string</span> <span onmouseout="hideTip(event, 'fs20', 128)" onmouseover="showTip(event, 'fs20', 128)" class="i">list</span> <span class="k">-&gt;</span>
+    <span class="i">entities</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs3', 129)" onmouseover="showTip(event, 'fs3', 129)" class="i">string</span> <span onmouseout="hideTip(event, 'fs20', 130)" onmouseover="showTip(event, 'fs20', 130)" class="i">list</span> <span class="k">-&gt;</span>
+    <span class="i">extraArgs</span><span class="o">:</span> (<span onmouseout="hideTip(event, 'fs3', 131)" onmouseover="showTip(event, 'fs3', 131)" class="i">string</span> <span class="o">*</span> <span onmouseout="hideTip(event, 'fs3', 132)" onmouseover="showTip(event, 'fs3', 132)" class="i">string</span>) <span onmouseout="hideTip(event, 'fs20', 133)" onmouseover="showTip(event, 'fs20', 133)" class="i">list</span> <span class="k">-&gt;</span>
+    <span onmouseout="hideTip(event, 'fs6', 134)" onmouseover="showTip(event, 'fs6', 134)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -348,9 +354,9 @@ to the solution with the unique name <code>solution</code>.</p>
 <div class="tip" id="fs16">val updateServiceContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; lcid:int option -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateServiceContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
 <div class="tip" id="fs17">Multiple items<br />val int : value:&#39;T -&gt; int (requires member op_Explicit)<br /><br />Full name: Microsoft.FSharp.Core.Operators.int<br /><br />--------------------<br />type int = int32<br /><br />Full name: Microsoft.FSharp.Core.int<br /><br />--------------------<br />type int&lt;&#39;Measure&gt; = int<br /><br />Full name: Microsoft.FSharp.Core.int&lt;_&gt;</div>
 <div class="tip" id="fs18">type &#39;T option = Option&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Core.option&lt;_&gt;</div>
-<div class="tip" id="fs19">val updateCustomServiceContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; solutions:string list -&gt; entities:string list -&gt; extraArgs:(string * string) list -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateCustomServiceContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
+<div class="tip" id="fs19">val updateCustomServiceContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; solutions:string list -&gt; entities:string list -&gt; extraArgs:(string * string) list -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateCustomServiceContext<br /><em><br /><br />&#160;Updates/creates the custom service context files, at the given <br />&#160;`location` with the XrmContext executable provided by Delegate A/S.</em></div>
 <div class="tip" id="fs20">type &#39;T list = List&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.list&lt;_&gt;</div>
-<div class="tip" id="fs21">val updateTypeScriptContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateTypeScriptContext<br /><em><br /><br />&#160;Updates the service context files at the specified location.</em></div>
+<div class="tip" id="fs21">val updateTypeScriptContext : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; exeLocation:string -&gt; logLevel:LogLevel -&gt; solutions:string list -&gt; entities:string list -&gt; extraArgs:(string * string) list -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Solution.updateTypeScriptContext<br /><em><br /><br />&#160;Updates/creates TypeScript context files, at the given <br />&#160;`location` with the XrmDefinitelyTyped executable provided by Delegate A/S.</em></div>
 
             </div>
             <div class="span3">
@@ -359,7 +365,7 @@ to the solution with the unique name <code>solution</code>.</p>
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.1.2.3</li>
+                    <li class="nav-header">DAXIF# v.2.1.3.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
