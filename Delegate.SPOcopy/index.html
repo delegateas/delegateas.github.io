@@ -122,7 +122,7 @@ whatsoever</p>
 <li>In order to be able to upload the files with the mminimal amount of 
 <strong>noise</strong> we rely on using SharePoint Onlines REST service instead of their
 SOAP, see <a href="http://stackoverflow.com/a/8983122">Martin Lawrence REST vs SOAP</a> for more info. This allows
-us to use F# powerfull <code>async</code> but simple engine to implement parallelism.</li>
+us to use F# powerfull but simple <code>async</code> engine to implement parallelism.</li>
 <li><p>For more information, please look into the code (about +275 lines) at <a href="https://github.com/delegateas/Delegate.SPOcopy">GitHub</a></p></li>
 </ul></li>
 <li>We describe a few <strong>limitations</strong> we found while we were making the library:
@@ -133,9 +133,9 @@ would supports ADFS users as we think the easiest approach is that the
 Office365 Admin just creates a new service account in the cloud without
 synchronization with the local AD.</li>
 <li><strong>No executable</strong>: The reason we haven't created an executable file is that
-we then have to rely on .bat or .cmd files in order to execute the
-application command-line arguments. We think that the approach of creating
-a type-safe F# script file is a much better approach.</li>
+we then have to rely on .bat or .cmd file in order to execute the
+application with command-line arguments. We think that the approach of
+creating a type-safe F# script file is a much better approach.</li>
 </ul></li>
 </ul>
 
