@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>Serialization
-</title>
+    <title>Serialization</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="
         A framework for automating installation of all kinds of xRM systems.
@@ -37,87 +36,7 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>Serialization</h1>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l"> 1: </span>
-<span class="l"> 2: </span>
-<span class="l"> 3: </span>
-<span class="l"> 4: </span>
-<span class="l"> 5: </span>
-<span class="l"> 6: </span>
-<span class="l"> 7: </span>
-<span class="l"> 8: </span>
-<span class="l"> 9: </span>
-<span class="l">10: </span>
-<span class="l">11: </span>
-<span class="l">12: </span>
-<span class="l">13: </span>
-<span class="l">14: </span>
-<span class="l">15: </span>
-<span class="l">16: </span>
-<span class="l">17: </span>
-<span class="l">18: </span>
-<span class="l">19: </span>
-<span class="l">20: </span>
-<span class="l">21: </span>
-<span class="l">22: </span>
-<span class="l">23: </span>
-<span class="l">24: </span>
-<span class="l">25: </span>
-<span class="l">26: </span>
-<span class="l">27: </span>
-<span class="l">28: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">map2Dictionary</span> <span class="o">:</span>
-    <span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Map</span><span class="o">&lt;</span><span class="o">&#39;</span><span class="i">a</span>,<span class="o">&#39;</span><span class="i">b</span><span class="o">&gt;</span> <span class="k">-&gt;</span> 
-    <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">IDictionary</span><span class="o">&lt;</span><span class="o">&#39;</span><span class="i">a</span>,<span class="o">&#39;</span><span class="i">b</span><span class="o">&gt;</span> <span class="k">when</span> <span class="o">&#39;</span><span class="i">a</span> <span class="o">:</span> <span class="i">comparison</span>
-
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">dictionary2Map</span> <span class="o">:</span>
-    <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">seq</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">KeyValuePair</span><span class="o">&lt;</span><span class="o">&#39;</span><span class="i">a</span>,<span class="o">&#39;</span><span class="i">b</span><span class="o">&gt;</span><span class="o">&gt;</span> <span class="k">-&gt;</span>
-    <span onmouseout="hideTip(event, 'fs2', 7)" onmouseover="showTip(event, 'fs2', 7)" class="i">Map</span><span class="o">&lt;</span><span class="o">&#39;</span><span class="i">a</span>,<span class="o">&#39;</span><span class="i">b</span><span class="o">&gt;</span> <span class="k">when</span> <span class="o">&#39;</span><span class="i">a</span> <span class="o">:</span> <span class="i">comparison</span>
-
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="i">serialize</span><span class="o">&lt;</span><span class="o">&#39;</span><span class="i">a</span><span class="o">&gt;</span> <span class="o">:</span>
-    <span onmouseout="hideTip(event, 'fs8', 9)" onmouseover="showTip(event, 'fs8', 9)" class="i">Serialize</span> <span class="k">-&gt;</span>
-    <span class="o">&#39;</span><span class="i">a</span> <span class="k">-&gt;</span>
-    <span onmouseout="hideTip(event, 'fs9', 10)" onmouseover="showTip(event, 'fs9', 10)" class="i">byte</span> <span onmouseout="hideTip(event, 'fs10', 11)" onmouseover="showTip(event, 'fs10', 11)" class="i">array</span>
-
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs11', 12)" onmouseover="showTip(event, 'fs11', 12)" class="i">deserialize</span><span class="o">&lt;</span><span class="o">&#39;</span><span class="i">a</span><span class="o">&gt;</span> <span class="o">:</span>
-    <span onmouseout="hideTip(event, 'fs12', 13)" onmouseover="showTip(event, 'fs12', 13)" class="i">SerializeType</span> <span class="k">-&gt;</span>
-    <span class="o">&#39;</span><span class="i">a</span>
-
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs13', 14)" onmouseover="showTip(event, 'fs13', 14)" class="i">deserializeBinary</span><span class="o">&lt;</span><span class="o">&#39;</span><span class="i">a</span><span class="o">&gt;</span> <span class="o">:</span> 
-    <span onmouseout="hideTip(event, 'fs9', 15)" onmouseover="showTip(event, 'fs9', 15)" class="i">byte</span> [] <span class="k">-&gt;</span>
-    <span class="o">&#39;</span><span class="i">a</span>
-
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs14', 16)" onmouseover="showTip(event, 'fs14', 16)" class="i">serializeBinary</span><span class="o">:</span> 
-    <span class="o">&#39;</span><span class="i">a</span> <span class="k">-&gt;</span> 
-    <span onmouseout="hideTip(event, 'fs9', 17)" onmouseover="showTip(event, 'fs9', 17)" class="i">byte</span> []
-
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs15', 18)" onmouseover="showTip(event, 'fs15', 18)" class="i">xmlPrettyPrinterHelper</span><span class="o">:</span> 
-    <span onmouseout="hideTip(event, 'fs9', 19)" onmouseover="showTip(event, 'fs9', 19)" class="i">byte</span> [] <span class="k">-&gt;</span>
-    <span onmouseout="hideTip(event, 'fs9', 20)" onmouseover="showTip(event, 'fs9', 20)" class="i">byte</span> []</pre>
-</td>
-</tr>
-</table>
-
-<div class="tip" id="fs1">val map2Dictionary : Map&lt;&#39;a,&#39;b&gt; -&gt; IDictionary&lt;&#39;a,&#39;b&gt; (requires comparison)<br /><br />Full name: DG.Daxif.Modules.Serialization.map2Dictionary<br /><em><br /><br />&#160;TODO:</em></div>
-<div class="tip" id="fs2">Multiple items<br />module Map<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type Map&lt;&#39;Key,&#39;Value (requires comparison)&gt; =<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IComparable<br />&#160;&#160;interface IEnumerable&lt;KeyValuePair&lt;&#39;Key,&#39;Value&gt;&gt;<br />&#160;&#160;interface ICollection&lt;KeyValuePair&lt;&#39;Key,&#39;Value&gt;&gt;<br />&#160;&#160;interface IDictionary&lt;&#39;Key,&#39;Value&gt;<br />&#160;&#160;new : elements:seq&lt;&#39;Key * &#39;Value&gt; -&gt; Map&lt;&#39;Key,&#39;Value&gt;<br />&#160;&#160;member Add : key:&#39;Key * value:&#39;Value -&gt; Map&lt;&#39;Key,&#39;Value&gt;<br />&#160;&#160;member ContainsKey : key:&#39;Key -&gt; bool<br />&#160;&#160;override Equals : obj -&gt; bool<br />&#160;&#160;member Remove : key:&#39;Key -&gt; Map&lt;&#39;Key,&#39;Value&gt;<br />&#160;&#160;...<br /><br />Full name: Microsoft.FSharp.Collections.Map&lt;_,_&gt;<br /><br />--------------------<br />new : elements:seq&lt;&#39;Key * &#39;Value&gt; -&gt; Map&lt;&#39;Key,&#39;Value&gt;</div>
-<div class="tip" id="fs3">type IDictionary&lt;&#39;TKey,&#39;TValue&gt; =<br />&#160;&#160;member Add : key:&#39;TKey * value:&#39;TValue -&gt; unit<br />&#160;&#160;member ContainsKey : key:&#39;TKey -&gt; bool<br />&#160;&#160;member Item : &#39;TKey -&gt; &#39;TValue with get, set<br />&#160;&#160;member Keys : ICollection&lt;&#39;TKey&gt;<br />&#160;&#160;member Remove : key:&#39;TKey -&gt; bool<br />&#160;&#160;member TryGetValue : key:&#39;TKey * value:&#39;TValue -&gt; bool<br />&#160;&#160;member Values : ICollection&lt;&#39;TValue&gt;<br /><br />Full name: System.Collections.Generic.IDictionary&lt;_,_&gt;</div>
-<div class="tip" id="fs4">val dictionary2Map : seq&lt;KeyValuePair&lt;&#39;a,&#39;b&gt;&gt; -&gt; Map&lt;&#39;a,&#39;b&gt; (requires comparison)<br /><br />Full name: DG.Daxif.Modules.Serialization.dictionary2Map<br /><em><br /><br />&#160;TODO:</em></div>
-<div class="tip" id="fs5">Multiple items<br />val seq : sequence:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Core.Operators.seq<br /><br />--------------------<br />type seq&lt;&#39;T&gt; = IEnumerable&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.seq&lt;_&gt;</div>
-<div class="tip" id="fs6">Multiple items<br />type KeyValuePair&lt;&#39;TKey,&#39;TValue&gt; =<br />&#160;&#160;struct<br />&#160;&#160;&#160;&#160;new : key:&#39;TKey * value:&#39;TValue -&gt; KeyValuePair&lt;&#39;TKey, &#39;TValue&gt;<br />&#160;&#160;&#160;&#160;member Key : &#39;TKey<br />&#160;&#160;&#160;&#160;member ToString : unit -&gt; string<br />&#160;&#160;&#160;&#160;member Value : &#39;TValue<br />&#160;&#160;end<br /><br />Full name: System.Collections.Generic.KeyValuePair&lt;_,_&gt;<br /><br />--------------------<br />KeyValuePair()<br />KeyValuePair(key: &#39;TKey, value: &#39;TValue) : unit</div>
-<div class="tip" id="fs7">val serialize : Serialize -&gt; &#39;a -&gt; byte array<br /><br />Full name: DG.Daxif.Modules.Serialization.serialize<br /><em><br /><br />&#160;TODO:</em></div>
-<div class="tip" id="fs8">type Serialize =<br />&#160;&#160;| BIN<br />&#160;&#160;| XML<br />&#160;&#160;| JSON<br /><br />Full name: DG.Daxif.Serialize</div>
-<div class="tip" id="fs9">Multiple items<br />val byte : value:&#39;T -&gt; byte (requires member op_Explicit)<br /><br />Full name: Microsoft.FSharp.Core.Operators.byte<br /><br />--------------------<br />type byte = Byte<br /><br />Full name: Microsoft.FSharp.Core.byte</div>
-<div class="tip" id="fs10">type &#39;T array = &#39;T []<br /><br />Full name: Microsoft.FSharp.Core.array&lt;_&gt;</div>
-<div class="tip" id="fs11">val deserialize : SerializeType -&gt; &#39;a<br /><br />Full name: DG.Daxif.Modules.Serialization.deserialize<br /><em><br /><br />&#160;TODO:</em></div>
-<div class="tip" id="fs12">type SerializeType =<br />&#160;&#160;| BIN of byte array<br />&#160;&#160;| XML of string<br />&#160;&#160;| JSON of string<br /><br />Full name: DG.Daxif.SerializeType</div>
-<div class="tip" id="fs13">val deserializeBinary : byte [] -&gt; &#39;a<br /><br />Full name: DG.Daxif.Modules.Serialization.deserializeBinary<br /><em><br /><br />&#160;TODO:</em></div>
-<div class="tip" id="fs14">val serializeBinary : &#39;a -&gt; byte []<br /><br />Full name: DG.Daxif.Modules.Serialization.serializeBinary<br /><em><br /><br />&#160;TODO:</em></div>
-<div class="tip" id="fs15">val xmlPrettyPrinterHelper : byte [] -&gt; byte []<br /><br />Full name: DG.Daxif.Modules.Serialization.xmlPrettyPrinterHelper<br /><em><br /><br />&#160;TODO:</em></div>
 
             </div>
             <div class="span3">
@@ -126,13 +45,13 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.1.3.6</li>
+                    <li class="nav-header">DAXIF# v.2.2.0.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
 
                     <li><a href="https://www.nuget.org/packages/Delegate.Daxif/" target="_blank">Get Library via NuGet</a></li>
-                    <li><a href="mailto:crm@delegate.dk">License (Contact crm 'at' delegate.dk)</a></li>
+                    <li><a href="/Delegate.Daxif/license.html">License</a></li>
                     <li><a href="/Delegate.Daxif/RELEASE_NOTES.html">Release Notes</a></li>
 
                     <li class="nav-header">Setup Instructions</li>
@@ -147,7 +66,6 @@
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionCreateDev.html">SolutionCreateDev</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionDiff.html">SolutionDiff</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExportDev.html">SolutionExportDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExportTest.html">SolutionExportTest</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExtract.html">SolutionExtract</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionImportDev.html">SolutionImportDev</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionImportTest.html">SolutionImportTest</a></li>
@@ -156,7 +74,6 @@
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateCustomContext.html">SolutionUpdateCustomContext</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateTsContext.html">SolutionUpdateTsContext</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WebResourcesSyncDev.html">WebResourcesSyncDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WebUI.html">WebUI</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WorkflowSyncDev.html">WorkflowSyncDev</a></li>
 
                     <li class="nav-header">Documentation</li>
@@ -167,5 +84,6 @@
             </div>
         </div>
     </div>
+    <a href="http://delegateas.github.io/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://raw.githubusercontent.com/delegateas/delegateas.github.io/master/img/forkme_right_dgred_background.png"></a>
 </body>
 </html>
