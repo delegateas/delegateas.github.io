@@ -90,7 +90,7 @@ It also needs either <code>FSharp.Core.dll</code> or F# installed on the compute
 </tr>
 <tr class="odd">
 <td align="left"><p>entities</p></td>
-<td align="left"><p>Comma-separated list of logical names of the entities it should generate code for. This is additive with the entities gotten via the <strong><em>solutions</em></strong> argument.</p></td>
+<td align="left"><p>Comma-separated list of logical names of the entities it should generate code for. <br/> This is additive with the entities gotten via the <strong><em>solutions</em></strong> argument.</p></td>
 </tr>
 </tbody>
 </table>
@@ -98,7 +98,13 @@ It also needs either <code>FSharp.Core.dll</code> or F# installed on the compute
 
 <p>You can also view this list of arguments using the "<strong><em>/help</em></strong>" argument.</p>
 
-<p>If you want to generate a dummy configuration file to use for arguments, use the "<strong><em>/config</em></strong>" argument.</p>
+<h3><a name="Configuration-file" class="anchor" href="#Configuration-file">Configuration file</a></h3>
+
+<p>If no arguments are given to the executable, it will check if there is an configuration file in the same folder with arguments it can use instead.</p>
+
+<p>If you want to generate a dummy configuration file to use for arguments, you can use the "<strong><em>/genconfig</em></strong>" argument.<br />
+If you want to use a mix of the arguments from the configuration file and arguments passed to the executable, 
+you can specify the "<strong><em>/useconfig</em></strong>" argument in the command-line.</p>
 
 <h2><a name="Command-prompt" class="anchor" href="#Command-prompt">Command prompt</a></h2>
 
@@ -152,7 +158,7 @@ Example usage from a command prompt:</p>
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.1.7.3</li>
+                <li class="nav-header">XrmDefinitelyTyped v.1.7.4</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
