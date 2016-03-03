@@ -39,6 +39,16 @@
                 
 <h1>Release Notes</h1>
 
+<h4>2.2.0.12 - Mar 03 2016</h4>
+
+<ul>
+<li>Fixed issue where interfaces documentation where not displayed on the GitHub
+page. FSharp.Literate is sensitive to indentation and recently the .fsi files
+where altered. The markdown notation in the .fsi files was indented resulting
+in only the first markdown notation which hid everything between two markdown
+notations.</li>
+</ul>
+
 <h4>2.2.0.11 - Mar 01 2016</h4>
 
 <ul>
@@ -67,6 +77,9 @@
 
 <ul>
 <li>Fixed path in script files after removel of folder level in 2.2.0.5</li>
+<li>Updated PluginSync to handle user context and accept a guid of a user entity 
+to impersonate as. This enables a plugin to be executed under that user.
+A new <a href="https://gist.github.com/TomMalow/b9301e024879639a6918">Plugin.cs</a> is requried from the current version and up</li>
 </ul>
 
 <h4>2.2.0.6 - Feb 14 2016</h4>
@@ -633,7 +646,7 @@ guidelines: <a href="http://webcache.googleusercontent.com/search?q=cache:https:
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.2.0.11</li>
+                    <li class="nav-header">DAXIF# v.2.2.0.12</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
