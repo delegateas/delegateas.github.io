@@ -4,14 +4,9 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>WebResouresSyncDev
-</title>
+    <title>CrmDataInternal - DAXIF# v.2.3.0.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="
-        A framework for automating installation of all kinds of xRM systems.
-        By using simple F# script commands/files one can save a lot of time
-        and effort during this process.
-        ">
+    <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
 
     <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
@@ -37,74 +32,15 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>WebResouresSyncDev</h1>
 
-<h2>Libraries</h2>
 
-<p>Config information</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="prep">#load</span> <span class="s">@&quot;</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">.</span><span class="s">XrmSolution</span><span class="s">.</span><span class="s">Config</span><span class="s">.</span><span class="s">fsx</span><span class="s">&quot;</span>
+<h1>CrmDataInternal</h1>
+<div class="xmldoc">
+</div>
 
-<span class="k">module</span> <span class="i">cfg</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">XrmOrg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">XrmSolution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Config</span></pre>
-</td>
-</tr>
-</table>
+<!-- Render nested types and modules, if there are any -->
 
-<p>Open libraries for use</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="i">Daxif</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="i">Modules</span></pre>
-</td>
-</tr>
-</table>
-
-<h2>DAXIF# operations</h2>
-
-<p>Sync Dev</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span onmouseout="hideTip(event, 'fs7', 8)" onmouseover="showTip(event, 'fs7', 8)" class="i">WebResources</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 9)" onmouseover="showTip(event, 'fs8', 9)" class="i">syncSolution</span>
-  <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 10)" onmouseover="showTip(event, 'fs9', 10)" class="i">wsdlDev&#39;</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 11)" onmouseover="showTip(event, 'fs10', 11)" class="i">solution</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 12)" onmouseover="showTip(event, 'fs11', 12)" class="i">webresources</span>
-    <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 13)" onmouseover="showTip(event, 'fs12', 13)" class="i">authType</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 14)" onmouseover="showTip(event, 'fs13', 14)" class="i">usrDev</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs14', 15)" onmouseover="showTip(event, 'fs14', 15)" class="i">pwdDev</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 16)" onmouseover="showTip(event, 'fs15', 16)" class="i">domainDev</span> 
-      <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs16', 17)" onmouseover="showTip(event, 'fs16', 17)" class="i">log</span></pre>
-</td>
-</tr>
-</table>
-
-<div class="tip" id="fs1">namespace DG</div>
-<div class="tip" id="fs2">namespace DG.XrmOrg</div>
-<div class="tip" id="fs3">namespace DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs4">module Config<br /><br />from DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs5">namespace DG.Daxif</div>
-<div class="tip" id="fs6">namespace DG.Daxif.Modules</div>
-<div class="tip" id="fs7">module WebResources<br /><br />from DG.Daxif.Modules</div>
-<div class="tip" id="fs8">val syncSolution : wsdl:System.Uri -&gt; solution:string -&gt; location:string -&gt; ap:Microsoft.Xrm.Sdk.Client.AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:Daxif.LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.WebResources.syncSolution</div>
-<div class="tip" id="fs9">val wsdlDev&#39; : System.Uri<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.wsdlDev&#39;</div>
-<div class="tip" id="fs10">val solution : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.solution</div>
-<div class="tip" id="fs11">val webresources : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.webresources</div>
-<div class="tip" id="fs12">val authType : Microsoft.Xrm.Sdk.Client.AuthenticationProviderType<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.authType</div>
-<div class="tip" id="fs13">val usrDev : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.usrDev</div>
-<div class="tip" id="fs14">val pwdDev : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.pwdDev</div>
-<div class="tip" id="fs15">val domainDev : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.domainDev</div>
-<div class="tip" id="fs16">val log : Daxif.LogLevel<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.log</div>
 
             </div>
             <div class="span3">
