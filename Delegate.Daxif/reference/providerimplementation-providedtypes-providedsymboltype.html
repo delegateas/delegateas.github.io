@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>ProvidedProperty - DAXIF# v.2.3.0.0</title>
+    <title>ProvidedSymbolType - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -35,33 +35,9 @@
 
 
 
-<h1>ProvidedProperty</h1>
+<h1>ProvidedSymbolType</h1>
 <div class="xmldoc">
 </div>
-  <h3>Constructors</h3>
-  <table class="table table-bordered member-list">
-    <thead>
-      <tr><td>Constructor</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '97', 97)" onmouseover="showTip(event, '97', 97)">
-            new(...)
-          </code>
-          <div class="tip" id="97">
-            <strong>Signature:</strong> (propertyName:string * propertyType:Type * parameters:ProvidedParameter list option) -&gt; ProvidedProperty<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Create a new provided type. It is not initially associated with any specific provided type definition.
-</br>
-        </td>
-      </tr>
-    </tbody>
-  </table>
   <h3>Instance members</h3>
   <table class="table table-bordered member-list">
     <thead>
@@ -71,163 +47,64 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '106', 106)" onmouseover="showTip(event, '106', 106)">
-            AddCustomAttribute(arg1)
+          <code onmouseout="hideTip(event, '177', 177)" onmouseover="showTip(event, '177', 177)">
+            Args
           </code>
-          <div class="tip" id="106">
-            <strong>Signature:</strong> CustomAttributeData -&gt; unit<br />
+          <div class="tip" id="177">
+            <strong>Signature:</strong> Type list<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add a custom attribute to the provided property definition.
+ Return the provided types used as arguments of this symbolic type
 </br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '108', 108)" onmouseover="showTip(event, '108', 108)">
-            AddDefinitionLocation(...)
+          <code onmouseout="hideTip(event, '180', 180)" onmouseover="showTip(event, '180', 180)">
+            IsFSharpTypeAbbreviation
           </code>
-          <div class="tip" id="108">
-            <strong>Signature:</strong> (line:int * column:int * filePath:string) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add definition location information to the provided type definition.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '109', 109)" onmouseover="showTip(event, '109', 109)">
-            AddObsoleteAttribute(message, ?isError)
-          </code>
-          <div class="tip" id="109">
-            <strong>Signature:</strong> (message:string * isError:bool option) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add a 'System.Obsolete' attribute to this provided property
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '110', 110)" onmouseover="showTip(event, '110', 110)">
-            AddXmlDoc(xmlDoc)
-          </code>
-          <div class="tip" id="110">
-            <strong>Signature:</strong> xmlDoc:string -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided constructor
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '111', 111)" onmouseover="showTip(event, '111', 111)">
-            AddXmlDocComputed(xmlDocFunction)
-          </code>
-          <div class="tip" id="111">
-            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary
- The documentation is re-computed  every time it is required.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '112', 112)" onmouseover="showTip(event, '112', 112)">
-            AddXmlDocDelayed(xmlDocFunction)
-          </code>
-          <div class="tip" id="112">
-            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '113', 113)" onmouseover="showTip(event, '113', 113)">
-            GetterCode()
-          </code>
-          <div class="tip" id="113">
-            <strong>Signature:</strong> unit -&gt; Expr list -&gt; Expr<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Set the quotation used to compute the implementation of gets of this property.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '114', 114)" onmouseover="showTip(event, '114', 114)">
-            IsStatic
-          </code>
-          <div class="tip" id="114">
+          <div class="tip" id="180">
             <strong>Signature:</strong> bool<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Get or set a flag indicating if the property is static.
- FSharp.Data addition: the getter is used by Debug.fs
+ For example, kg
 </br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '115', 115)" onmouseover="showTip(event, '115', 115)">
-            IsStatic()
+          <code onmouseout="hideTip(event, '181', 181)" onmouseover="showTip(event, '181', 181)">
+            IsFSharpUnitAnnotated
           </code>
-          <div class="tip" id="115">
-            <strong>Signature:</strong> unit -&gt; bool<br />
+          <div class="tip" id="181">
+            <strong>Signature:</strong> bool<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Get or set a flag indicating if the property is static.
- FSharp.Data addition: the getter is used by Debug.fs
+ For example, int<kg> or int<kilogram>
 </br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '116', 116)" onmouseover="showTip(event, '116', 116)">
-            SetterCode()
+          <code onmouseout="hideTip(event, '182', 182)" onmouseover="showTip(event, '182', 182)">
+            Kind
           </code>
-          <div class="tip" id="116">
-            <strong>Signature:</strong> unit -&gt; Expr list -&gt; Expr<br />
+          <div class="tip" id="182">
+            <strong>Signature:</strong> ProvidedSymbolKind<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Set the function used to compute the implementation of sets of this property.
+ Returns the kind of this symbolic type
 </br>
         </td>
       </tr>
@@ -241,7 +118,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.0.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

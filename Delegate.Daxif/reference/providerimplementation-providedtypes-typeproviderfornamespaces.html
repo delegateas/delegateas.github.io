@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>ProvidedConstructor - DAXIF# v.2.3.0.0</title>
+    <title>TypeProviderForNamespaces - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -35,7 +35,7 @@
 
 
 
-<h1>ProvidedConstructor</h1>
+<h1>TypeProviderForNamespaces</h1>
 <div class="xmldoc">
 </div>
   <h3>Constructors</h3>
@@ -47,16 +47,32 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '117', 117)" onmouseover="showTip(event, '117', 117)">
-            new(parameters)
+          <code onmouseout="hideTip(event, '173', 173)" onmouseover="showTip(event, '173', 173)">
+            new()
           </code>
-          <div class="tip" id="117">
-            <strong>Signature:</strong> (parameters:ProvidedParameter list) -&gt; ProvidedConstructor<br />
+          <div class="tip" id="173">
+            <strong>Signature:</strong> unit -&gt; TypeProviderForNamespaces<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Create a new provided constructor. It is not initially associated with any specific provided type definition.
+ Initializes a type provider 
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '174', 174)" onmouseover="showTip(event, '174', 174)">
+            new(namespaceName, types)
+          </code>
+          <div class="tip" id="174">
+            <strong>Signature:</strong> (namespaceName:string * types:ProvidedTypeDefinition list) -&gt; TypeProviderForNamespaces<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Initializes a type provider to provide the types in the given namespace.
 </br>
         </td>
       </tr>
@@ -71,48 +87,30 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '180', 180)" onmouseover="showTip(event, '180', 180)">
-            AddDefinitionLocation(...)
+          <code onmouseout="hideTip(event, '178', 178)" onmouseover="showTip(event, '178', 178)">
+            add_Disposing(arg1)
           </code>
-          <div class="tip" id="180">
-            <strong>Signature:</strong> (line:int * column:int * filePath:string) -&gt; unit<br />
+          <div class="tip" id="178">
+            <strong>Signature:</strong> EventHandler -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add definition location information to the provided constructor.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '182', 182)" onmouseover="showTip(event, '182', 182)">
-            AddObsoleteAttribute(message, ?isError)
-          </code>
-          <div class="tip" id="182">
-            <strong>Signature:</strong> (message:string * isError:bool option) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add a 'System.Obsolete' attribute to this provided constructor
-</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '183', 183)" onmouseover="showTip(event, '183', 183)">
-            AddXmlDoc(xmlDoc)
+            AddNamespace(namespaceName, types)
           </code>
           <div class="tip" id="183">
-            <strong>Signature:</strong> xmlDoc:string -&gt; unit<br />
+            <strong>Signature:</strong> (namespaceName:string * types:ProvidedTypeDefinition list) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add XML documentation information to this provided constructor
+ Invoked by the type provider to add a namespace of provided types in the specification of the type provider.
 </br>
         </td>
       </tr>
@@ -120,15 +118,15 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '184', 184)" onmouseover="showTip(event, '184', 184)">
-            AddXmlDocComputed(xmlDocFunction)
+            ApplyStaticArgumentsForMethod(...)
           </code>
           <div class="tip" id="184">
-            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
+            <strong>Signature:</strong> (MethodBase * string * obj []) -&gt; MethodBase<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add XML documentation information to this provided constructor, where the documentation is re-computed  every time it is required.
+ Invoked by the host of the type provider to apply the static argumetns for a method.
 </br>
         </td>
       </tr>
@@ -136,31 +134,29 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '185', 185)" onmouseover="showTip(event, '185', 185)">
-            AddXmlDocDelayed(xmlDocFunction)
+            Disposing
           </code>
           <div class="tip" id="185">
-            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
+            <strong>Signature:</strong> IEvent&lt;EventHandler,EventArgs&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary
-</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '186', 186)" onmouseover="showTip(event, '186', 186)">
-            BaseConstructorCall()
+            GetStaticParametersForMethod(arg1)
           </code>
           <div class="tip" id="186">
-            <strong>Signature:</strong> unit -&gt; Expr list -&gt; ConstructorInfo * Expr list<br />
+            <strong>Signature:</strong> MethodBase -&gt; ParameterInfo []<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Set the target and arguments of the base constructor call. Only used for generated types.
+ Invoked by the host of the type provider to get the static parameters for a method.
 </br>
         </td>
       </tr>
@@ -168,15 +164,15 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '187', 187)" onmouseover="showTip(event, '187', 187)">
-            InvokeCode()
+            Invalidate()
           </code>
           <div class="tip" id="187">
-            <strong>Signature:</strong> unit -&gt; Expr list -&gt; Expr<br />
+            <strong>Signature:</strong> unit -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Set the quotation used to compute the implementation of invocations of this constructor.
+ Invoked by the type provider to invalidate the information provided by the provider
 </br>
         </td>
       </tr>
@@ -184,17 +180,15 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '188', 188)" onmouseover="showTip(event, '188', 188)">
-            IsImplicitCtor
+            Namespaces
           </code>
           <div class="tip" id="188">
-            <strong>Signature:</strong> bool<br />
+            <strong>Signature:</strong> seq&lt;string * ProvidedTypeDefinition list&gt;<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Set a flag indicating that the constructor acts like an F# implicit constructor, so the
- parameters of the constructor become fields and can be accessed using Expr.GlobalVar with the
- same name.
+ Invoked by the type provider to get all provided namespaces with their provided types.
 </br>
         </td>
       </tr>
@@ -202,17 +196,15 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '189', 189)" onmouseover="showTip(event, '189', 189)">
-            IsImplicitCtor()
+            RegisterProbingFolder(folder)
           </code>
           <div class="tip" id="189">
-            <strong>Signature:</strong> unit -&gt; bool<br />
+            <strong>Signature:</strong> folder:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Set a flag indicating that the constructor acts like an F# implicit constructor, so the
- parameters of the constructor become fields and can be accessed using Expr.GlobalVar with the
- same name.
+ Registers custom probing path that can be used for probing assemblies
 </br>
         </td>
       </tr>
@@ -220,10 +212,26 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '190', 190)" onmouseover="showTip(event, '190', 190)">
-            IsTypeInitializer
+            RegisterRuntimeAssemblyLocationAsProbingFolder(...)
           </code>
           <div class="tip" id="190">
-            <strong>Signature:</strong> bool<br />
+            <strong>Signature:</strong> config:TypeProviderConfig -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Registers location of RuntimeAssembly (from TypeProviderConfig) as probing folder
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '191', 191)" onmouseover="showTip(event, '191', 191)">
+            remove_Disposing(arg1)
+          </code>
+          <div class="tip" id="191">
+            <strong>Signature:</strong> EventHandler -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -233,15 +241,18 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '191', 191)" onmouseover="showTip(event, '191', 191)">
-            IsTypeInitializer()
+          <code onmouseout="hideTip(event, '192', 192)" onmouseover="showTip(event, '192', 192)">
+            ResolveAssembly(arg1)
           </code>
-          <div class="tip" id="191">
-            <strong>Signature:</strong> unit -&gt; bool<br />
+          <div class="tip" id="192">
+            <strong>Signature:</strong> ResolveEventArgs -&gt; Assembly<br />
+              <strong>Modifiers:</strong> abstract<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ AssemblyResolve handler. Default implementation searches <assemblyname>.dll file in registered folders 
+</br>
         </td>
       </tr>
     </tbody>
@@ -254,7 +265,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.0.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

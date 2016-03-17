@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>WebResourceType - DAXIF# v.2.3.0.1</title>
+    <title>ProvidedTypeDefinition - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -35,238 +35,531 @@
 
 
 
-<h1>WebResourceType</h1>
+<h1>ProvidedTypeDefinition</h1>
 <div class="xmldoc">
 </div>
-  <h3>Record Fields</h3>
+  <h3>Constructors</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Record Field</td><td>Description</td></tr>
+      <tr><td>Constructor</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '66', 66)" onmouseover="showTip(event, '66', 66)">
-            CSS
+          <code onmouseout="hideTip(event, '175', 175)" onmouseover="showTip(event, '175', 175)">
+            new(className, baseType)
           </code>
-          <div class="tip" id="66">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="175">
+            <strong>Signature:</strong> (className:string * baseType:Type option) -&gt; ProvidedTypeDefinition<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Create a new provided type definition, to be located as a nested type in some type definition.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '70', 70)" onmouseover="showTip(event, '70', 70)">
-            GIF
+          <code onmouseout="hideTip(event, '176', 176)" onmouseover="showTip(event, '176', 176)">
+            new(...)
           </code>
-          <div class="tip" id="70">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="176">
+            <strong>Signature:</strong> (assembly:Assembly * namespaceName:string * className:string * baseType:Type option) -&gt; ProvidedTypeDefinition<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Create a new provided type definition in a namespace. 
+</br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Instance members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Instance member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '179', 179)" onmouseover="showTip(event, '179', 179)">
+            AddAssemblyTypesAsNestedTypesDelayed(...)
+          </code>
+          <div class="tip" id="179">
+            <strong>Signature:</strong> (assemblyFunction:(unit -&gt; Assembly)) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Add the types of the generated assembly as generative types, where types in namespaces get hierarchically positioned as nested types.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '71', 71)" onmouseover="showTip(event, '71', 71)">
-            HTM
+          <code onmouseout="hideTip(event, '193', 193)" onmouseover="showTip(event, '193', 193)">
+            AddCustomAttribute(arg1)
           </code>
-          <div class="tip" id="71">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="193">
+            <strong>Signature:</strong> CustomAttributeData -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Add a custom attribute to the provided type definition.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '72', 72)" onmouseover="showTip(event, '72', 72)">
-            HTML
+          <code onmouseout="hideTip(event, '194', 194)" onmouseover="showTip(event, '194', 194)">
+            AddDefinitionLocation(...)
           </code>
-          <div class="tip" id="72">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="194">
+            <strong>Signature:</strong> (line:int * column:int * filePath:string) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Add definition location information to the provided type definition.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '73', 73)" onmouseover="showTip(event, '73', 73)">
-            ICO
+          <code onmouseout="hideTip(event, '195', 195)" onmouseover="showTip(event, '195', 195)">
+            AddInterfaceImplementation(...)
           </code>
-          <div class="tip" id="73">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="195">
+            <strong>Signature:</strong> interfaceType:Type -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Add the given type as an implemented interface.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '74', 74)" onmouseover="showTip(event, '74', 74)">
-            JPEG
+          <code onmouseout="hideTip(event, '196', 196)" onmouseover="showTip(event, '196', 196)">
+            AddInterfaceImplementationsDelayed(...)
           </code>
-          <div class="tip" id="74">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="196">
+            <strong>Signature:</strong> (interfacesFunction:(unit -&gt; Type list)) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Add the given function as a set of on-demand computed interfaces.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '75', 75)" onmouseover="showTip(event, '75', 75)">
-            JPG
+          <code onmouseout="hideTip(event, '197', 197)" onmouseover="showTip(event, '197', 197)">
+            AddMember(memberInfo)
           </code>
-          <div class="tip" id="75">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="197">
+            <strong>Signature:</strong> memberInfo:MemberInfo -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Add a method, property, nested type or other member to a ProvidedTypeDefinition
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '76', 76)" onmouseover="showTip(event, '76', 76)">
-            JS
+          <code onmouseout="hideTip(event, '198', 198)" onmouseover="showTip(event, '198', 198)">
+            AddMemberDelayed(memberFunction)
           </code>
-          <div class="tip" id="76">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
-                      </div>
+          <div class="tip" id="198">
+            <strong>Signature:</strong> (memberFunction:(unit -&gt; &#39;a)) -&gt; unit<br />
+                          <strong>Type parameters:</strong> 'a          </div>
         </td>
         <td class="xmldoc">
         
+ Add a member to a ProvidedTypeDefinition, delaying computation of the members until required by the compilation context.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '77', 77)" onmouseover="showTip(event, '77', 77)">
-            PNG
+          <code onmouseout="hideTip(event, '199', 199)" onmouseover="showTip(event, '199', 199)">
+            AddMembers(memberInfos)
           </code>
-          <div class="tip" id="77">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
-                      </div>
+          <div class="tip" id="199">
+            <strong>Signature:</strong> (memberInfos:&#39;?167672 list) -&gt; unit<br />
+                          <strong>Type parameters:</strong> '?167672          </div>
         </td>
         <td class="xmldoc">
         
+ Add a set of members to a ProvidedTypeDefinition
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '78', 78)" onmouseover="showTip(event, '78', 78)">
-            XAML
+          <code onmouseout="hideTip(event, '200', 200)" onmouseover="showTip(event, '200', 200)">
+            AddMembersDelayed(membersFunction)
           </code>
-          <div class="tip" id="78">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
-                      </div>
+          <div class="tip" id="200">
+            <strong>Signature:</strong> (membersFunction:(unit -&gt; &#39;a list)) -&gt; unit<br />
+                          <strong>Type parameters:</strong> 'a          </div>
         </td>
         <td class="xmldoc">
         
+ Add a set of members to a ProvidedTypeDefinition, delaying computation of the members until required by the compilation context.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '79', 79)" onmouseover="showTip(event, '79', 79)">
-            XAP
+          <code onmouseout="hideTip(event, '201', 201)" onmouseover="showTip(event, '201', 201)">
+            AddObsoleteAttribute(message, ?isError)
           </code>
-          <div class="tip" id="79">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="201">
+            <strong>Signature:</strong> (message:string * isError:bool option) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Add a 'Obsolete' attribute to this provided type definition
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '80', 80)" onmouseover="showTip(event, '80', 80)">
-            XML
+          <code onmouseout="hideTip(event, '202', 202)" onmouseover="showTip(event, '202', 202)">
+            AddXmlDoc(xmlDoc)
           </code>
-          <div class="tip" id="80">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="202">
+            <strong>Signature:</strong> xmlDoc:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Add XML documentation information to this provided constructor
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '81', 81)" onmouseover="showTip(event, '81', 81)">
-            XSD
+          <code onmouseout="hideTip(event, '203', 203)" onmouseover="showTip(event, '203', 203)">
+            AddXmlDocComputed(xmlDocFunction)
           </code>
-          <div class="tip" id="81">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="203">
+            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary
+ The documentation is re-computed  every time it is required.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '82', 82)" onmouseover="showTip(event, '82', 82)">
-            XSL
+          <code onmouseout="hideTip(event, '204', 204)" onmouseover="showTip(event, '204', 204)">
+            AddXmlDocDelayed(xmlDocFunction)
           </code>
-          <div class="tip" id="82">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="204">
+            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary.
+ The documentation is only computed once.
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '83', 83)" onmouseover="showTip(event, '83', 83)">
-            XSLT
+          <code onmouseout="hideTip(event, '205', 205)" onmouseover="showTip(event, '205', 205)">
+            DefineMethodOverride(...)
           </code>
-          <div class="tip" id="83">
-            <strong>Signature:</strong> WebResourceType<br />
-              <strong>Modifiers:</strong> static<br />
+          <div class="tip" id="205">
+            <strong>Signature:</strong> (methodInfoBody:ProvidedMethod * methodInfoDeclaration:MethodInfo) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Specifies that the given method body implements the given method declaration.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '206', 206)" onmouseover="showTip(event, '206', 206)">
+            DefineStaticParameters(...)
+          </code>
+          <div class="tip" id="206">
+            <strong>Signature:</strong> (parameters:ProvidedStaticParameter list * instantiationFunction:(string -&gt; obj [] -&gt; ProvidedTypeDefinition)) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Define the static parameters available on a statically parameterized type
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '207', 207)" onmouseover="showTip(event, '207', 207)">
+            HideObjectMethods()
+          </code>
+          <div class="tip" id="207">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Suppress Object entries in intellisense menus in instances of this provided type 
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '208', 208)" onmouseover="showTip(event, '208', 208)">
+            IsErased
+          </code>
+          <div class="tip" id="208">
+            <strong>Signature:</strong> bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Get or set a flag indicating if the ProvidedTypeDefinition is erased
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '209', 209)" onmouseover="showTip(event, '209', 209)">
+            IsErased()
+          </code>
+          <div class="tip" id="209">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Get or set a flag indicating if the ProvidedTypeDefinition is erased
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '210', 210)" onmouseover="showTip(event, '210', 210)">
+            MakeParametricType(name, args)
+          </code>
+          <div class="tip" id="210">
+            <strong>Signature:</strong> (name:string * args:obj []) -&gt; ProvidedTypeDefinition<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ FSharp.Data addition: this method is used by Debug.fs
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '211', 211)" onmouseover="showTip(event, '211', 211)">
+            NonNullable()
+          </code>
+          <div class="tip" id="211">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Disallows the use of the null literal. 
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '212', 212)" onmouseover="showTip(event, '212', 212)">
+            ResetEnclosingType(enclosingType)
+          </code>
+          <div class="tip" id="212">
+            <strong>Signature:</strong> enclosingType:Type -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Reset the enclosing type (for generated nested types)
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '213', 213)" onmouseover="showTip(event, '213', 213)">
+            SetAttributes(arg1)
+          </code>
+          <div class="tip" id="213">
+            <strong>Signature:</strong> TypeAttributes -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Set the attributes on the provided type. This fully replaces the default TypeAttributes.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '214', 214)" onmouseover="showTip(event, '214', 214)">
+            SetBaseType(arg1)
+          </code>
+          <div class="tip" id="214">
+            <strong>Signature:</strong> Type -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Set the base type
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '215', 215)" onmouseover="showTip(event, '215', 215)">
+            SetBaseTypeDelayed(baseTypeFunction)
+          </code>
+          <div class="tip" id="215">
+            <strong>Signature:</strong> (baseTypeFunction:(unit -&gt; Type)) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Set the base type to a lazily evaluated value. Use this to delay realization of the base type as late as possible.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '216', 216)" onmouseover="showTip(event, '216', 216)">
+            SetEnumUnderlyingType(arg1)
+          </code>
+          <div class="tip" id="216">
+            <strong>Signature:</strong> Type -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Set underlying type for generated enums
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '217', 217)" onmouseover="showTip(event, '217', 217)">
+            SuppressRelocation
+          </code>
+          <div class="tip" id="217">
+            <strong>Signature:</strong> bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Get or set a flag indicating if the ProvidedTypeDefinition has type-relocation suppressed
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '218', 218)" onmouseover="showTip(event, '218', 218)">
+            SuppressRelocation()
+          </code>
+          <div class="tip" id="218">
+            <strong>Signature:</strong> unit -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Get or set a flag indicating if the ProvidedTypeDefinition has type-relocation suppressed
+</br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '221', 221)" onmouseover="showTip(event, '221', 221)">
+            EraseType(typ)
+          </code>
+          <div class="tip" id="221">
+            <strong>Signature:</strong> typ:Type -&gt; Type<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Emulate the F# type provider type erasure mechanism to get the 
+ actual (erased) type. We erase ProvidedTypes to their base type
+ and we erase array of provided type to array of base type. In the
+ case of generics all the generic type arguments are also recursively
+ replaced with the erased-to types
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '222', 222)" onmouseover="showTip(event, '222', 222)">
+            Logger
+          </code>
+          <div class="tip" id="222">
+            <strong>Signature:</strong> (string -&gt; unit) option ref<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Get or set a utility function to log the creation of root Provided Type. Used to debug caching/invalidation.
+</br>
         </td>
       </tr>
     </tbody>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>ProvidedParameter - DAXIF# v.2.3.0.0</title>
+    <title>ProvidedMethod - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -35,7 +35,7 @@
 
 
 
-<h1>ProvidedParameter</h1>
+<h1>ProvidedMethod</h1>
 <div class="xmldoc">
 </div>
   <h3>Constructors</h3>
@@ -47,15 +47,17 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '99', 99)" onmouseover="showTip(event, '99', 99)">
-            new(...)
+          <code onmouseout="hideTip(event, '117', 117)" onmouseover="showTip(event, '117', 117)">
+            new(methodName, parameters, returnType)
           </code>
-          <div class="tip" id="99">
-            <strong>Signature:</strong> (parameterName:string * parameterType:Type * isOut:bool option * optionalValue:obj option) -&gt; ProvidedParameter<br />
+          <div class="tip" id="117">
+            <strong>Signature:</strong> (methodName:string * parameters:ProvidedParameter list * returnType:Type) -&gt; ProvidedMethod<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Create a new provided method. It is not initially associated with any specific provided type definition.
+</br>
         </td>
       </tr>
     </tbody>
@@ -69,11 +71,43 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '126', 126)" onmouseover="showTip(event, '126', 126)">
-            IsParamArray
+          <code onmouseout="hideTip(event, '141', 141)" onmouseover="showTip(event, '141', 141)">
+            AddCustomAttribute(arg1)
           </code>
-          <div class="tip" id="126">
-            <strong>Signature:</strong> bool<br />
+          <div class="tip" id="141">
+            <strong>Signature:</strong> CustomAttributeData -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Add a custom attribute to the provided method definition.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '147', 147)" onmouseover="showTip(event, '147', 147)">
+            AddDefinitionLocation(...)
+          </code>
+          <div class="tip" id="147">
+            <strong>Signature:</strong> (line:int * column:int * filePath:string) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Add definition location information to the provided type definition.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '148', 148)" onmouseover="showTip(event, '148', 148)">
+            AddMethodAttrs(attributes)
+          </code>
+          <div class="tip" id="148">
+            <strong>Signature:</strong> attributes:MethodAttributes -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -83,15 +117,146 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '133', 133)" onmouseover="showTip(event, '133', 133)">
-            IsParamArray()
+          <code onmouseout="hideTip(event, '149', 149)" onmouseover="showTip(event, '149', 149)">
+            AddObsoleteAttribute(message, ?isError)
           </code>
-          <div class="tip" id="133">
+          <div class="tip" id="149">
+            <strong>Signature:</strong> (message:string * isError:bool option) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Add XML documentation information to this provided method
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '150', 150)" onmouseover="showTip(event, '150', 150)">
+            AddXmlDoc(xmlDoc)
+          </code>
+          <div class="tip" id="150">
+            <strong>Signature:</strong> xmlDoc:string -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Add XML documentation information to this provided constructor
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '151', 151)" onmouseover="showTip(event, '151', 151)">
+            AddXmlDocComputed(xmlDocFunction)
+          </code>
+          <div class="tip" id="151">
+            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary
+ The documentation is re-computed  every time it is required.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '152', 152)" onmouseover="showTip(event, '152', 152)">
+            AddXmlDocDelayed(xmlDocFunction)
+          </code>
+          <div class="tip" id="152">
+            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '153', 153)" onmouseover="showTip(event, '153', 153)">
+            DefineStaticParameters(...)
+          </code>
+          <div class="tip" id="153">
+            <strong>Signature:</strong> (parameters:ProvidedStaticParameter list * instantiationFunction:(string -&gt; obj [] -&gt; ProvidedMethod)) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Define the static parameters available on a statically parameterized method
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '154', 154)" onmouseover="showTip(event, '154', 154)">
+            InvokeCode()
+          </code>
+          <div class="tip" id="154">
+            <strong>Signature:</strong> unit -&gt; Expr list -&gt; Expr<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Set the quotation used to compute the implementation of invocations of this method.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '155', 155)" onmouseover="showTip(event, '155', 155)">
+            IsStaticMethod
+          </code>
+          <div class="tip" id="155">
+            <strong>Signature:</strong> bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Get or set a flag indicating if the property is static.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '156', 156)" onmouseover="showTip(event, '156', 156)">
+            IsStaticMethod()
+          </code>
+          <div class="tip" id="156">
             <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Get or set a flag indicating if the property is static.
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '157', 157)" onmouseover="showTip(event, '157', 157)">
+            SetMethodAttrs(attributes)
+          </code>
+          <div class="tip" id="157">
+            <strong>Signature:</strong> attributes:MethodAttributes -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Set the method attributes of the method. By default these are simple 'MethodAttributes.Public'
+</br>
         </td>
       </tr>
     </tbody>
@@ -104,7 +269,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.0.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

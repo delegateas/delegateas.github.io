@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>ProvidedMeasureBuilder - DAXIF# v.2.3.0.0</title>
+    <title>ProvidedSymbolKind - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -35,148 +35,108 @@
 
 
 
-<h1>ProvidedMeasureBuilder</h1>
+<h1>ProvidedSymbolKind</h1>
 <div class="xmldoc">
 </div>
-  <h3>Instance members</h3>
+  <h3>Union Cases</h3>
   <table class="table table-bordered member-list">
     <thead>
-      <tr><td>Instance member</td><td>Description</td></tr>
+      <tr><td>Union Case</td><td>Description</td></tr>
     </thead>
     <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '147', 147)" onmouseover="showTip(event, '147', 147)">
-            AnnotateType(basic, argument)
+          <code onmouseout="hideTip(event, '108', 108)" onmouseover="showTip(event, '108', 108)">
+            Array(int)
           </code>
-          <div class="tip" id="147">
-            <strong>Signature:</strong> (basic:Type * argument:Type list) -&gt; Type<br />
+          <div class="tip" id="108">
+            <strong>Signature:</strong> int<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- e.g. float<kg>, Vector<int, kg>
+ Indicates that the type constructor is for a multi-dimensional array
 </br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '148', 148)" onmouseover="showTip(event, '148', 148)">
-            Inverse(denominator)
+          <code onmouseout="hideTip(event, '109', 109)" onmouseover="showTip(event, '109', 109)">
+            ByRef
           </code>
-          <div class="tip" id="148">
-            <strong>Signature:</strong> denominator:Type -&gt; Type<br />
+          <div class="tip" id="109">
+            <strong>Signature:</strong> <br />
                       </div>
         </td>
         <td class="xmldoc">
         
- e.g. 1 / kg
+ Indicates that the type constructor is for byref types
 </br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '149', 149)" onmouseover="showTip(event, '149', 149)">
-            One
+          <code onmouseout="hideTip(event, '110', 110)" onmouseover="showTip(event, '110', 110)">
+            FSharpTypeAbbreviation(...)
           </code>
-          <div class="tip" id="149">
+          <div class="tip" id="110">
+            <strong>Signature:</strong> Assembly * string * string []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Indicates that the type constructor is for abbreviated types
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '111', 111)" onmouseover="showTip(event, '111', 111)">
+            Generic(Type)
+          </code>
+          <div class="tip" id="111">
             <strong>Signature:</strong> Type<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- e.g. 1
+ Indicates that the type constructor is for named generic types
 </br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '150', 150)" onmouseover="showTip(event, '150', 150)">
-            Product(measure1, measure1)
+          <code onmouseout="hideTip(event, '112', 112)" onmouseover="showTip(event, '112', 112)">
+            Pointer
           </code>
-          <div class="tip" id="150">
-            <strong>Signature:</strong> (measure1:Type * measure1:Type) -&gt; Type<br />
+          <div class="tip" id="112">
+            <strong>Signature:</strong> <br />
                       </div>
         </td>
         <td class="xmldoc">
         
- e.g. m * kg
+ Indicates that the type constructor is for pointer types
 </br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '151', 151)" onmouseover="showTip(event, '151', 151)">
-            Ratio(numerator, denominator)
+          <code onmouseout="hideTip(event, '113', 113)" onmouseover="showTip(event, '113', 113)">
+            SDArray
           </code>
-          <div class="tip" id="151">
-            <strong>Signature:</strong> (numerator:Type * denominator:Type) -&gt; Type<br />
+          <div class="tip" id="113">
+            <strong>Signature:</strong> <br />
                       </div>
         </td>
         <td class="xmldoc">
         
- e.g. kg / m
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '152', 152)" onmouseover="showTip(event, '152', 152)">
-            SI(arg1)
-          </code>
-          <div class="tip" id="152">
-            <strong>Signature:</strong> string -&gt; Type<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- the SI unit from the F# core library, where the string is in capitals and US spelling, e.g. Meter
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '153', 153)" onmouseover="showTip(event, '153', 153)">
-            Square(measure)
-          </code>
-          <div class="tip" id="153">
-            <strong>Signature:</strong> measure:Type -&gt; Type<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- e.g. m * m 
-</br>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>Static members</h3>
-  <table class="table table-bordered member-list">
-    <thead>
-      <tr><td>Static member</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '213', 213)" onmouseover="showTip(event, '213', 213)">
-            Default
-          </code>
-          <div class="tip" id="213">
-            <strong>Signature:</strong> ProvidedMeasureBuilder<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- The ProvidedMeasureBuilder for building measures.
+ Indicates that the type constructor is for a single-dimensional array
 </br>
         </td>
       </tr>
@@ -190,7 +150,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.0.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

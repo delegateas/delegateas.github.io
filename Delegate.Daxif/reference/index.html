@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>Namespaces - DAXIF# v.2.3.0.0</title>
+    <title>Namespaces - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -33,7 +33,7 @@
             <div class="span9" id="main">
                 
 
-<h1>DAXIF# v.2.3.0.0</h1>
+<h1>DAXIF# v.2.3.0.1</h1>
 
   <h2>DG.Daxif Namespace</h2>
   <div>
@@ -206,14 +206,14 @@
             <a href="dg-daxif-modules-typeprovider-xrmprovider.html">XrmProvider</a>
           </td>
           <td class="xmldoc">
- Basic and simple/read-only F# xRM TypeProvider (F# 3.0)
+ Basic and simple/read-only F# xRM TypeProvider
 </br></td>
         </tr>
     </tbody>
   </table>
 
   </div>
-  <h2>Microsoft.FSharp.ProvidedTypes Namespace</h2>
+  <h2>ProviderImplementation.ProvidedTypes Namespace</h2>
   <div>
       <table class="table table-bordered type-list">
     <thead>
@@ -222,7 +222,7 @@
     <tbody>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedassembly.html">ProvidedAssembly</a>
+            <a href="providerimplementation-providedtypes-providedassembly.html">ProvidedAssembly</a>
           </td>
           <td class="xmldoc">
  A provided generated assembly
@@ -230,7 +230,7 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedconstructor.html">ProvidedConstructor</a>
+            <a href="providerimplementation-providedtypes-providedconstructor.html">ProvidedConstructor</a>
           </td>
           <td class="xmldoc">
  Represents an erased provided constructor.
@@ -238,7 +238,7 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedevent.html">ProvidedEvent</a>
+            <a href="providerimplementation-providedtypes-providedevent.html">ProvidedEvent</a>
           </td>
           <td class="xmldoc">
  Represents an erased provided property.
@@ -246,7 +246,7 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedfield.html">ProvidedField</a>
+            <a href="providerimplementation-providedtypes-providedfield.html">ProvidedField</a>
           </td>
           <td class="xmldoc">
  Represents an erased provided field.
@@ -254,7 +254,7 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedliteralfield.html">ProvidedLiteralField</a>
+            <a href="providerimplementation-providedtypes-providedliteralfield.html">ProvidedLiteralField</a>
           </td>
           <td class="xmldoc">
  Represents an erased provided field.
@@ -262,7 +262,7 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedmeasurebuilder.html">ProvidedMeasureBuilder</a>
+            <a href="providerimplementation-providedtypes-providedmeasurebuilder.html">ProvidedMeasureBuilder</a>
           </td>
           <td class="xmldoc">
  Helps create erased provided unit-of-measure annotations.
@@ -270,13 +270,13 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedmethod.html">ProvidedMethod</a>
+            <a href="providerimplementation-providedtypes-providedmethod.html">ProvidedMethod</a>
           </td>
           <td class="xmldoc"></td>
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedparameter.html">ProvidedParameter</a>
+            <a href="providerimplementation-providedtypes-providedparameter.html">ProvidedParameter</a>
           </td>
           <td class="xmldoc">
  Represents an erased provided parameter
@@ -284,7 +284,7 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedproperty.html">ProvidedProperty</a>
+            <a href="providerimplementation-providedtypes-providedproperty.html">ProvidedProperty</a>
           </td>
           <td class="xmldoc">
  Represents an erased provided property.
@@ -292,7 +292,7 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedstaticparameter.html">ProvidedStaticParameter</a>
+            <a href="providerimplementation-providedtypes-providedstaticparameter.html">ProvidedStaticParameter</a>
           </td>
           <td class="xmldoc">
  Represents a provided static parameter.
@@ -300,10 +300,17 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedsymboltype.html">ProvidedSymbolType</a>
+            <a href="providerimplementation-providedtypes-providedsymbolkind.html">ProvidedSymbolKind</a>
           </td>
           <td class="xmldoc">
- FSharp.Data addition: ProvidedSymbolType is used by AssemblyReplacer.fs
+ Represents the type constructor in a provided symbol type.
+</br></td>
+        </tr>
+        <tr>
+          <td class="type-name">
+            <a href="providerimplementation-providedtypes-providedsymboltype.html">ProvidedSymbolType</a>
+          </td>
+          <td class="xmldoc">
  Represents an array or other symbolic type involving a provided type as the argument.
  See the type provider spec for the methods that must be implemented.
  Note that the type provider specification does not require us to implement pointer-equality for provided types.
@@ -311,15 +318,15 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedtypebuilder.html">ProvidedTypeBuilder</a>
+            <a href="providerimplementation-providedtypes-providedtypebuilder.html">ProvidedTypeBuilder</a>
           </td>
           <td class="xmldoc">
- Provides symbolic provided types
+ Helpers to build symbolic provided types
 </br></td>
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-providedtypedefinition.html">ProvidedTypeDefinition</a>
+            <a href="providerimplementation-providedtypes-providedtypedefinition.html">ProvidedTypeDefinition</a>
           </td>
           <td class="xmldoc">
  Represents a provided type definition.
@@ -327,16 +334,7 @@
         </tr>
         <tr>
           <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-symbolkind.html">SymbolKind</a>
-          </td>
-          <td class="xmldoc">
- FSharp.Data addition: SymbolKind is used by AssemblyReplacer.fs
- Represents the type constructor in a provided symbol type.
-</br></td>
-        </tr>
-        <tr>
-          <td class="type-name">
-            <a href="microsoft-fsharp-providedtypes-typeproviderfornamespaces.html">TypeProviderForNamespaces</a>
+            <a href="providerimplementation-providedtypes-typeproviderfornamespaces.html">TypeProviderForNamespaces</a>
           </td>
           <td class="xmldoc">
  A base type providing default implementations of type provider functionality when all provided 
@@ -355,7 +353,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.0.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

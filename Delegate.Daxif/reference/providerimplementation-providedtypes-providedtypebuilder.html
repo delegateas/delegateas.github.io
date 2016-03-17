@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>ProvidedAssembly - DAXIF# v.2.3.0.0</title>
+    <title>ProvidedTypeBuilder - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -35,74 +35,9 @@
 
 
 
-<h1>ProvidedAssembly</h1>
+<h1>ProvidedTypeBuilder</h1>
 <div class="xmldoc">
 </div>
-  <h3>Constructors</h3>
-  <table class="table table-bordered member-list">
-    <thead>
-      <tr><td>Constructor</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '145', 145)" onmouseover="showTip(event, '145', 145)">
-            new(assemblyFileName)
-          </code>
-          <div class="tip" id="145">
-            <strong>Signature:</strong> assemblyFileName:string -&gt; ProvidedAssembly<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  <h3>Instance members</h3>
-  <table class="table table-bordered member-list">
-    <thead>
-      <tr><td>Instance member</td><td>Description</td></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '209', 209)" onmouseover="showTip(event, '209', 209)">
-            AddNestedTypes(...)
-          </code>
-          <div class="tip" id="209">
-            <strong>Signature:</strong> (types:ProvidedTypeDefinition list * enclosingGeneratedTypeNames:string list) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '210', 210)" onmouseover="showTip(event, '210', 210)">
-            AddTypes(types)
-          </code>
-          <div class="tip" id="210">
-            <strong>Signature:</strong> (types:ProvidedTypeDefinition list) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Emit the given provided type definitions as part of the assembly 
- and adjust the 'Assembly' property of all provided type definitions to return that
- assembly.
-
- The assembly is only emitted when the Assembly property on the root type is accessed for the first time.
- The host F# compiler does this when processing a generative type declaration for the type.
- </br>
-        </td>
-      </tr>
-    </tbody>
-  </table>
   <h3>Static members</h3>
   <table class="table table-bordered member-list">
     <thead>
@@ -112,16 +47,32 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '215', 215)" onmouseover="showTip(event, '215', 215)">
-            RegisterGenerated(fileName)
+          <code onmouseout="hideTip(event, '219', 219)" onmouseover="showTip(event, '219', 219)">
+            MakeGenericMethod(...)
           </code>
-          <div class="tip" id="215">
-            <strong>Signature:</strong> fileName:string -&gt; Assembly<br />
+          <div class="tip" id="219">
+            <strong>Signature:</strong> (genericMethodDefinition:MethodInfo * genericArguments:Type list) -&gt; MethodInfo<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Register that a given file is a provided generated assembly
+ Like methodInfo.MakeGenericMethod, but will also work with unit-annotated types and provided types
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '220', 220)" onmouseover="showTip(event, '220', 220)">
+            MakeGenericType(...)
+          </code>
+          <div class="tip" id="220">
+            <strong>Signature:</strong> (genericTypeDefinition:Type * genericArguments:Type list) -&gt; Type<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Like typ.MakeGenericType, but will also work with unit-annotated types
 </br>
         </td>
       </tr>
@@ -135,7 +86,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.0.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

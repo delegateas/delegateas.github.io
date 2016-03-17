@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>TypeProviderForNamespaces - DAXIF# v.2.3.0.0</title>
+    <title>ProvidedParameter - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -35,7 +35,7 @@
 
 
 
-<h1>TypeProviderForNamespaces</h1>
+<h1>ProvidedParameter</h1>
 <div class="xmldoc">
 </div>
   <h3>Constructors</h3>
@@ -47,33 +47,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '103', 103)" onmouseover="showTip(event, '103', 103)">
-            new()
+          <code onmouseout="hideTip(event, '118', 118)" onmouseover="showTip(event, '118', 118)">
+            new(...)
           </code>
-          <div class="tip" id="103">
-            <strong>Signature:</strong> unit -&gt; TypeProviderForNamespaces<br />
+          <div class="tip" id="118">
+            <strong>Signature:</strong> (parameterName:string * parameterType:Type * isOut:bool option * optionalValue:obj option) -&gt; ProvidedParameter<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Initializes a type provider 
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '104', 104)" onmouseover="showTip(event, '104', 104)">
-            new(namespaceName, types)
-          </code>
-          <div class="tip" id="104">
-            <strong>Signature:</strong> (namespaceName:string * types:ProvidedTypeDefinition list) -&gt; TypeProviderForNamespaces<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Initializes a type provider to provide the types in the given namespace.
-</br>
         </td>
       </tr>
     </tbody>
@@ -87,11 +69,11 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '181', 181)" onmouseover="showTip(event, '181', 181)">
-            add_Disposing(arg1)
+          <code onmouseout="hideTip(event, '158', 158)" onmouseover="showTip(event, '158', 158)">
+            IsParamArray
           </code>
-          <div class="tip" id="181">
-            <strong>Signature:</strong> EventHandler -&gt; unit<br />
+          <div class="tip" id="158">
+            <strong>Signature:</strong> bool<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -101,127 +83,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '200', 200)" onmouseover="showTip(event, '200', 200)">
-            AddNamespace(namespaceName, types)
+          <code onmouseout="hideTip(event, '159', 159)" onmouseover="showTip(event, '159', 159)">
+            IsParamArray()
           </code>
-          <div class="tip" id="200">
-            <strong>Signature:</strong> (namespaceName:string * types:ProvidedTypeDefinition list) -&gt; unit<br />
+          <div class="tip" id="159">
+            <strong>Signature:</strong> unit -&gt; bool<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add a namespace of provided types.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '201', 201)" onmouseover="showTip(event, '201', 201)">
-            Disposing
-          </code>
-          <div class="tip" id="201">
-            <strong>Signature:</strong> IEvent&lt;EventHandler,EventArgs&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '202', 202)" onmouseover="showTip(event, '202', 202)">
-            Invalidate()
-          </code>
-          <div class="tip" id="202">
-            <strong>Signature:</strong> unit -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Invalidate the information provided by the provider
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '203', 203)" onmouseover="showTip(event, '203', 203)">
-            Namespaces
-          </code>
-          <div class="tip" id="203">
-            <strong>Signature:</strong> seq&lt;string * ProvidedTypeDefinition list&gt;<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- FSharp.Data addition: this method is used by Debug.fs
- Get all namespace with their provided types.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '204', 204)" onmouseover="showTip(event, '204', 204)">
-            RegisterProbingFolder(folder)
-          </code>
-          <div class="tip" id="204">
-            <strong>Signature:</strong> folder:string -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Registers custom probing path that can be used for probing assemblies
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '205', 205)" onmouseover="showTip(event, '205', 205)">
-            RegisterRuntimeAssemblyLocationAsProbingFolder(...)
-          </code>
-          <div class="tip" id="205">
-            <strong>Signature:</strong> cfg:TypeProviderConfig -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Registers location of RuntimeAssembly (from TypeProviderConfig) as probing folder
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '206', 206)" onmouseover="showTip(event, '206', 206)">
-            remove_Disposing(arg1)
-          </code>
-          <div class="tip" id="206">
-            <strong>Signature:</strong> EventHandler -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '207', 207)" onmouseover="showTip(event, '207', 207)">
-            ResolveAssembly(arg1)
-          </code>
-          <div class="tip" id="207">
-            <strong>Signature:</strong> ResolveEventArgs -&gt; Assembly<br />
-              <strong>Modifiers:</strong> abstract<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- AssemblyResolve handler. Default implementation searches <assemblyname>.dll file in registered folders 
-</br>
         </td>
       </tr>
     </tbody>
@@ -234,7 +104,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.0.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

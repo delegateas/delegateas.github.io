@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>ProvidedLiteralField - DAXIF# v.2.3.0.0</title>
+    <title>ProvidedStaticParameter - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -35,7 +35,7 @@
 
 
 
-<h1>ProvidedLiteralField</h1>
+<h1>ProvidedStaticParameter</h1>
 <div class="xmldoc">
 </div>
   <h3>Constructors</h3>
@@ -47,17 +47,15 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '101', 101)" onmouseover="showTip(event, '101', 101)">
-            new(fieldName, fieldType, literalValue)
+          <code onmouseout="hideTip(event, '120', 120)" onmouseover="showTip(event, '120', 120)">
+            new(...)
           </code>
-          <div class="tip" id="101">
-            <strong>Signature:</strong> (fieldName:string * fieldType:Type * literalValue:obj) -&gt; ProvidedLiteralField<br />
+          <div class="tip" id="120">
+            <strong>Signature:</strong> (parameterName:string * parameterType:Type * parameterDefaultValue:obj option) -&gt; ProvidedStaticParameter<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Create a new provided field. It is not initially associated with any specific provided type definition.
-</br>
         </td>
       </tr>
     </tbody>
@@ -71,81 +69,32 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '127', 127)" onmouseover="showTip(event, '127', 127)">
-            AddDefinitionLocation(...)
-          </code>
-          <div class="tip" id="127">
-            <strong>Signature:</strong> (line:int * column:int * filePath:string) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add definition location information to the provided field.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '129', 129)" onmouseover="showTip(event, '129', 129)">
-            AddObsoleteAttribute(message, ?isError)
-          </code>
-          <div class="tip" id="129">
-            <strong>Signature:</strong> (message:string * isError:bool option) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add a 'System.Obsolete' attribute to this provided field
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '130', 130)" onmouseover="showTip(event, '130', 130)">
+          <code onmouseout="hideTip(event, '170', 170)" onmouseover="showTip(event, '170', 170)">
             AddXmlDoc(xmlDoc)
           </code>
-          <div class="tip" id="130">
+          <div class="tip" id="170">
             <strong>Signature:</strong> xmlDoc:string -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add XML documentation information to this provided field
+ Add XML documentation information to this provided constructor
 </br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '131', 131)" onmouseover="showTip(event, '131', 131)">
-            AddXmlDocComputed(xmlDocFunction)
-          </code>
-          <div class="tip" id="131">
-            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided field, where the computation of the documentation is delayed until necessary
- The documentation is re-computed  every time it is required.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '132', 132)" onmouseover="showTip(event, '132', 132)">
+          <code onmouseout="hideTip(event, '171', 171)" onmouseover="showTip(event, '171', 171)">
             AddXmlDocDelayed(xmlDocFunction)
           </code>
-          <div class="tip" id="132">
+          <div class="tip" id="171">
             <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add XML documentation information to this provided field, where the computation of the documentation is delayed until necessary
+ Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary
 </br>
         </td>
       </tr>
@@ -159,7 +108,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.0.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

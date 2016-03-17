@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>ProvidedMethod - DAXIF# v.2.3.0.0</title>
+    <title>ProvidedAssembly - DAXIF# v.2.3.0.1</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -35,7 +35,7 @@
 
 
 
-<h1>ProvidedMethod</h1>
+<h1>ProvidedAssembly</h1>
 <div class="xmldoc">
 </div>
   <h3>Constructors</h3>
@@ -47,16 +47,16 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '98', 98)" onmouseover="showTip(event, '98', 98)">
-            new(methodName, parameters, returnType)
+          <code onmouseout="hideTip(event, '91', 91)" onmouseover="showTip(event, '91', 91)">
+            new(assemblyFileName)
           </code>
-          <div class="tip" id="98">
-            <strong>Signature:</strong> (methodName:string * parameters:ProvidedParameter list * returnType:Type) -&gt; ProvidedMethod<br />
+          <div class="tip" id="91">
+            <strong>Signature:</strong> assemblyFileName:string -&gt; ProvidedAssembly<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Create a new provided method. It is not initially associated with any specific provided type definition.
+ Create a provided generated assembly
 </br>
         </td>
       </tr>
@@ -71,175 +71,63 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '134', 134)" onmouseover="showTip(event, '134', 134)">
-            AddCustomAttribute(arg1)
+          <code onmouseout="hideTip(event, '94', 94)" onmouseover="showTip(event, '94', 94)">
+            AddNestedTypes(...)
           </code>
-          <div class="tip" id="134">
-            <strong>Signature:</strong> CustomAttributeData -&gt; unit<br />
+          <div class="tip" id="94">
+            <strong>Signature:</strong> (types:ProvidedTypeDefinition list * enclosingGeneratedTypeNames:string list) -&gt; unit<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add a custom attribute to the provided method definition.
+ Emit the given nested provided type definitions as part of the assembly.
+ and adjust the 'Assembly' property of all provided type definitions to return that
+ assembly.
+ </br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '95', 95)" onmouseover="showTip(event, '95', 95)">
+            AddTypes(types)
+          </code>
+          <div class="tip" id="95">
+            <strong>Signature:</strong> (types:ProvidedTypeDefinition list) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+ Emit the given provided type definitions as part of the assembly 
+ and adjust the 'Assembly' property of all provided type definitions to return that
+ assembly.
+
+ The assembly is only emitted when the Assembly property on the root type is accessed for the first time.
+ The host F# compiler does this when processing a generative type declaration for the type.
 </br>
         </td>
       </tr>
+    </tbody>
+  </table>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '135', 135)" onmouseover="showTip(event, '135', 135)">
-            AddDefinitionLocation(...)
+          <code onmouseout="hideTip(event, '107', 107)" onmouseover="showTip(event, '107', 107)">
+            RegisterGenerated(fileName)
           </code>
-          <div class="tip" id="135">
-            <strong>Signature:</strong> (line:int * column:int * filePath:string) -&gt; unit<br />
+          <div class="tip" id="107">
+            <strong>Signature:</strong> fileName:string -&gt; Assembly<br />
                       </div>
         </td>
         <td class="xmldoc">
         
- Add definition location information to the provided type definition.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '136', 136)" onmouseover="showTip(event, '136', 136)">
-            AddMethodAttrs(attributes)
-          </code>
-          <div class="tip" id="136">
-            <strong>Signature:</strong> attributes:MethodAttributes -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '137', 137)" onmouseover="showTip(event, '137', 137)">
-            AddObsoleteAttribute(message, ?isError)
-          </code>
-          <div class="tip" id="137">
-            <strong>Signature:</strong> (message:string * isError:bool option) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided method
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '138', 138)" onmouseover="showTip(event, '138', 138)">
-            AddXmlDoc(xmlDoc)
-          </code>
-          <div class="tip" id="138">
-            <strong>Signature:</strong> xmlDoc:string -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided constructor
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '139', 139)" onmouseover="showTip(event, '139', 139)">
-            AddXmlDocComputed(xmlDocFunction)
-          </code>
-          <div class="tip" id="139">
-            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary
- The documentation is re-computed  every time it is required.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '140', 140)" onmouseover="showTip(event, '140', 140)">
-            AddXmlDocDelayed(xmlDocFunction)
-          </code>
-          <div class="tip" id="140">
-            <strong>Signature:</strong> (xmlDocFunction:(unit -&gt; string)) -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Add XML documentation information to this provided constructor, where the computation of the documentation is delayed until necessary
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '141', 141)" onmouseover="showTip(event, '141', 141)">
-            InvokeCode()
-          </code>
-          <div class="tip" id="141">
-            <strong>Signature:</strong> unit -&gt; Expr list -&gt; Expr<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Set the quotation used to compute the implementation of invocations of this method.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '142', 142)" onmouseover="showTip(event, '142', 142)">
-            IsStaticMethod
-          </code>
-          <div class="tip" id="142">
-            <strong>Signature:</strong> bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Get or set a flag indicating if the property is static.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '143', 143)" onmouseover="showTip(event, '143', 143)">
-            IsStaticMethod()
-          </code>
-          <div class="tip" id="143">
-            <strong>Signature:</strong> unit -&gt; bool<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Get or set a flag indicating if the property is static.
-</br>
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '144', 144)" onmouseover="showTip(event, '144', 144)">
-            SetMethodAttrs(attributes)
-          </code>
-          <div class="tip" id="144">
-            <strong>Signature:</strong> attributes:MethodAttributes -&gt; unit<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
- Set the method attributes of the method. By default these are simple 'MethodAttributes.Public'
+ Register that a given file is a provided generated assembly
 </br>
         </td>
       </tr>
@@ -253,7 +141,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.0.1</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
