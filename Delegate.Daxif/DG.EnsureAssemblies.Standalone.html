@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>Ensure Assemblies
+    <title>Ensure Assemblies (Standalone)
 </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="
@@ -37,7 +37,7 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>Ensure Assemblies</h1>
+<h1>Ensure Assemblies (Standalone)</h1>
 
 <p>Due to NuGets limitations when a VS project is restored, the "install.ps1" is not
 executed and for this reason for this script, that will copy all the *.dll 
@@ -78,7 +78,7 @@ DAXIF# scripts</p>
 
 <span class="c">/// Executed only once in order to ensure .dll from nuget packages are copied to .lib</span>
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">root</span> <span class="o">=</span>  <span class="k">__SOURCE_DIRECTORY__</span>
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">pkgs</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs3', 5)" onmouseover="showTip(event, 'fs3', 5)" class="i">root</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">/</span><span class="s">.</span><span class="s">.</span><span class="s">&quot;</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">/</span><span class="s">packages</span><span class="s">&quot;</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">pkgs</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs3', 5)" onmouseover="showTip(event, 'fs3', 5)" class="i">root</span> <span class="o">+</span> <span class="s">@&quot;</span><span class="s">/</span><span class="s">packages</span><span class="s">&quot;</span>
 
 <span class="c">/// Exclude older or portable .NET versions</span>
 <span class="k">let</span> <span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="i">blacklist</span> <span class="o">=</span> [ <span class="s">&quot;</span><span class="s">net20</span><span class="s">&quot;</span>; <span class="s">&quot;</span><span class="s">portable</span><span class="s">-</span><span class="s">&quot;</span> ]
@@ -104,10 +104,10 @@ DAXIF# scripts</p>
 
 <div class="tip" id="fs1">namespace System</div>
 <div class="tip" id="fs2">namespace System.IO</div>
-<div class="tip" id="fs3">val root : string<br /><br />Full name: DG.EnsureAssemblies.root<br /><em><br /><br />&#160;Executed only once in order to ensure .dll from nuget packages are copied to .lib</em></div>
-<div class="tip" id="fs4">val pkgs : string<br /><br />Full name: DG.EnsureAssemblies.pkgs</div>
-<div class="tip" id="fs5">val blacklist : string list<br /><br />Full name: DG.EnsureAssemblies.blacklist<br /><em><br /><br />&#160;Exclude older or portable .NET versions</em></div>
-<div class="tip" id="fs6">val exclude : path:string -&gt; bool<br /><br />Full name: DG.EnsureAssemblies.exclude</div>
+<div class="tip" id="fs3">val root : string<br /><br />Full name: DG.EnsureAssemblies.Standalone.root<br /><em><br /><br />&#160;Executed only once in order to ensure .dll from nuget packages are copied to .lib</em></div>
+<div class="tip" id="fs4">val pkgs : string<br /><br />Full name: DG.EnsureAssemblies.Standalone.pkgs</div>
+<div class="tip" id="fs5">val blacklist : string list<br /><br />Full name: DG.EnsureAssemblies.Standalone.blacklist<br /><em><br /><br />&#160;Exclude older or portable .NET versions</em></div>
+<div class="tip" id="fs6">val exclude : path:string -&gt; bool<br /><br />Full name: DG.EnsureAssemblies.Standalone.exclude</div>
 <div class="tip" id="fs7">val path : string</div>
 <div class="tip" id="fs8">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = System.String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
 <div class="tip" id="fs9">Multiple items<br />module List<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type List&lt;&#39;T&gt; =<br />&#160;&#160;| ( [] )<br />&#160;&#160;| ( :: ) of Head: &#39;T * Tail: &#39;T list<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IEnumerable&lt;&#39;T&gt;<br />&#160;&#160;member Head : &#39;T<br />&#160;&#160;member IsEmpty : bool<br />&#160;&#160;member Item : index:int -&gt; &#39;T with get<br />&#160;&#160;member Length : int<br />&#160;&#160;member Tail : &#39;T list<br />&#160;&#160;static member Cons : head:&#39;T * tail:&#39;T list -&gt; &#39;T list<br />&#160;&#160;static member Empty : &#39;T list<br /><br />Full name: Microsoft.FSharp.Collections.List&lt;_&gt;</div>
@@ -116,7 +116,7 @@ DAXIF# scripts</p>
 <div class="tip" id="fs12">val y : string</div>
 <div class="tip" id="fs13">System.String.Contains(value: string) : bool</div>
 <div class="tip" id="fs14">val not : value:bool -&gt; bool<br /><br />Full name: Microsoft.FSharp.Core.Operators.not</div>
-<div class="tip" id="fs15">val helper : paths:seq&lt;string&gt; -&gt; unit<br /><br />Full name: DG.EnsureAssemblies.helper</div>
+<div class="tip" id="fs15">val helper : paths:seq&lt;string&gt; -&gt; unit<br /><br />Full name: DG.EnsureAssemblies.Standalone.helper</div>
 <div class="tip" id="fs16">val paths : seq&lt;string&gt;</div>
 <div class="tip" id="fs17">module Seq<br /><br />from Microsoft.FSharp.Collections</div>
 <div class="tip" id="fs18">val filter : predicate:(&#39;T -&gt; bool) -&gt; source:seq&lt;&#39;T&gt; -&gt; seq&lt;&#39;T&gt;<br /><br />Full name: Microsoft.FSharp.Collections.Seq.filter</div>
