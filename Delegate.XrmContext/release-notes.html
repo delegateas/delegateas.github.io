@@ -33,41 +33,47 @@
         <div class="span9" id="main">
           
 <h1><a name="Release-Notes" class="anchor" href="#Release-Notes">Release Notes</a></h1>
-
+<h3><a name="1-2-0-March-29-2016" class="anchor" href="#1-2-0-March-29-2016">1.2.0 - March 29 2016</a></h3>
+<ul>
+<li>
+Added functionality that helps with alternate keys for entities, 
+and in order to support this, the dependency <code>Microsoft.CrmSdk.CoreAssemblies</code> has been increased to the newest version again
+</li>
+<li>Added a comment description for entity classes</li>
+<li>Added several functions to easily create CRM requests from entity objects</li>
+<li>Added static retrieve methods (<code>.Retrieve_&lt;keyname&gt;</code>) on entity classes that makes it possible to retrieve records using alternate keys</li>
+<li>Added methods (<code>.AltKey_&lt;keyname&gt;</code>) that helps set the alternate keys correctly on an entity object before upserting it</li>
+<li>Added <code>.Retrieve&lt;T&gt;</code>, <code>.Upsert</code>, <code>.Assign</code> and <code>.SetState</code> extension methods on <code>IOrganizationService</code> to simplify the use of these requests</li>
+<li>Added <code>.PerformAsBulk</code> extension method on <code>IOrganizationService</code> that performs requests as bulk</li>
+<li>To support multiple versions of <code>CrmSdk.CoreAssemblies</code> in the target library, a new "<strong><em>/version</em></strong>" argument has been added</li>
+</ul>
 <h3><a name="1-1-2-February-24-2016" class="anchor" href="#1-1-2-February-24-2016">1.1.2 - February 24 2016</a></h3>
-
 <ul>
 <li>Added "<strong><em>/genconfig</em></strong>" argument which generates a dummy configuration file to use</li>
 <li>Added "<strong><em>/useconfig</em></strong>" argument, see <a href="tool-usage.html#Configuration-file">usage for more information</a></li>
 <li>Added version print when using the executable</li>
 <li>Changed exit-code for the executable to be 1 instead of 0, when it encounters an exception</li>
 </ul>
-
 <h3><a name="1-1-1-December-29-2015" class="anchor" href="#1-1-1-December-29-2015">1.1.1 - December 29 2015</a></h3>
-
 <ul>
 <li>Improved retrieval of CRM metadata</li>
 <li>Fixed incorrect argument description</li>
 </ul>
-
 <h3><a name="1-1-0-December-18-2015" class="anchor" href="#1-1-0-December-18-2015">1.1.0 - December 18 2015</a></h3>
-
 <ul>
-<li>Reduced version requirements to support backward-compatibility:
+<li>
+Reduced version requirements to support backward-compatibility:
 <ul>
 <li>Reduced requirement of the dependency <code>Microsoft.CrmSdk.CoreAssemblies</code> to 5.0.18 or greater</li>
 <li>Reduced used .NET Framework to version 4.5.2</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3><a name="1-0-1-December-07-2015" class="anchor" href="#1-0-1-December-07-2015">1.0.1 - December 07 2015</a></h3>
-
 <ul>
 <li>Fixed an incorrect string set in some <code>AttributeLogicalName</code> attributes.</li>
 </ul>
-
 <h3><a name="1-0-0-October-15-2015" class="anchor" href="#1-0-0-October-15-2015">1.0.0 - October 15 2015</a></h3>
-
 <ul>
 <li>Initial public release</li>
 </ul>
@@ -80,7 +86,7 @@
             <img src="/Delegate.XrmContext/img/delegate_xrmcontext_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmContext v.1.1.2</li>
+                <li class="nav-header">XrmContext v.1.2.0</li>
                 <li><a href="/Delegate.XrmContext/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmContext">Get Executable via NuGet</a></li>
