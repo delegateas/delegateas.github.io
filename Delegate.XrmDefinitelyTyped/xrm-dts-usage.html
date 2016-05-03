@@ -33,31 +33,24 @@
         <div class="span9" id="main">
           
 <h1><a name="Xrm-Object-Model" class="anchor" href="#Xrm-Object-Model">Xrm Object Model</a></h1>
-
-<p>The <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> can be accessed from web resources in your 
-solution. To start using the declaration files, one can drag in a reference to 
-<code>base.d.ts</code> which is located in the root folder, <code>typings/XRM/</code>. 
+<p>The <a href="https://msdn.microsoft.com/en-us/library/gg328255.aspx">Xrm object model</a> can be accessed from web resources in your
+solution. To start using the declaration files, one can drag in a reference to
+<code>base.d.ts</code> which is located in the root folder, <code>typings/XRM/</code>.
 This contains the base description of the API.</p>
-
-<p>The Xrm object model also allows access to entity specific attributes 
-and controls when it is used on a entity-specific page (such as a form). 
+<p>The Xrm object model also allows access to entity specific attributes
+and controls when it is used on a entity-specific page (such as a form).
 The following section will show an example of this usage on a specific
 Contact entity form.</p>
-
 <h2><a name="Specific-Contact-Form-Example" class="anchor" href="#Specific-Contact-Form-Example">Specific Contact Form Example</a></h2>
-
-<p>First off you need to reference the declaration file which matches the form 
-you want to add some client-side code to. These declaration files can be found 
+<p>First off you need to reference the declaration file which matches the form
+you want to add some client-side code to. These declaration files can be found
 at <code>typings/XRM/Form/&lt;EntityType&gt;/&lt;FormType&gt;/&lt;FormName&gt;.d.ts</code>.</p>
-
-<p>In this example, we want to add code to the standard Contact form called 
-'Information', which is of the 'Main' form type. This can be found at 
-<code>typings/XRM/Form/contact/Main/Information.d.ts</code>. Simply by adding this, 
+<p>In this example, we want to add code to the standard Contact form called
+'Information', which is of the 'Main' form type. This can be found at
+<code>typings/XRM/Form/contact/Main/Information.d.ts</code>. Simply by adding this,
 you get access to the entire Xrm object model API for the current form page!</p>
-
-<p>We just need to tell the compiler what page we are currently on 
+<p>We just need to tell the compiler what page we are currently on
 (<code>Form.contact.Main.Information</code>), which can be done in two ways:</p>
-
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
@@ -70,9 +63,7 @@ you get access to the entire Xrm object model API for the current form page!</p>
 <span class="c">// .. or just cast the page itself in a new variable</span>
 <span class="k">var</span> Page <span class="o">=</span> &lt;Form.contact.Main.Information&gt; Xrm.Page;
 </code></pre></td></tr></table>
-
 <p>Below is an example of an initial setup for your code file.</p>
-
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
@@ -93,25 +84,20 @@ you get access to the entire Xrm object model API for the current form page!</p>
     }
 }
 </code></pre></td></tr></table>
-
 <blockquote>
-  <p>Note when using modules, you need to export all functions you want to call 
-outside of it. In this case the <code>onLoad()</code> function needs to be used by CRM, 
+<p>Note when using modules, you need to export all functions you want to call
+outside of it. In this case the <code>onLoad()</code> function needs to be used by CRM,
 and therefore needs to be exported.</p>
 </blockquote>
-
-<p>In your desired IDE, you will now get intellisense for that specific 
+<p>In your desired IDE, you will now get intellisense for that specific
 contact form, with all of its attributes, controls, tabs and sections:</p>
-
 <img src="img/control-intellisense.gif" class="code" />
-
-<p>Each attribute and control on the form will have the correct type, which 
+<p>Each attribute and control on the form will have the correct type, which
 gives you type safety on the following values and functions!</p>
-
-<p>In case an invalid string is entered as an argument to one of the 
+<p>In case an invalid string is entered as an argument to one of the
 string-specific functions, it will return an empty interface with no
-functionality. This makes it easy to see if a string has been entered 
-incorrectly, or if you are trying to access an element that is not present 
+functionality. This makes it easy to see if a string has been entered
+incorrectly, or if you are trying to access an element that is not present
 on the form.</p>
 
 
@@ -122,7 +108,7 @@ on the form.</p>
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.1.7.4</li>
+                <li class="nav-header">XrmDefinitelyTyped v.1.7.5</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>

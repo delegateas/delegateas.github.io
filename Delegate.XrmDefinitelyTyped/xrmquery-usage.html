@@ -33,21 +33,16 @@
         <div class="span9" id="main">
           
 <h1><a name="XrmQuery" class="anchor" href="#XrmQuery">XrmQuery</a></h1>
-
 <p>With XrmQuery you can get intellisense for creating your query to the CRM dynamics database!
-Simply add a reference to the declaration file <code>typings/XRM/dg.xrmquery.d.ts</code>, and be sure 
+Simply add a reference to the declaration file <code>typings/XRM/dg.xrmquery.d.ts</code>, and be sure
 to include the javascript code for XrmQuery on the page/form you want to use it on.</p>
-
-<p>A minified version of the necessary javascript code of XrmQuery can be <a href="libs/dg.xrmquery.min.js">found here</a>. 
+<p>A minified version of the necessary javascript code of XrmQuery can be <a href="libs/dg.xrmquery.min.js">found here</a>.
 The code is also included in the NuGet package.</p>
-
-<p>With the javascript in place, you can write the following code with full intellisense on 
-the entity and all of its attributes and relationships! It also provides helper functions which 
+<p>With the javascript in place, you can write the following code with full intellisense on
+the entity and all of its attributes and relationships! It also provides helper functions which
 create the filter string for the query correctly based on the types given. XrmQuery provides intellisense
 and helper functions for all the options one can query with for <a href="https://msdn.microsoft.com/en-us/library/gg309461.aspx">OData on CRM</a>.</p>
-
 <p>Here is a small example where a complex filter is applied to a RetrieveMultiple on accounts:</p>
-
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
 <span class="l"> 3: </span>
@@ -70,12 +65,12 @@ and helper functions for all the options one can query with for <a href="https:/
 <span class="c">/// &lt;reference path="../../typings/xrm/entity/account.d.ts" /&gt;</span>
 
 XrmQuery.retrieveMultipleRecords(x <span class="o">=</span><span class="o">&gt;</span> x.Account)
-    .select(acc <span class="o">=</span><span class="o">&gt;</span> [acc.Name, acc.EMailAddress1])
+    .select(acc <span class="o">=</span><span class="o">&gt;</span> [acc.Name, acc.EMailAddress<span class="n">1</span>])
     .filter(acc <span class="o">=</span><span class="o">&gt;</span>
         Filter.and(
             Filter.or(
-                Filter.equals(acc.Address1_ShippingMethodCode.Value, account_address1_shippingmethodcode.Airborne),
-                Filter.greaterThan(acc.CreditLimit.Value, 1000)
+                Filter.equals(acc.Address<span class="n">1</span>_ShippingMethodCode.Value, account_address<span class="n">1</span>_shippingmethodcode.Airborne),
+                Filter.greaterThan(acc.CreditLimit.Value, <span class="n">1000</span>)
             ),
             Filter.equals(acc.PrimaryContactId.Id, Filter.makeGuid(<span class="s">"0000-SOME-GUID"</span>))
         ))
@@ -84,12 +79,10 @@ XrmQuery.retrieveMultipleRecords(x <span class="o">=</span><span class="o">&gt;<
         console.log(records)
     });
 </code></pre></td></tr></table>
-
-<p>The execute function also has the possibility to add a callback handler for errors and onComplete, 
+<p>The execute function also has the possibility to add a callback handler for errors and onComplete,
 like the standard SDK.REST API. These have been made optional, since they aren't necessary for a
 succesful run of the function.</p>
-
-<p>Check out the generated declaration file at <code>typings/XRM/dg.xrmquery.d.ts</code> to see what can be 
+<p>Check out the generated declaration file at <code>typings/XRM/dg.xrmquery.d.ts</code> to see what can be
 accomplished with XrmQuery!</p>
 
 
@@ -100,7 +93,7 @@ accomplished with XrmQuery!</p>
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.1.7.4</li>
+                <li class="nav-header">XrmDefinitelyTyped v.1.7.5</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
