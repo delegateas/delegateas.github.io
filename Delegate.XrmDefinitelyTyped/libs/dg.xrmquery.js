@@ -112,7 +112,7 @@ var XQC;
     function analyzeFunc(f) {
         var m = f.toString().match(fPatt);
         if (!m)
-            throw new Error("XrmQuery: Unable to parse function: " + f.toString());
+            throw new Error("XrmQuery: Unable to properly parse function: " + f.toString());
         return { arg: m[1], body: m[2] };
     }
     /**
