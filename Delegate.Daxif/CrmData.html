@@ -168,6 +168,15 @@
 <span class="l">42: </span>
 <span class="l">43: </span>
 <span class="l">44: </span>
+<span class="l">45: </span>
+<span class="l">46: </span>
+<span class="l">47: </span>
+<span class="l">48: </span>
+<span class="l">49: </span>
+<span class="l">50: </span>
+<span class="l">51: </span>
+<span class="l">52: </span>
+<span class="l">53: </span>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
@@ -214,7 +223,16 @@
    <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs25', 78)" onmouseover="showTip(event, 'fs25', 78)" class="i">Guid</span>
 
 <span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs38', 79)" onmouseover="showTip(event, 'fs38', 79)" class="i">publish</span> <span class="o">:</span> <span class="i">proxy</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 80)" onmouseover="showTip(event, 'fs3', 80)" class="i">OrganizationServiceProxy</span>
-   <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs19', 81)" onmouseover="showTip(event, 'fs19', 81)" class="i">unit</span></pre>
+   <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs19', 81)" onmouseover="showTip(event, 'fs19', 81)" class="i">unit</span>
+
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs39', 82)" onmouseover="showTip(event, 'fs39', 82)" class="i">performAsBulk</span> <span class="o">:</span> <span class="i">proxy</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 83)" onmouseover="showTip(event, 'fs3', 83)" class="i">OrganizationServiceProxy</span>
+  <span class="k">-&gt;</span> <span class="i">reqs</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs40', 84)" onmouseover="showTip(event, 'fs40', 84)" class="i">OrganizationRequest</span> []
+  <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs41', 85)" onmouseover="showTip(event, 'fs41', 85)" class="i">ExecuteMultipleResponseItem</span> []
+
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs42', 86)" onmouseover="showTip(event, 'fs42', 86)" class="i">performAsBulkWithOutput</span> <span class="o">:</span> <span class="i">proxy</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 87)" onmouseover="showTip(event, 'fs3', 87)" class="i">OrganizationServiceProxy</span>
+  <span class="k">-&gt;</span> <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs43', 88)" onmouseover="showTip(event, 'fs43', 88)" class="i">LogLevel</span>
+  <span class="k">-&gt;</span> <span class="i">reqs</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs40', 89)" onmouseover="showTip(event, 'fs40', 89)" class="i">OrganizationRequest</span> []      
+  <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs19', 90)" onmouseover="showTip(event, 'fs19', 90)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -257,6 +275,11 @@
 <div class="tip" id="fs36">Multiple items<br />type DeleteRequest =<br />&#160;&#160;inherit OrganizationRequest<br />&#160;&#160;new : unit -&gt; DeleteRequest<br />&#160;&#160;member ConcurrencyBehavior : ConcurrencyBehavior with get, set<br />&#160;&#160;member Target : EntityReference with get, set<br /><br />Full name: Microsoft.Xrm.Sdk.Messages.DeleteRequest<br /><br />--------------------<br />DeleteRequest() : unit</div>
 <div class="tip" id="fs37">val delete : proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; guid:Guid -&gt; Guid<br /><br />Full name: DG.Daxif.HelperModules.Common.CrmData.CRUD.delete<br /><em><br /><br />&#160;TODO:</em></div>
 <div class="tip" id="fs38">val publish : proxy:OrganizationServiceProxy -&gt; unit<br /><br />Full name: DG.Daxif.HelperModules.Common.CrmData.CRUD.publish<br /><em><br /><br />&#160;TODO:</em></div>
+<div class="tip" id="fs39">val performAsBulk : proxy:OrganizationServiceProxy -&gt; reqs:OrganizationRequest [] -&gt; ExecuteMultipleResponseItem []<br /><br />Full name: DG.Daxif.HelperModules.Common.CrmData.CRUD.performAsBulk</div>
+<div class="tip" id="fs40">Multiple items<br />type OrganizationRequest =<br />&#160;&#160;new : unit -&gt; OrganizationRequest + 1 overload<br />&#160;&#160;member ExtensionData : ExtensionDataObject with get, set<br />&#160;&#160;member Item : string -&gt; obj with get, set<br />&#160;&#160;member Parameters : ParameterCollection with get, set<br />&#160;&#160;member RequestId : Nullable&lt;Guid&gt; with get, set<br />&#160;&#160;member RequestName : string with get, set<br /><br />Full name: Microsoft.Xrm.Sdk.OrganizationRequest<br /><br />--------------------<br />OrganizationRequest() : unit<br />OrganizationRequest(requestName: string) : unit</div>
+<div class="tip" id="fs41">Multiple items<br />type ExecuteMultipleResponseItem =<br />&#160;&#160;new : unit -&gt; ExecuteMultipleResponseItem<br />&#160;&#160;member ExtensionData : ExtensionDataObject with get, set<br />&#160;&#160;member Fault : OrganizationServiceFault with get, set<br />&#160;&#160;member RequestIndex : int with get, set<br />&#160;&#160;member Response : OrganizationResponse with get, set<br /><br />Full name: Microsoft.Xrm.Sdk.ExecuteMultipleResponseItem<br /><br />--------------------<br />ExecuteMultipleResponseItem() : unit</div>
+<div class="tip" id="fs42">val performAsBulkWithOutput : proxy:OrganizationServiceProxy -&gt; logLevel:LogLevel -&gt; reqs:OrganizationRequest [] -&gt; unit<br /><br />Full name: DG.Daxif.HelperModules.Common.CrmData.CRUD.performAsBulkWithOutput</div>
+<div class="tip" id="fs43">type LogLevel =<br />&#160;&#160;|  None  =  0<br />&#160;&#160;|  Info  =  1<br />&#160;&#160;|  Warning  =  3<br />&#160;&#160;|  Error  =  7<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  Debug  =  31<br />&#160;&#160;|  File  =  63<br /><br />Full name: DG.Daxif.LogLevel</div>
 
             </div>
             <div class="span3">
@@ -265,7 +288,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.7</li>
+                    <li class="nav-header">DAXIF# v.2.3.1.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
@@ -281,6 +304,9 @@
                     <li class="nav-header">Example Scripts</li>
                         <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.html">EnsureAssemblies</a></li>
                         <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.Standalone.html">Standalone</a></li>
+                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSoluition.DataExportSource.html">DataExportSource</a></li>
+                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSoluition.DataImportTarget.html">DataImportTarget</a></li>
+                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSoluition.DataInMemoryMigrate.html">DataInMemoryMigrate</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.AuthInfo.html">AuthInfo</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.Config.html">Config</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.CountEntities.html">CountEntities</a></li>

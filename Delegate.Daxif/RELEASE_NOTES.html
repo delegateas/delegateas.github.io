@@ -39,6 +39,17 @@
                 
 <h1>Release Notes</h1>
 
+<h4>2.3.1.0 - Aug 15 2016</h4>
+
+<ul>
+<li>Added three new scripts for importing and export of data</li>
+<li>Exposed helper function from CRMData for handling large amount of request</li>
+<li>Added function to delete plugins found in Target but not in Source</li>
+<li>Added check for status of async import job to avoid infinite loop in case job</li>
+<li>Added new import and export of solution which includes synching of view and 
+workflow stage and deleting of plugins found in source but not in target</li>
+</ul>
+
 <h4>2.3.0.7 - Jun 21 2016</h4>
 
 <ul>
@@ -703,7 +714,7 @@ guidelines: <a href="http://webcache.googleusercontent.com/search?q=cache:https:
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.0.7</li>
+                    <li class="nav-header">DAXIF# v.2.3.1.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
@@ -719,6 +730,9 @@ guidelines: <a href="http://webcache.googleusercontent.com/search?q=cache:https:
                     <li class="nav-header">Example Scripts</li>
                         <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.html">EnsureAssemblies</a></li>
                         <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.Standalone.html">Standalone</a></li>
+                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSoluition.DataExportSource.html">DataExportSource</a></li>
+                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSoluition.DataImportTarget.html">DataImportTarget</a></li>
+                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSoluition.DataInMemoryMigrate.html">DataInMemoryMigrate</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.AuthInfo.html">AuthInfo</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.Config.html">Config</a></li>
                         <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.CountEntities.html">CountEntities</a></li>
