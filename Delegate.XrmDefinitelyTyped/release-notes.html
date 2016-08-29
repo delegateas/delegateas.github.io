@@ -33,6 +33,20 @@
         <div class="span9" id="main">
           
 <h1><a name="Release-Notes" class="anchor" href="#Release-Notes">Release Notes</a></h1>
+<h3><a name="1-9-0-August-29-2016" class="anchor" href="#1-9-0-August-29-2016">1.9.0 - August 29 2016</a></h3>
+<ul>
+<li>Split <code>base.d.ts</code> into more parts</li>
+<li>
+XrmDefinitelyTyped now retrieves the version from the targeted CRM and modifies the resulting <code>base.d.ts</code> to fit that version
+<ul>
+<li>Made AddTabStateChange function for specific CRM versions (Pre-CRM2016: <code>add_tabStateChange</code>, Post-CRM2016: <code>addTabStateChange</code>)</li>
+<li>Made CRM 2015 Update 1 form functionality only available, when CRM is that version or higher</li>
+</ul>
+</li>
+<li>Added more specific types when getting controls on an attribute via <code>&lt;Attribute&gt;.controls</code></li>
+<li>Changed <code>IPage</code> module to be a namespace instead</li>
+<li>Made <code>IPage.ExecutionContext</code> generic, such that it contains the type of the event source</li>
+</ul>
 <h3><a name="1-8-0-August-2-2016" class="anchor" href="#1-8-0-August-2-2016">1.8.0 - August 2 2016</a></h3>
 <ul>
 <li>Removed current implementation for supporting previous TypeScript versions</li>
@@ -263,7 +277,7 @@ they are necessary.
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.1.8.0</li>
+                <li class="nav-header">XrmDefinitelyTyped v.1.9.0</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
