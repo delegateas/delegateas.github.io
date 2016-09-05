@@ -83,6 +83,10 @@ It also needs either <code>FSharp.Core.dll</code> or F# installed on the compute
 <td align="left"><p>entities</p></td>
 <td align="left"><p>Comma-separated list of logical names of the entities it should generate code for. <br/> This is additive with the entities gotten via the <strong><em>solutions</em></strong> argument.</p></td>
 </tr>
+<tr class="odd">
+<td align="left"><p>formintersect</p></td>
+<td align="left"><p>Comma-separated list of named semicolon-separated lists of form GUIDs that should be intersected. Example: <br /> <code>MyAccountIntersect: 284FF02B-BDD1-4BB0-9BCF-6CFDBDA130D4;16068A3B-D428-4430-AEF6-397CE2AEFE07, MyContactIntersect: F4B3397C-C1A5-40BE-89DD-CEA5F7064D1D;824CFA3C-3EB4-4746-BA3C-7F1DFCA114C0</code></p></td>
+</tr>
 </tbody>
 </table>
 
@@ -129,8 +133,8 @@ Example usage from a command prompt:</p>
 <div class="tip" id="fs4">namespace Microsoft.Xrm.Sdk.Client</div>
 <div class="tip" id="fs5">namespace DG</div>
 <div class="tip" id="fs6">namespace DG.XrmDefinitelyTyped</div>
-<div class="tip" id="fs7">type XrmDefinitelyTyped =<br />&#160;&#160;private new : unit -&gt; XrmDefinitelyTyped<br />&#160;&#160;static member GetContext : xrmAuth:XrmAuthentication * settings:XrmDefinitelyTypedSettings -&gt; unit<br />&#160;&#160;static member GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string * ?entities:string [] * ?solutions:string [] -&gt; unit<br /><br />Full name: DG.XrmDefinitelyTyped.XrmDefinitelyTyped</div>
-<div class="tip" id="fs8">static member XrmDefinitelyTyped.GetContext : xrmAuth:GeneratorLogic.XrmAuthentication * settings:XrmDefinitelyTypedSettings -&gt; unit<br />static member XrmDefinitelyTyped.GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string * ?entities:string [] * ?solutions:string [] -&gt; unit</div>
+<div class="tip" id="fs7">type XrmDefinitelyTyped =<br />&#160;&#160;private new : unit -&gt; XrmDefinitelyTyped<br />&#160;&#160;static member GetContext : xrmAuth:XrmAuthentication * settings:XrmDefinitelyTypedSettings -&gt; unit<br />&#160;&#160;static member GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string * ?entities:string [] * ?solutions:string [] * ?formIntersects:FormIntersect [] -&gt; unit<br /><br />Full name: DG.XrmDefinitelyTyped.XrmDefinitelyTyped</div>
+<div class="tip" id="fs8">static member XrmDefinitelyTyped.GetContext : xrmAuth:GeneratorLogic.XrmAuthentication * settings:XrmDefinitelyTypedSettings -&gt; unit<br />static member XrmDefinitelyTyped.GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string * ?entities:string [] * ?solutions:string [] * ?formIntersects:FormIntersect [] -&gt; unit</div>
 
         </div>
         <div class="span3">
@@ -139,7 +143,7 @@ Example usage from a command prompt:</p>
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.1.9.1</li>
+                <li class="nav-header">XrmDefinitelyTyped v.1.10.0</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
