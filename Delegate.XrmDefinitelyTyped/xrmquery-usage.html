@@ -74,7 +74,7 @@ XrmQuery.retrieveMultipleRecords(x <span class="o">=</span><span class="o">&gt;<
             ),
             Filter.equals(acc.PrimaryContactId.Id, Filter.makeGuid(<span class="s">"0000-SOME-GUID"</span>))
         ))
-    .execute(records <span class="o">=</span><span class="o">&gt;</span> {
+    .getAll(records <span class="o">=</span><span class="o">&gt;</span> {
         <span class="c">// Success callback function for the accounts.</span>
         console.log(records)
     });
@@ -93,7 +93,7 @@ accomplished with XrmQuery!</p>
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.1.10.0</li>
+                <li class="nav-header">XrmDefinitelyTyped v.1.11.0</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
