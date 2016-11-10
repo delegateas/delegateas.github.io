@@ -99,7 +99,7 @@ a.hlink
 {
   font-weight: bold;
   line-height: 150%;
-  font-size: 32pt;
+  font-size: 300%;
   font-weight: 400;
   text-decoration: none;
   vertical-align: middle;
@@ -120,28 +120,84 @@ ul.projects
   margin-left: -20px;
   text-align: center;
   display: inline-block;
-  columns:2; 
-  -webkit-columns: 2; 
-  -moz-columns:2
 }
+
+
+/* Large desktop */
+@media (min-width: 1200px) {
+	ul.projects
+	{
+	  columns:2; 
+	  -webkit-columns: 2; 
+	  -moz-columns:2		
+	}
+}
+
 
 ul.projects li
 {
-  font-size: 12pt;
   padding: 20px;
   height: 6.4em;
+  border-bottom: thin dashed #373F4C;
 }
 
-ul.projects li
-{
-  border-top: thin dashed #373F4C;
+@media (max-width: 399px) {
+	ul.projects li {
+	  font-size: 6pt;
+	}
+	img.logo {
+	  width: 55px; 
+	  height: 55px;
+	  margin-right: 8px;
+	  display: block;
+	  float: left;
+	}
 }
 
 
-ul.projects li:nth-child(1),
-ul.projects li:nth-child(5) {
-  border-top: none;
+@media (min-width: 400px) {
+	ul.projects li {
+		font-size: 8pt;
+	}
+	img.logo
+	{
+	  width: 70px; 
+	  height: 70px;
+	  margin-right: 10px;
+	  display: block;
+	  float: left;
+	}
 }
+
+
+@media (min-width: 500px) {
+	ul.projects li {
+		font-size: 10pt;
+	}
+	img.logo
+	{
+	  width: 85px; 
+	  height: 85px;
+	  margin-right: 10px;
+	  display: block;
+	  float: left;
+	}
+}
+
+@media (min-width: 600px) {
+	ul.projects li {
+		font-size: 12pt;
+	}
+	img.logo
+	{
+	  width: 100px; 
+	  height: 100px;
+	  margin-right: 12px;
+	  display: block;
+	  float: left;
+	}
+}
+
 
 h1.headline
 {
@@ -152,21 +208,11 @@ h1.headline
   color: #373F4C; 
   font-weight: bold;
   line-height: 150%;
-  font-size: 40pt;
+  font-size: 3.5em;
   font-weight: 400;
   text-decoration: none;
   vertical-align: middle;
   font-family: "Segoe UI Light", "Helvetica Neue", 'RobotoLight', "Segoe UI", "Segoe WP", sans-serif;
-
-}
-
-img.logo
-{
-  width: 100px; 
-  height: 100px;
-  margin-right: 10px;
-  display: block;
-  float: left;
 }
 
 /* Format the heading - nicer spacing etc. */
@@ -213,6 +259,10 @@ img.logo
   font-style: italic;
   font-family: sans-serif;
   font-size: 80%;
+}
+
+li {
+	line-height: 130%;
 }
 
 .credits a {
