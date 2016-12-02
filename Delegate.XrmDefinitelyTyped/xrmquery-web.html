@@ -34,14 +34,15 @@
           
 <h1><a name="XrmQuery-Web-API" class="anchor" href="#XrmQuery-Web-API">XrmQuery (Web API)</a></h1>
 <p>With XrmQuery you get full intellisense and type-support for creating a Web API query towards your Dynamics 365/CRM instance.</p>
-<p><strong><em>Try it out yourself - it's an absolute pleasure to use in any TypeScript IDE!</em></strong></p>
+<p>The syntax when using XrmQuery is very similar to that of the <a href="https://msdn.microsoft.com/en-us/library/bb397947.aspx">method syntax of LINQ</a>.</p>
+<p><strong><em>Try it out yourself - it's an absolute pleasure to use in any IDE with TypeScript!</em></strong></p>
 <h2><a name="Features" class="anchor" href="#Features">Features</a></h2>
 <ul>
 <li>Supports create, update and delete</li>
 <li>Supports basic query functionality (<code>retrieve</code>, <code>retrieveMultiple</code>, <code>retrieveRelated</code>, <code>retrieveRelatedMultiple</code>)</li>
+<li>Supports using FetchXML and pre-defined query filtering</li>
 <li>Supports sending custom requests via <code>XrmQuery.sendRequest(..)</code> or <code>XrmQuery.promiseRequest(..)</code></li>
 <li>Full type-support for all query options, such as <code>select</code>, <code>filter</code>, <code>expand</code> and <code>orderBy</code></li>
-<li>Supports using FetchXML and pre-defined query filtering</li>
 <li>Supports ES6 promises (use <code>dg.xrmquery.promise.min.js</code> to include polyfill for IE)</li>
 <li>Automatically resolves all <code>@odata.nextLink</code>s in returned query result (for paging and expand on entity sets)</li>
 <li>
@@ -50,22 +51,15 @@ Supports as many entities and attributes as desired, without increasing the size
 </li>
 <li>No need to register a CRM app in the Azure AD in order to generate the declaration files</li>
 <li>
-Retrieval of formatted values, and access them as <code>&lt;record&gt;.&lt;attribute-name&gt;_formatted</code> instead of 
+Retrieval of formatted values, and accessing them as <code>&lt;record&gt;.&lt;attribute-name&gt;_formatted</code> instead of 
 <code>&lt;record&gt;["&lt;attribute-name&gt;@OData.Community.Display.V1.FormattedValue"]</code>
 </li>
 </ul>
-<h2><a name="Planned-features" class="anchor" href="#Planned-features">Planned features</a></h2>
-<ul>
-<li>Support for <a href="https://msdn.microsoft.com/en-us/library/mt607875.aspx">association and dissassociation</a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/mt607600.aspx">Calling standard and custom actions</a></li>
-<li><a href="https://msdn.microsoft.com/en-us/library/mt607871.aspx#Anchor_3">Retrieve using an alternate key</a></li>
-<li>Allow manual control of paging</li>
-</ul>
 <h2><a name="Usage" class="anchor" href="#Usage">Usage</a></h2>
 <p>XrmQuery relies mostly on functions to deduce the necessary types and actions used to perform the query.
-These functions are also meant to help the developer with intellisense and autocomplete in each function of XrmQuery.</p>
+These functions are meant to help the developer with intellisense and autocomplete in each function of XrmQuery.</p>
 <p>Since TypeScript supports lambda functions (shortened function declarations, i.e. <code>x =&gt; x + 2</code>), you can use these
-to achieve neater looking code.</p>
+to achieve neater looking code. This is just like <a href="https://msdn.microsoft.com/en-us/library/bb397947.aspx#Anchor_1">using lambda expressions for the method syntax of LINQ</a>.</p>
 <p><strong>Example:</strong></p>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
@@ -76,7 +70,7 @@ to achieve neater looking code.</p>
 <span class="l">7: </span>
 </pre></td>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="typescript">XrmQuery.retrieveMultiple(x <span class="o">=</span><span class="o">&gt;</span> x.accounts) <span class="c">// Tells XrmQuery to retrieve accounts</span>
-    .select(x <span class="o">=</span><span class="o">&gt;</span> [x.accountnumber]) <span class="c">// Select which attributes to retrieve, in this case just accountnumber</span>
+    .select(x <span class="o">=</span><span class="o">&gt;</span> [ x.accountnumber ]) <span class="c">// Select which attributes to retrieve, in this case just accountnumber</span>
     .filter(x <span class="o">=</span><span class="o">&gt;</span> Filter.equals(x.name, <span class="s">"Contoso"</span>)) <span class="c">// Only get accounts which have a name equal to "Contoso"</span>
     .execute(accounts <span class="o">=</span><span class="o">&gt;</span> { 
         <span class="c">// Do something with the retrieved accounts</span>
@@ -86,8 +80,15 @@ to achieve neater looking code.</p>
 <p>Each of these lambda functions use one argument, which I usually just call <code>x</code>. Inside the function call, you can use this
 argument for all the autocomplete necessary by simply dotting it as an object (when you type <code>x.</code>, the intellisense will kick in).
 Most functions in XrmQuery just expect you to return something directly on the argument object, like: <code>x =&gt; x.accounts</code>.</p>
-<p>The only functions that differ are select-functions and and filter-functions, as seen above.
-Select-functions expect an array of properties on the argument, and the filter function expects you to return a call to a <code>Filter.</code>-functions.</p>
+<p>The only functions that differ are select-functions and and filter-functions (as seen above).
+Select-functions expect an array of properties, and the filter function expects you to return a call to one of the <code>Filter</code>-functions.</p>
+<h2><a name="Planned-features" class="anchor" href="#Planned-features">Planned features</a></h2>
+<ul>
+<li>Support for <a href="https://msdn.microsoft.com/en-us/library/mt607875.aspx">association and dissassociation</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/mt607600.aspx">Calling standard and custom actions</a></li>
+<li><a href="https://msdn.microsoft.com/en-us/library/mt607871.aspx#Anchor_3">Retrieve using an alternate key</a></li>
+<li>Allow manual control of paging</li>
+</ul>
 
 
         </div>
