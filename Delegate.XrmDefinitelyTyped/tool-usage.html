@@ -36,66 +36,129 @@
 <p>The executable can be used from a command prompt, but also directly from code,
 if you want the generation of the declaration files to be a part of your
 workflow.</p>
-<blockquote>
-<p><strong>Note:</strong> The executable must be able to find the assemblies it depends on.
-This can be solved by having them placed in the same folder.
-It also needs either <code>FSharp.Core.dll</code> or F# installed on the computer.</p>
-</blockquote>
 <h2><a name="Arguments" class="anchor" href="#Arguments">Arguments</a></h2>
 <p>Here is the full list of arguments for configuring the tool:</p>
 <table>
 <thead>
 <tr class="header">
 <th align="left"><p>Argument</p></th>
+<th align="left"><p>Short-hand</p></th>
 <th align="left"><p>Description</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td align="left"><p>url</p></td>
+<td align="left"></td>
 <td align="left"><p>URL to the Organization.svc</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>username</p></td>
-<td align="left"><p>CRM Username</p></td>
+<td align="left"><p>u, usr</p></td>
+<td align="left"><p>Username for the CRM system.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>password</p></td>
-<td align="left"><p>CRM Password</p></td>
+<td align="left"><p>p, pwd</p></td>
+<td align="left"><p>Password for the CRM system.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>domain</p></td>
-<td align="left"><p>Domain to use for CRM</p></td>
+<td align="left"><p>d, dmn</p></td>
+<td align="left"><p>Domain for the user.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>ap</p></td>
+<td align="left"></td>
 <td align="left"><p>Authentication Provider Type</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>out</p></td>
-<td align="left"><p>Output directory for the generated files.</p></td>
+<td align="left"><p>o</p></td>
+<td align="left"><p>Output directory for the generated declaration files.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>solutions</p></td>
-<td align="left"><p>Comma-separated list of solutions names. Generates code for the entities found in these solutions.</p></td>
+<td align="left"><p>jsLib</p></td>
+<td align="left"><p>jl</p></td>
+<td align="left"><p>Output directory for the JavaScript library files (<strong>XrmQuery files</strong>)</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>entities</p></td>
-<td align="left"><p>Comma-separated list of logical names of the entities it should generate code for. <br/> This is additive with the entities gotten via the <strong><em>solutions</em></strong> argument.</p></td>
+<td align="left"><p>solutions</p></td>
+<td align="left"><p>ss</p></td>
+<td align="left"><p>Comma-separated list of solutions names. Generates code for the entities found in these solutions.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p>formintersect</p></td>
+<td align="left"><p>entities</p></td>
+<td align="left"><p>es</p></td>
+<td align="left"><p>Comma-separated list of logical names of the entities it should generate code for. <br/> This is additive with the entities gotten via the <strong><em>solutions</em></strong> argument.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>web</p></td>
+<td align="left"><p>w</p></td>
+<td align="left"><p>Generates declaration files for the Web API endpoint. If given a string, all the interfaces will be put in a namespace of that name. For example -web=WebNs puts all interfaces in namespace "WebNs"</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>rest</p></td>
+<td align="left"><p>r</p></td>
+<td align="left"><p>Generates declaration files for the REST API endpoint. If given a string, all the interfaces will be put in a namespace of that name. For example -rest=RestNs puts all interfaces in namespace "RestNs"</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>crmVersion</p></td>
+<td align="left"><p>cv</p></td>
+<td align="left"><p>Version of CRM that it should generate declaration files for.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>skipForms</p></td>
+<td align="left"><p>sf</p></td>
+<td align="left"><p>Skip generation of form declaration files.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>formIntersect</p></td>
+<td align="left"><p>fi</p></td>
 <td align="left"><p>Comma-separated list of named semicolon-separated lists of form GUIDs that should be intersected. Example: <br /> <code>MyAccountIntersect: 284FF02B-BDD1-4BB0-9BCF-6CFDBDA130D4;16068A3B-D428-4430-AEF6-397CE2AEFE07, MyContactIntersect: F4B3397C-C1A5-40BE-89DD-CEA5F7064D1D;824CFA3C-3EB4-4746-BA3C-7F1DFCA114C0</code></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>useconfig</p></td>
+<td align="left"><p>uc</p></td>
+<td align="left"><p>Also applies the arguments found in the <code>.config</code> file.</p></td>
 </tr>
 </tbody>
 </table>
 
 <p>You can also view this list of arguments using the "<strong><em>/help</em></strong>" argument.</p>
-<h3><a name="Configuration-file" class="anchor" href="#Configuration-file">Configuration file</a></h3>
+<h3><a name="Special-arguments" class="anchor" href="#Special-arguments">Special arguments</a></h3>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><p>Argument</p></th>
+<th align="left"><p>Short-hand</p></th>
+<th align="left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p>genconfig</p></td>
+<td align="left"><p>gc</p></td>
+<td align="left"><p>Generates a configuration file with preset dummy values</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p>save</p></td>
+<td align="left"></td>
+<td align="left"><p>Connects to CRM given the arguments, fetches the necessary metadata and saves it to a local file.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p>load</p></td>
+<td align="left"></td>
+<td align="left"><p>Loads a local file containing the necessary metadata and generates the declaration files based on it.</p></td>
+</tr>
+</tbody>
+</table>
+
+<h2><a name="Configuration-file" class="anchor" href="#Configuration-file">Configuration file</a></h2>
 <p>If no arguments are given to the executable, it will check if there is an configuration file in the same folder with arguments it can use instead.</p>
-<p>If you want to generate a dummy configuration file to use for arguments, you can use the "<strong><em>/genconfig</em></strong>" argument.<br />
+<p>If you want to generate a configuration file with dummy values to use for arguments, you can use the "<strong><em>/genconfig</em></strong>" argument.<br />
 If you want to use a mix of the arguments from the configuration file and arguments passed to the executable,
-you can specify the "<strong><em>/useconfig</em></strong>" argument in the command-line.</p>
+you can use the "<strong><em>/useconfig</em></strong>" argument from the command-line.</p>
 <h2><a name="Command-prompt" class="anchor" href="#Command-prompt">Command prompt</a></h2>
 <p>The arguments are similar to those given to the <a href="https://msdn.microsoft.com/en-us/library/gg327844.aspx">CrmSvcUtil</a> tool.
 Example usage from a command prompt:</p>
@@ -119,10 +182,10 @@ Example usage from a command prompt:</p>
 <td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Microsoft</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Xrm</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">Sdk</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Client</span>
 <span class="k">open</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">XrmDefinitelyTyped</span>
 
-<span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="t">XrmDefinitelyTyped</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="f">GetContext</span>(
+<span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="t">XrmDefinitelyTyped</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="f">GenerateFromCrm</span>(
   <span class="s">&quot;http://&lt;serverName&gt;/&lt;organizationName&gt;/XRMServices/2011/Organization.svc&quot;</span>, 
   <span class="s">&quot;username&quot;</span>, <span class="s">&quot;password&quot;</span>, 
-  <span class="i">out</span> <span class="o">=</span> <span class="s">@&quot;WebResources\typings\XRM&quot;</span>)
+  <span class="i">outDir</span> <span class="o">=</span> <span class="s">@&quot;WebResources\typings\XRM&quot;</span>)
 </code></pre></td>
 </tr>
 </table>
@@ -133,8 +196,8 @@ Example usage from a command prompt:</p>
 <div class="tip" id="fs4">namespace Microsoft.Xrm.Sdk.Client</div>
 <div class="tip" id="fs5">namespace DG</div>
 <div class="tip" id="fs6">namespace DG.XrmDefinitelyTyped</div>
-<div class="tip" id="fs7">type XrmDefinitelyTyped =<br />&#160;&#160;private new : unit -&gt; XrmDefinitelyTyped<br />&#160;&#160;static member GetContext : xrmAuth:XrmAuthentication * settings:XrmDefinitelyTypedSettings -&gt; unit<br />&#160;&#160;static member GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string * ?entities:string [] * ?solutions:string [] * ?formIntersects:FormIntersect [] -&gt; unit<br /><br />Full name: DG.XrmDefinitelyTyped.XrmDefinitelyTyped</div>
-<div class="tip" id="fs8">static member XrmDefinitelyTyped.GetContext : xrmAuth:GeneratorLogic.XrmAuthentication * settings:XrmDefinitelyTypedSettings -&gt; unit<br />static member XrmDefinitelyTyped.GetContext : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?out:string * ?entities:string [] * ?solutions:string [] * ?formIntersects:FormIntersect [] -&gt; unit</div>
+<div class="tip" id="fs7">type XrmDefinitelyTyped =<br />&#160;&#160;private new : unit -&gt; XrmDefinitelyTyped<br />&#160;&#160;static member GenerateFromCrm : xrmAuth:XrmAuthentication * rSettings:XdtRetrievalSettings * gSettings:XdtGenerationSettings -&gt; unit<br />&#160;&#160;static member GenerateFromCrm : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?outDir:string * ?jsLib:string * ?tsLib:string * ?entities:string [] * ?solutions:string [] * ?crmVersion:XrmVersion * ?skipForms:bool * ?restNs:string * ?webNs:string * ?formIntersects:FormIntersect [] -&gt; unit<br />&#160;&#160;static member GenerateFromFile : gSettings:XdtGenerationSettings * ?filePath:string -&gt; unit<br />&#160;&#160;static member GenerateFromRawState : rawState:RawState * gSettings:XdtGenerationSettings -&gt; unit<br />&#160;&#160;static member SaveMetadataToFile : xrmAuth:XrmAuthentication * rSettings:XdtRetrievalSettings * ?filePath:string -&gt; unit<br /><br />Full name: DG.XrmDefinitelyTyped.XrmDefinitelyTyped</div>
+<div class="tip" id="fs8">static member XrmDefinitelyTyped.GenerateFromCrm : xrmAuth:XrmAuthentication * rSettings:XdtRetrievalSettings * gSettings:XdtGenerationSettings -&gt; unit<br />static member XrmDefinitelyTyped.GenerateFromCrm : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?outDir:string * ?jsLib:string * ?tsLib:string * ?entities:string [] * ?solutions:string [] * ?crmVersion:XrmVersion * ?skipForms:bool * ?restNs:string * ?webNs:string * ?formIntersects:FormIntersect [] -&gt; unit</div>
 
         </div>
         <div class="span3">
@@ -143,20 +206,21 @@ Example usage from a command prompt:</p>
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.1.11.1</li>
+                <li class="nav-header">XrmDefinitelyTyped v.2.0.0</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
-                <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/getting-started.html">Getting started</a></li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/migration-guide-2.html">Migrating from 1.X to 2.0</a></li>
 
-                <li class="nav-header">Getting Started</li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-usage.html">Using XrmQuery</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the REST API</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
+                <li class="nav-header">Usage</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Executable and arguments</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Form scripting</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/form-intersection.html">Form intersections</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-web.html">XrmQuery (Web API)</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-rest.html">XrmQuery.REST</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">SDK.REST</a></li>
             </ul>
           
           <div class="credits">

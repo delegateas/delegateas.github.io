@@ -33,10 +33,6 @@
         <div class="span9" id="main">
           
 <h1><a name="The-REST-API" class="anchor" href="#The-REST-API">The REST API</a></h1>
-<p>To work with the REST API you will need to reference the declaration file for
-it, which can be found at <code>typings/XRM/rest.d.ts</code>.</p>
-<p>To work on further with specific entities you should reference these as well.
-They are located in the <code>typings/XRM/Entity/</code> folder:</p>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l"> 1: </span>
 <span class="l"> 2: </span>
 <span class="l"> 3: </span>
@@ -48,14 +44,8 @@ They are located in the <code>typings/XRM/Entity/</code> folder:</p>
 <span class="l"> 9: </span>
 <span class="l">10: </span>
 <span class="l">11: </span>
-<span class="l">12: </span>
-<span class="l">13: </span>
-<span class="l">14: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="typescript"><span class="c">/// &lt;reference path="../../typings/XRM/rest.d.ts" /&gt;</span>
-<span class="c">/// &lt;reference path="../../typings/XRM/Entity/account.d.ts" /&gt;</span>
-
-SDK.REST.retrieveRecord(<span class="s">"&lt;SomeGuid&gt;"</span>,
+<td class="snippet"><pre class="fssnip highlighted"><code lang="typescript">SDK.REST.retrieveRecord(<span class="s">"&lt;SomeGuid&gt;"</span>,
     <span class="s">"Account"</span>, <span class="c">// Entity type</span>
     <span class="s">""</span>, <span class="c">// Select string</span>
     <span class="s">""</span>, <span class="c">// Expand string</span>
@@ -82,20 +72,21 @@ record and all of its attributes and relations!</p>
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.1.11.1</li>
+                <li class="nav-header">XrmDefinitelyTyped v.2.0.0</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
-                <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get Executable via NuGet</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/getting-started.html">Getting started</a></li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/coming-features.html">Coming Features</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/migration-guide-2.html">Migrating from 1.X to 2.0</a></li>
 
-                <li class="nav-header">Getting Started</li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Generating the declaration files</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Using the Xrm object model</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-usage.html">Using XrmQuery</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">Using the REST API</a></li>
-                <li><a href="/Delegate.XrmDefinitelyTyped/os-dts-usage.html">Using option sets</a></li>
+                <li class="nav-header">Usage</li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/tool-usage.html">Executable and arguments</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrm-dts-usage.html">Form scripting</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/form-intersection.html">Form intersections</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-web.html">XrmQuery (Web API)</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/xrmquery-rest.html">XrmQuery.REST</a></li>
+                <li><a href="/Delegate.XrmDefinitelyTyped/rest-dts-usage.html">SDK.REST</a></li>
             </ul>
           
           <div class="credits">
