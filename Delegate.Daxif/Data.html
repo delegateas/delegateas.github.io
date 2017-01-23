@@ -259,6 +259,76 @@ and adds the extra attributes given in <code>extraAttributes</code>.</p>
 </tr>
 </table>
 
+<p>Imports entities from files at the given <code>location</code> with a matching
+extension to that of <code>serialize</code>.</p>
+
+<p>Ignores EntityReferences if ''
+Adds the extra attributes given in <code>extraAttributes</code>.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs23', 110)" onmouseover="showTip(event, 'fs23', 110)" class="i">importWithoutReferences</span> <span class="o">:</span> <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 111)" onmouseover="showTip(event, 'fs2', 111)" class="i">Uri</span>
+   <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 112)" onmouseover="showTip(event, 'fs3', 112)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs6', 113)" onmouseover="showTip(event, 'fs6', 113)" class="i">AuthenticationProviderType</span>
+   <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 114)" onmouseover="showTip(event, 'fs3', 114)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 115)" onmouseover="showTip(event, 'fs3', 115)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 116)" onmouseover="showTip(event, 'fs3', 116)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs7', 117)" onmouseover="showTip(event, 'fs7', 117)" class="i">LogLevel</span>
+   <span class="k">-&gt;</span> <span class="i">serialize</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs15', 118)" onmouseover="showTip(event, 'fs15', 118)" class="i">Serialize</span>
+   <span class="k">-&gt;</span> <span class="i">extraAttributes</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 119)" onmouseover="showTip(event, 'fs4', 119)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs21', 120)" onmouseover="showTip(event, 'fs21', 120)" class="i">String</span>, _<span class="o">&gt;</span>
+   <span class="k">-&gt;</span> <span class="i">data</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 121)" onmouseover="showTip(event, 'fs4', 121)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs21', 122)" onmouseover="showTip(event, 'fs21', 122)" class="i">String</span>, <span onmouseout="hideTip(event, 'fs4', 123)" onmouseover="showTip(event, 'fs4', 123)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs8', 124)" onmouseover="showTip(event, 'fs8', 124)" class="i">Guid</span>, <span onmouseout="hideTip(event, 'fs8', 125)" onmouseover="showTip(event, 'fs8', 125)" class="i">Guid</span><span class="o">&gt;</span><span class="o">&gt;</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs10', 126)" onmouseover="showTip(event, 'fs10', 126)" class="i">unit</span></pre>
+</td>
+</tr>
+</table>
+
+<p>Imports entities from files at the given <code>location</code> with a matching
+extension to that of <code>serialize</code>.</p>
+
+<p>Ignores EntityReferences if ''
+Adds the extra attributes given in <code>extraAttributes</code>.</p>
+
+<table class="pre"><tr><td class="lines"><pre class="fssnip">
+<span class="l"> 1: </span>
+<span class="l"> 2: </span>
+<span class="l"> 3: </span>
+<span class="l"> 4: </span>
+<span class="l"> 5: </span>
+<span class="l"> 6: </span>
+<span class="l"> 7: </span>
+<span class="l"> 8: </span>
+<span class="l"> 9: </span>
+<span class="l">10: </span>
+<span class="l">11: </span>
+</pre>
+</td>
+<td class="snippet"><pre class="fssnip">
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs24', 127)" onmouseover="showTip(event, 'fs24', 127)" class="i">importReferences</span> <span class="o">:</span> <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 128)" onmouseover="showTip(event, 'fs2', 128)" class="i">Uri</span>
+   <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 129)" onmouseover="showTip(event, 'fs3', 129)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs6', 130)" onmouseover="showTip(event, 'fs6', 130)" class="i">AuthenticationProviderType</span>
+   <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 131)" onmouseover="showTip(event, 'fs3', 131)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 132)" onmouseover="showTip(event, 'fs3', 132)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 133)" onmouseover="showTip(event, 'fs3', 133)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs7', 134)" onmouseover="showTip(event, 'fs7', 134)" class="i">LogLevel</span>
+   <span class="k">-&gt;</span> <span class="i">serialize</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs15', 135)" onmouseover="showTip(event, 'fs15', 135)" class="i">Serialize</span>
+   <span class="k">-&gt;</span> <span class="i">referenceFiler</span><span class="o">:</span> <span onmouseout="hideTip(event, 'fs3', 136)" onmouseover="showTip(event, 'fs3', 136)" class="i">string</span> []
+   <span class="k">-&gt;</span> <span class="i">extraAttributes</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 137)" onmouseover="showTip(event, 'fs4', 137)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs21', 138)" onmouseover="showTip(event, 'fs21', 138)" class="i">String</span>, _<span class="o">&gt;</span>
+   <span class="k">-&gt;</span> <span class="i">data</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 139)" onmouseover="showTip(event, 'fs4', 139)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs21', 140)" onmouseover="showTip(event, 'fs21', 140)" class="i">String</span>, <span onmouseout="hideTip(event, 'fs4', 141)" onmouseover="showTip(event, 'fs4', 141)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs8', 142)" onmouseover="showTip(event, 'fs8', 142)" class="i">Guid</span>, <span onmouseout="hideTip(event, 'fs8', 143)" onmouseover="showTip(event, 'fs8', 143)" class="i">Guid</span><span class="o">&gt;</span><span class="o">&gt;</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs10', 144)" onmouseover="showTip(event, 'fs10', 144)" class="i">unit</span></pre>
+</td>
+</tr>
+</table>
+
 <table class="pre"><tr><td class="lines"><pre class="fssnip">
 <span class="l">1: </span>
 <span class="l">2: </span>
@@ -271,14 +341,14 @@ and adds the extra attributes given in <code>extraAttributes</code>.</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs23', 110)" onmouseover="showTip(event, 'fs23', 110)" class="i">reassignOwner</span> <span class="o">:</span> <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 111)" onmouseover="showTip(event, 'fs2', 111)" class="i">Uri</span>
-   <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 112)" onmouseover="showTip(event, 'fs3', 112)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs6', 113)" onmouseover="showTip(event, 'fs6', 113)" class="i">AuthenticationProviderType</span>
-   <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 114)" onmouseover="showTip(event, 'fs3', 114)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 115)" onmouseover="showTip(event, 'fs3', 115)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 116)" onmouseover="showTip(event, 'fs3', 116)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs7', 117)" onmouseover="showTip(event, 'fs7', 117)" class="i">LogLevel</span>
-   <span class="k">-&gt;</span> <span class="i">serialize</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs15', 118)" onmouseover="showTip(event, 'fs15', 118)" class="i">Serialize</span> <span class="k">-&gt;</span> <span class="i">data</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 119)" onmouseover="showTip(event, 'fs4', 119)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs21', 120)" onmouseover="showTip(event, 'fs21', 120)" class="i">String</span>, <span onmouseout="hideTip(event, 'fs4', 121)" onmouseover="showTip(event, 'fs4', 121)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs8', 122)" onmouseover="showTip(event, 'fs8', 122)" class="i">Guid</span>, <span onmouseout="hideTip(event, 'fs8', 123)" onmouseover="showTip(event, 'fs8', 123)" class="i">Guid</span><span class="o">&gt;</span><span class="o">&gt;</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs10', 124)" onmouseover="showTip(event, 'fs10', 124)" class="i">unit</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs25', 145)" onmouseover="showTip(event, 'fs25', 145)" class="i">reassignOwner</span> <span class="o">:</span> <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 146)" onmouseover="showTip(event, 'fs2', 146)" class="i">Uri</span>
+   <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 147)" onmouseover="showTip(event, 'fs3', 147)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs6', 148)" onmouseover="showTip(event, 'fs6', 148)" class="i">AuthenticationProviderType</span>
+   <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 149)" onmouseover="showTip(event, 'fs3', 149)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 150)" onmouseover="showTip(event, 'fs3', 150)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 151)" onmouseover="showTip(event, 'fs3', 151)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs7', 152)" onmouseover="showTip(event, 'fs7', 152)" class="i">LogLevel</span>
+   <span class="k">-&gt;</span> <span class="i">serialize</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs15', 153)" onmouseover="showTip(event, 'fs15', 153)" class="i">Serialize</span> <span class="k">-&gt;</span> <span class="i">data</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 154)" onmouseover="showTip(event, 'fs4', 154)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs21', 155)" onmouseover="showTip(event, 'fs21', 155)" class="i">String</span>, <span onmouseout="hideTip(event, 'fs4', 156)" onmouseover="showTip(event, 'fs4', 156)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs8', 157)" onmouseover="showTip(event, 'fs8', 157)" class="i">Guid</span>, <span onmouseout="hideTip(event, 'fs8', 158)" onmouseover="showTip(event, 'fs8', 158)" class="i">Guid</span><span class="o">&gt;</span><span class="o">&gt;</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs10', 159)" onmouseover="showTip(event, 'fs10', 159)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -306,25 +376,25 @@ and adds the extra attributes given in <code>extraAttributes</code>.</p>
 </pre>
 </td>
 <td class="snippet"><pre class="fssnip">
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs24', 125)" onmouseover="showTip(event, 'fs24', 125)" class="i">associationImport</span> <span class="o">:</span> <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 126)" onmouseover="showTip(event, 'fs2', 126)" class="i">Uri</span>
-   <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 127)" onmouseover="showTip(event, 'fs3', 127)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs6', 128)" onmouseover="showTip(event, 'fs6', 128)" class="i">AuthenticationProviderType</span>
-   <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 129)" onmouseover="showTip(event, 'fs3', 129)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 130)" onmouseover="showTip(event, 'fs3', 130)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 131)" onmouseover="showTip(event, 'fs3', 131)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs7', 132)" onmouseover="showTip(event, 'fs7', 132)" class="i">LogLevel</span>
-   <span class="k">-&gt;</span> <span class="i">ser&#237;alize</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs15', 133)" onmouseover="showTip(event, 'fs15', 133)" class="i">Serialize</span> <span class="k">-&gt;</span> <span class="i">data</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 134)" onmouseover="showTip(event, 'fs4', 134)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs21', 135)" onmouseover="showTip(event, 'fs21', 135)" class="i">String</span>, <span onmouseout="hideTip(event, 'fs4', 136)" onmouseover="showTip(event, 'fs4', 136)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs8', 137)" onmouseover="showTip(event, 'fs8', 137)" class="i">Guid</span>, <span onmouseout="hideTip(event, 'fs8', 138)" onmouseover="showTip(event, 'fs8', 138)" class="i">Guid</span><span class="o">&gt;</span><span class="o">&gt;</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs10', 139)" onmouseover="showTip(event, 'fs10', 139)" class="i">unit</span>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs26', 160)" onmouseover="showTip(event, 'fs26', 160)" class="i">associationImport</span> <span class="o">:</span> <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 161)" onmouseover="showTip(event, 'fs2', 161)" class="i">Uri</span>
+   <span class="k">-&gt;</span> <span class="i">location</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 162)" onmouseover="showTip(event, 'fs3', 162)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs6', 163)" onmouseover="showTip(event, 'fs6', 163)" class="i">AuthenticationProviderType</span>
+   <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 164)" onmouseover="showTip(event, 'fs3', 164)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 165)" onmouseover="showTip(event, 'fs3', 165)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 166)" onmouseover="showTip(event, 'fs3', 166)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs7', 167)" onmouseover="showTip(event, 'fs7', 167)" class="i">LogLevel</span>
+   <span class="k">-&gt;</span> <span class="i">ser&#237;alize</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs15', 168)" onmouseover="showTip(event, 'fs15', 168)" class="i">Serialize</span> <span class="k">-&gt;</span> <span class="i">data</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs4', 169)" onmouseover="showTip(event, 'fs4', 169)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs21', 170)" onmouseover="showTip(event, 'fs21', 170)" class="i">String</span>, <span onmouseout="hideTip(event, 'fs4', 171)" onmouseover="showTip(event, 'fs4', 171)" class="i">Map</span><span class="o">&lt;</span><span onmouseout="hideTip(event, 'fs8', 172)" onmouseover="showTip(event, 'fs8', 172)" class="i">Guid</span>, <span onmouseout="hideTip(event, 'fs8', 173)" onmouseover="showTip(event, 'fs8', 173)" class="i">Guid</span><span class="o">&gt;</span><span class="o">&gt;</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs10', 174)" onmouseover="showTip(event, 'fs10', 174)" class="i">unit</span>
 
 <span class="c">(**</span>
 <span class="c">      </span>
 <span class="c">*)</span>
-<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs25', 140)" onmouseover="showTip(event, 'fs25', 140)" class="i">publishDuplicateDetectionRules</span> <span class="o">:</span> <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 141)" onmouseover="showTip(event, 'fs2', 141)" class="i">Uri</span>
-   <span class="k">-&gt;</span> <span class="i">dupRules</span><span class="o">:</span>(<span onmouseout="hideTip(event, 'fs3', 142)" onmouseover="showTip(event, 'fs3', 142)" class="i">string</span>)[]
-   <span class="k">-&gt;</span> <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs6', 143)" onmouseover="showTip(event, 'fs6', 143)" class="i">AuthenticationProviderType</span>
-   <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 144)" onmouseover="showTip(event, 'fs3', 144)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 145)" onmouseover="showTip(event, 'fs3', 145)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 146)" onmouseover="showTip(event, 'fs3', 146)" class="i">string</span>
-   <span class="k">-&gt;</span> <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs7', 147)" onmouseover="showTip(event, 'fs7', 147)" class="i">LogLevel</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs10', 148)" onmouseover="showTip(event, 'fs10', 148)" class="i">unit</span></pre>
+<span class="k">val</span> <span class="k">public</span> <span onmouseout="hideTip(event, 'fs27', 175)" onmouseover="showTip(event, 'fs27', 175)" class="i">publishDuplicateDetectionRules</span> <span class="o">:</span> <span class="i">wsdl</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs2', 176)" onmouseover="showTip(event, 'fs2', 176)" class="i">Uri</span>
+   <span class="k">-&gt;</span> <span class="i">dupRules</span><span class="o">:</span>(<span onmouseout="hideTip(event, 'fs3', 177)" onmouseover="showTip(event, 'fs3', 177)" class="i">string</span>)[]
+   <span class="k">-&gt;</span> <span class="i">ap</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs6', 178)" onmouseover="showTip(event, 'fs6', 178)" class="i">AuthenticationProviderType</span>
+   <span class="k">-&gt;</span> <span class="i">usr</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 179)" onmouseover="showTip(event, 'fs3', 179)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">pwd</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 180)" onmouseover="showTip(event, 'fs3', 180)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">domain</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs3', 181)" onmouseover="showTip(event, 'fs3', 181)" class="i">string</span>
+   <span class="k">-&gt;</span> <span class="i">logLevel</span><span class="o">:</span><span onmouseout="hideTip(event, 'fs7', 182)" onmouseover="showTip(event, 'fs7', 182)" class="i">LogLevel</span> <span class="k">-&gt;</span> <span onmouseout="hideTip(event, 'fs10', 183)" onmouseover="showTip(event, 'fs10', 183)" class="i">unit</span></pre>
 </td>
 </tr>
 </table>
@@ -351,9 +421,11 @@ and adds the extra attributes given in <code>extraAttributes</code>.</p>
 <div class="tip" id="fs20">val migrate : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:Serialize -&gt; keyValuePairs:Map&lt;String,&#39;a&gt; -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.migrate<br /><em><br /><br />&#160;TODO:</em></div>
 <div class="tip" id="fs21">Multiple items<br />type String =<br />&#160;&#160;new : value:char -&gt; string + 7 overloads<br />&#160;&#160;member Chars : int -&gt; char<br />&#160;&#160;member Clone : unit -&gt; obj<br />&#160;&#160;member CompareTo : value:obj -&gt; int + 1 overload<br />&#160;&#160;member Contains : value:string -&gt; bool<br />&#160;&#160;member CopyTo : sourceIndex:int * destination:char[] * destinationIndex:int * count:int -&gt; unit<br />&#160;&#160;member EndsWith : value:string -&gt; bool + 2 overloads<br />&#160;&#160;member Equals : obj:obj -&gt; bool + 2 overloads<br />&#160;&#160;member GetEnumerator : unit -&gt; CharEnumerator<br />&#160;&#160;member GetHashCode : unit -&gt; int<br />&#160;&#160;...<br /><br />Full name: System.String<br /><br />--------------------<br />String(value: nativeptr&lt;char&gt;) : unit<br />String(value: nativeptr&lt;sbyte&gt;) : unit<br />String(value: char []) : unit<br />String(c: char, count: int) : unit<br />String(value: nativeptr&lt;char&gt;, startIndex: int, length: int) : unit<br />String(value: nativeptr&lt;sbyte&gt;, startIndex: int, length: int) : unit<br />String(value: char [], startIndex: int, length: int) : unit<br />String(value: nativeptr&lt;sbyte&gt;, startIndex: int, length: int, enc: Text.Encoding) : unit</div>
 <div class="tip" id="fs22">val import : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:Serialize -&gt; extraAttributes:Map&lt;String,&#39;a&gt; -&gt; data:Map&lt;String,Map&lt;Guid,Guid&gt;&gt; -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.import<br /><em><br /><br />&#160;Imports entities from files at the given location.</em></div>
-<div class="tip" id="fs23">val reassignOwner : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:Serialize -&gt; data:Map&lt;String,Map&lt;Guid,Guid&gt;&gt; -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.reassignOwner<br /><em><br /><br />&#160;TODO:</em></div>
-<div class="tip" id="fs24">val associationImport : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; ser&#237;alize:Serialize -&gt; data:Map&lt;String,Map&lt;Guid,Guid&gt;&gt; -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.associationImport<br /><em><br /><br />&#160;TODO:</em></div>
-<div class="tip" id="fs25">val publishDuplicateDetectionRules : wsdl:Uri -&gt; dupRules:string [] -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.publishDuplicateDetectionRules<br /><em><br /><br />&#160;TODO:</em></div>
+<div class="tip" id="fs23">val importWithoutReferences : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:Serialize -&gt; extraAttributes:Map&lt;String,&#39;a&gt; -&gt; data:Map&lt;String,Map&lt;Guid,Guid&gt;&gt; -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.importWithoutReferences<br /><em><br /><br />&#160;Imports entities from files at the given location.</em></div>
+<div class="tip" id="fs24">val importReferences : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:Serialize -&gt; referenceFiler:string [] -&gt; extraAttributes:Map&lt;String,&#39;a&gt; -&gt; data:Map&lt;String,Map&lt;Guid,Guid&gt;&gt; -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.importReferences<br /><em><br /><br />&#160;Imports entities from files at the given location.</em></div>
+<div class="tip" id="fs25">val reassignOwner : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:Serialize -&gt; data:Map&lt;String,Map&lt;Guid,Guid&gt;&gt; -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.reassignOwner<br /><em><br /><br />&#160;TODO:</em></div>
+<div class="tip" id="fs26">val associationImport : wsdl:Uri -&gt; location:string -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; ser&#237;alize:Serialize -&gt; data:Map&lt;String,Map&lt;Guid,Guid&gt;&gt; -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.associationImport<br /><em><br /><br />&#160;TODO:</em></div>
+<div class="tip" id="fs27">val publishDuplicateDetectionRules : wsdl:Uri -&gt; dupRules:string [] -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.publishDuplicateDetectionRules<br /><em><br /><br />&#160;TODO:</em></div>
 
             </div>
             <div class="span3">
@@ -362,7 +434,7 @@ and adds the extra attributes given in <code>extraAttributes</code>.</p>
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.2.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.3.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

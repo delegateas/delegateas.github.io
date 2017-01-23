@@ -39,6 +39,20 @@
                 
 <h1>Release Notes</h1>
 
+<h4>2.3.3.0 - Jan 23 2017</h4>
+
+<ul>
+<li>Refactored plugin sync to be more readable and reduce the amount calls to CRM 
+improving the synchronization time</li>
+<li>Added new method <code>syncSolution</code> for synching plugins that takes in an enum specifing the 
+isolationmode of the plugin assembly</li>
+<li>Added two new import functions for importing entities with or without references. 
+<code>importWithoutReferences</code> imports entities withouth any <code>EntityReferences</code> attributes
+and <code>importReferences</code> that only entities with EntityReferences attributes</li>
+<li>Reduceed the number of ExecuteMultipleRequest Calls to 10 call made in parallel in DataHelper 
+to on-premise environments due to limitation with CRM on-premise</li>
+</ul>
+
 <h4>2.3.2.0 - Sep 29 2016</h4>
 
 <ul>
@@ -737,7 +751,7 @@ guidelines: <a href="http://webcache.googleusercontent.com/search?q=cache:https:
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.3.2.0</li>
+                    <li class="nav-header">DAXIF# v.2.3.3.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>

@@ -4,14 +4,9 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>DataExportSource
-</title>
+    <title>PluginIsolationMode - DAXIF# v.2.3.3.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="
-        A framework for automating installation of all kinds of xRM systems.
-        By using simple F# script commands/files one can save a lot of time
-        and effort during this process.
-        ">
+    <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
 
     <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
@@ -37,113 +32,50 @@
         <div class="row">
             <div class="span9" id="main">
                 
-<h1>DataExportSource</h1>
 
-<h2>Libraries</h2>
 
-<p>Config information</p>
 
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="prep">#load</span> <span class="s">@&quot;</span><span class="s">DG</span><span class="s">.</span><span class="s">XrmOrg</span><span class="s">.</span><span class="s">XrmSolution</span><span class="s">.</span><span class="s">Config</span><span class="s">.</span><span class="s">fsx</span><span class="s">&quot;</span>
+<h1>PluginIsolationMode</h1>
+<div class="xmldoc">
+</div>
+  <h3>Record Fields</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Record Field</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
 
-<span class="k">module</span> <span class="i">cfg</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">XrmOrg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">XrmSolution</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Config</span></pre>
-</td>
-</tr>
-</table>
+          <code onmouseout="hideTip(event, '93', 93)" onmouseover="showTip(event, '93', 93)">
+            None
+          </code>
+          <div class="tip" id="93">
+            <strong>Signature:</strong> PluginIsolationMode<br />
+              <strong>Modifiers:</strong> static<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
 
-<p>Open libraries for use</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-<span class="l">6: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 5)" onmouseover="showTip(event, 'fs1', 5)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 6)" onmouseover="showTip(event, 'fs5', 6)" class="i">Daxif</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 7)" onmouseover="showTip(event, 'fs1', 7)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs5', 8)" onmouseover="showTip(event, 'fs5', 8)" class="i">Daxif</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="i">Modules</span>
-
-<span class="k">type</span> <span onmouseout="hideTip(event, 'fs7', 10)" onmouseover="showTip(event, 'fs7', 10)" class="i">source</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs8', 11)" onmouseover="showTip(event, 'fs8', 11)" class="i">XrmProvider</span><span class="o">&lt;</span><span class="i">uri</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs9', 12)" onmouseover="showTip(event, 'fs9', 12)" class="i">wsdlSource</span>, <span class="i">usr</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 13)" onmouseover="showTip(event, 'fs10', 13)" class="i">usrSource</span>, 
-                          <span class="i">pwd</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 14)" onmouseover="showTip(event, 'fs11', 14)" class="i">pwdSource</span>, <span class="i">domain</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 15)" onmouseover="showTip(event, 'fs12', 15)" class="i">domainSource</span>,
-                          <span class="i">ap</span> <span class="o">=</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 16)" onmouseover="showTip(event, 'fs13', 16)" class="i">authType</span><span class="o">&gt;</span></pre>
-</td>
-</tr>
-</table>
-
-<h2>DAXIF# operations</h2>
-
-<p>Define entities to be exported</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span class="k">let</span> <span onmouseout="hideTip(event, 'fs14', 17)" onmouseover="showTip(event, 'fs14', 17)" class="i">entities</span> <span class="o">=</span> 
-  [|
-    <span onmouseout="hideTip(event, 'fs7', 18)" onmouseover="showTip(event, 'fs7', 18)" class="i">source</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 19)" onmouseover="showTip(event, 'fs15', 19)" class="i">Metadata</span><span class="o">.</span><span class="i">Account</span><span class="o">.</span><span class="i">``(LogicalName)``</span>;
-    <span onmouseout="hideTip(event, 'fs7', 20)" onmouseover="showTip(event, 'fs7', 20)" class="i">source</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs15', 21)" onmouseover="showTip(event, 'fs15', 21)" class="i">Metadata</span><span class="o">.</span><span class="i">Contact</span><span class="o">.</span><span class="i">``(LogicalName)``</span>
-  |]</pre>
-</td>
-</tr>
-</table>
-
-<p>Export entities and store them as xml at data location</p>
-
-<table class="pre"><tr><td class="lines"><pre class="fssnip">
-<span class="l">1: </span>
-<span class="l">2: </span>
-<span class="l">3: </span>
-<span class="l">4: </span>
-<span class="l">5: </span>
-</pre>
-</td>
-<td class="snippet"><pre class="fssnip">
-<span onmouseout="hideTip(event, 'fs16', 22)" onmouseover="showTip(event, 'fs16', 22)" class="i">Data</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs17', 23)" onmouseover="showTip(event, 'fs17', 23)" class="i">export</span>
-  <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs18', 24)" onmouseover="showTip(event, 'fs18', 24)" class="i">wsdlSource&#39;</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs19', 25)" onmouseover="showTip(event, 'fs19', 25)" class="i">data</span> <span onmouseout="hideTip(event, 'fs14', 26)" onmouseover="showTip(event, 'fs14', 26)" class="i">entities</span> 
-    <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs13', 27)" onmouseover="showTip(event, 'fs13', 27)" class="i">authType</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs10', 28)" onmouseover="showTip(event, 'fs10', 28)" class="i">usrSource</span> <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs11', 29)" onmouseover="showTip(event, 'fs11', 29)" class="i">pwdSource</span>
-      <span class="i">cfg</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs12', 30)" onmouseover="showTip(event, 'fs12', 30)" class="i">domainSource</span> <span onmouseout="hideTip(event, 'fs20', 31)" onmouseover="showTip(event, 'fs20', 31)" class="i">LogLevel</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs21', 32)" onmouseover="showTip(event, 'fs21', 32)" class="i">Debug</span> 
-        <span onmouseout="hideTip(event, 'fs22', 33)" onmouseover="showTip(event, 'fs22', 33)" class="i">Serialize</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs23', 34)" onmouseover="showTip(event, 'fs23', 34)" class="i">XML</span></pre>
-</td>
-</tr>
-</table>
-
-<div class="tip" id="fs1">namespace DG</div>
-<div class="tip" id="fs2">namespace DG.XrmOrg</div>
-<div class="tip" id="fs3">namespace DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs4">module Config<br /><br />from DG.XrmOrg.XrmSolution</div>
-<div class="tip" id="fs5">namespace DG.Daxif</div>
-<div class="tip" id="fs6">namespace DG.Daxif.Modules</div>
-<div class="tip" id="fs7">type source = XrmProvider&lt;...&gt;<br /><br />Full name: DG.XrmOrg.XrmSolution.DataExportSource.source</div>
-<div class="tip" id="fs8">type XrmProvider<br /><br />Full name: DG.Daxif.XrmProvider</div>
-<div class="tip" id="fs9">val wsdlSource : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.wsdlSource</div>
-<div class="tip" id="fs10">val usrSource : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.usrSource</div>
-<div class="tip" id="fs11">val pwdSource : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.pwdSource</div>
-<div class="tip" id="fs12">val domainSource : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.domainSource</div>
-<div class="tip" id="fs13">val authType : Microsoft.Xrm.Sdk.Client.AuthenticationProviderType<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.authType</div>
-<div class="tip" id="fs14">val entities : string []<br /><br />Full name: DG.XrmOrg.XrmSolution.DataExportSource.entities</div>
-<div class="tip" id="fs15">type Metadata =<br />&#160;&#160;static member ``(All Entities)`` : string []<br /><br />Full name: DG.Daxif.XrmProvider,uri=&quot;https://SOURCE.api.crm4.dynamics.com/XRMServices/2011/Organization.svc&quot;,usr=&quot;usr&quot;,pwd=&quot;pwd&quot;,ap=&quot;4&quot;,domain=&quot;domain&quot;.Metadata<br /><em><br /><br />Access the metadata of the CRM system.</em></div>
-<div class="tip" id="fs16">Multiple items<br />module Data<br /><br />from DG.Daxif.Modules<br /><br />--------------------<br />namespace Microsoft.FSharp.Data</div>
-<div class="tip" id="fs17">val export : wsdl:System.Uri -&gt; location:string -&gt; entityNames:string [] -&gt; ap:Microsoft.Xrm.Sdk.Client.AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; serialize:Serialize -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.export</div>
-<div class="tip" id="fs18">val wsdlSource&#39; : System.Uri<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.wsdlSource&#39;</div>
-<div class="tip" id="fs19">val data : string<br /><br />Full name: DG.XrmOrg.XrmSolution.Config.data</div>
-<div class="tip" id="fs20">type LogLevel =<br />&#160;&#160;|  None  =  0<br />&#160;&#160;|  Info  =  1<br />&#160;&#160;|  Warning  =  3<br />&#160;&#160;|  Error  =  7<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  Debug  =  31<br />&#160;&#160;|  File  =  63<br /><br />Full name: DG.Daxif.LogLevel</div>
-<div class="tip" id="fs21">LogLevel.Debug: LogLevel = 31</div>
-<div class="tip" id="fs22">type Serialize =<br />&#160;&#160;| BIN<br />&#160;&#160;| XML<br />&#160;&#160;| JSON<br /><br />Full name: DG.Daxif.Serialize</div>
-<div class="tip" id="fs23">union case Serialize.XML: Serialize</div>
+          <code onmouseout="hideTip(event, '94', 94)" onmouseover="showTip(event, '94', 94)">
+            Sandbox
+          </code>
+          <div class="tip" id="94">
+            <strong>Signature:</strong> PluginIsolationMode<br />
+              <strong>Modifiers:</strong> static<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
             </div>
             <div class="span3">
