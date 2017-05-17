@@ -42,23 +42,23 @@
 <h2><a name="Step-by-step" class="anchor" href="#Step-by-step">Step-by-step</a></h2>
 <p><strong>Setup:</strong></p>
 <ol>
-<li>Download the <a href="files/install-latest.cmd">self-contained install file</a>, and place it in a folder relative to your web resource project folder.</li>
-<li>Run the <code>install-latest.cmd</code> file to install the latest version of XrmDefinitelyTyped along with its dependencies in the folder.</li>
+<li><a href="https://www.nuget.org/packages/Delegate.XrmDefinitelyTyped">Install the package via NuGet</a></li>
 <li>
-Edit the <code>appSettings</code> in the generated configuration file (<code>XrmDefinitelyTyped.exe.config</code>) to fit your Dynamics CRM environment and needs
+Edit the <code>appSettings</code> in the configuration file (<code>XrmDefinitelyTyped.exe.config</code>) to fit your Dynamics CRM environment and needs
 (see <a href="tool-usage.html">arguments available to XDT</a>).
 </li>
 </ol>
 <p><strong>Usage:</strong></p>
 <ol>
-<li>Run <code>XrmDefinitelyTyped.exe</code>. This will generate the desired declaration files at the specified location (or in the current folder if none specified)</li>
+<li>Run <code>XrmDefinitelyTyped.exe</code>*. This will generate the desired declaration files at the specified location (or in the current folder if none specified)</li>
 <li>Make sure your <code>tsconfig.json</code> file includes the generated typings in the TypeScript context</li>
 <li>Create a TypeScript file, or convert your old .js files to .ts</li>
 <li>Making form logic? Cast the <code>Xrm.Page</code> object to the form you are coding towards</li>
 <li>Start coding!</li>
 </ol>
+<p>*: Since <code>.exe</code> files can not be run directly from Visual Studio (out-of-the-box at least), script files are included in the package to enable you to run it from the IDE (Powershell: <code>Run.ps1</code>, or F#: <code>Run.fsx</code>).</p>
 <h2><a name="Recommended-form-script-file-setup" class="anchor" href="#Recommended-form-script-file-setup">Recommended form script file-setup</a></h2>
-<p>Either make a new variable (<code>Page</code>), and set it to <code>Xrm.Page</code> casted to the desired form type:</p>
+<p>Either make a new variable (i.e. <code>Page</code>), and set it to <code>Xrm.Page</code> casted to the desired form type:</p>
 <table class="pre"><tr><td class="lines"><pre class="fssnip"><span class="l">1: </span>
 <span class="l">2: </span>
 <span class="l">3: </span>
@@ -107,9 +107,10 @@ Edit the <code>appSettings</code> in the generated configuration file (<code>Xrm
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.2.0.7</li>
+                <li class="nav-header">XrmDefinitelyTyped v.2.1.0</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
+                <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get the tool via NuGet</a></li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/getting-started.html">Getting started</a></li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/license.html">License</a></li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/release-notes.html">Release Notes</a></li>
