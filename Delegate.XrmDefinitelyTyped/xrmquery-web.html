@@ -57,6 +57,19 @@ Retrieval of formatted values, and easier access to them with <code>&lt;record&g
 <code>&lt;record&gt;["&lt;attribute-name&gt;@OData.Community.Display.V1.FormattedValue"]</code>
 </li>
 </ul>
+<h2><a name="Setup" class="anchor" href="#Setup">Setup</a></h2>
+<p>Running XrmDefinitelyTyped with the <code>web</code> and <code>jsLib</code> arguments generates the declaration files
+for <code>XrmQuery</code> for the Web API along with the necessary JavaScript code to make it work.</p>
+<p>The generated JavaScript files for the Web API are:</p>
+<ul>
+<li><code>dg.xrmquery.web.js</code>: The non-minified version of the XrmQuery library</li>
+<li><code>dg.xrmquery.web.min.js</code>: The minified version of the XrmQuery library</li>
+<li><code>dg.xrmquery.web.promise.min.js</code>: The minified version of the XrmQuery library with Promise polyfill included (to make it work in IE)</li>
+</ul>
+<p>Each of them are different flavours of the same library.
+I do, however, suggest using the minified version with the Promise polyfill in order to support all browsers.</p>
+<p>In order to use it on a form in CRM, you need to create it as a web resource first, and then include it on the form
+before any of your other web resources.</p>
 <h2><a name="Usage" class="anchor" href="#Usage">Usage</a></h2>
 <p>XrmQuery relies mostly on functions to deduce the necessary types and actions used to perform the query.
 These functions are meant to help the developer with intellisense and autocomplete in each function of XrmQuery.</p>
