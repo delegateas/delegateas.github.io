@@ -33,6 +33,14 @@
         <div class="span9" id="main">
           
 <h1><a name="Release-Notes" class="anchor" href="#Release-Notes">Release Notes</a></h1>
+<h3><a name="2-2-0-June-20-2017" class="anchor" href="#2-2-0-June-20-2017">2.2.0 - June 20 2017</a></h3>
+<ul>
+<li>Added some of the new Dynamics 365 form functionality</li>
+<li><code>SDK.REST.retrieveRecord</code> now allows <code>null</code> values in the select and expand parameters</li>
+<li><code>double</code> attributes are now typed as <code>number</code>'s instead of <code>string</code>'s for both endpoints</li>
+<li><code>decimal</code> attributes are now typed as <code>number</code>'s in the WebAPI, and as <code>string</code>'s in the old REST endpoint</li>
+<li>Fixed generated output when targeting all entities</li>
+</ul>
 <h3><a name="2-1-2-May-24-2017" class="anchor" href="#2-1-2-May-24-2017">2.1.2 - May 24 2017</a></h3>
 <ul>
 <li>Fixed bug when trying to access elements in the <code>Xrm</code>-namespace, while using <code>declare var Xrm: Xrm&lt;...&gt;</code></li>
@@ -363,7 +371,7 @@ they are necessary.
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.2.1.2</li>
+                <li class="nav-header">XrmDefinitelyTyped v.2.2.0</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get the tool via NuGet</a></li>

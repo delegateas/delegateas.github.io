@@ -184,10 +184,10 @@ Example usage from a command prompt:</p>
 <span class="l">6: </span>
 <span class="l">7: </span>
 </pre></td>
-<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span onmouseout="hideTip(event, 'fs1', 1)" onmouseover="showTip(event, 'fs1', 1)" class="i">Microsoft</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs2', 2)" onmouseover="showTip(event, 'fs2', 2)" class="i">Xrm</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs3', 3)" onmouseover="showTip(event, 'fs3', 3)" class="i">Sdk</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="i">Client</span>
-<span class="k">open</span> <span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="i">DG</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="i">XrmDefinitelyTyped</span>
+<td class="snippet"><pre class="fssnip highlighted"><code lang="fsharp"><span class="k">open</span> <span class="i">Microsoft</span><span class="o">.</span><span class="i">Xrm</span><span class="o">.</span><span class="i">Sdk</span><span class="o">.</span><span class="i">Client</span>
+<span class="k">open</span> <span class="i">DG</span><span class="o">.</span><span class="i">XrmDefinitelyTyped</span>
 
-<span onmouseout="hideTip(event, 'fs7', 7)" onmouseover="showTip(event, 'fs7', 7)" class="t">XrmDefinitelyTyped</span><span class="o">.</span><span onmouseout="hideTip(event, 'fs8', 8)" onmouseover="showTip(event, 'fs8', 8)" class="f">GenerateFromCrm</span>(
+<span class="i">XrmDefinitelyTyped</span><span class="o">.</span><span class="i">GenerateFromCrm</span>(
   <span class="s">&quot;http://&lt;serverName&gt;/&lt;organizationName&gt;/XRMServices/2011/Organization.svc&quot;</span>, 
   <span class="s">&quot;username&quot;</span>, <span class="s">&quot;password&quot;</span>, 
   <span class="i">outDir</span> <span class="o">=</span> <span class="s">@&quot;WebResources\typings\XRM&quot;</span>)
@@ -195,14 +195,6 @@ Example usage from a command prompt:</p>
 </tr>
 </table>
 
-<div class="tip" id="fs1">namespace Microsoft</div>
-<div class="tip" id="fs2">namespace Microsoft.Xrm</div>
-<div class="tip" id="fs3">namespace Microsoft.Xrm.Sdk</div>
-<div class="tip" id="fs4">namespace Microsoft.Xrm.Sdk.Client</div>
-<div class="tip" id="fs5">namespace DG</div>
-<div class="tip" id="fs6">namespace DG.XrmDefinitelyTyped</div>
-<div class="tip" id="fs7">type XrmDefinitelyTyped =<br />&#160;&#160;private new : unit -&gt; XrmDefinitelyTyped<br />&#160;&#160;static member GenerateFromCrm : xrmAuth:XrmAuthentication * rSettings:XdtRetrievalSettings * gSettings:XdtGenerationSettings -&gt; unit<br />&#160;&#160;static member GenerateFromCrm : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?outDir:string * ?jsLib:string * ?tsLib:string * ?entities:string [] * ?solutions:string [] * ?crmVersion:Version * ?skipForms:bool * ?oneFile:bool * ?restNs:string * ?webNs:string * ?formIntersects:FormIntersect [] -&gt; unit<br />&#160;&#160;static member GenerateFromFile : gSettings:XdtGenerationSettings * ?filePath:string -&gt; unit<br />&#160;&#160;static member GenerateFromRawState : rawState:RawState * gSettings:XdtGenerationSettings -&gt; unit<br />&#160;&#160;static member SaveMetadataToFile : xrmAuth:XrmAuthentication * rSettings:XdtRetrievalSettings * ?filePath:string -&gt; unit<br /><br />Full name: DG.XrmDefinitelyTyped.XrmDefinitelyTyped</div>
-<div class="tip" id="fs8">static member XrmDefinitelyTyped.GenerateFromCrm : xrmAuth:XrmAuthentication * rSettings:XdtRetrievalSettings * gSettings:XdtGenerationSettings -&gt; unit<br />static member XrmDefinitelyTyped.GenerateFromCrm : url:string * username:string * password:string * ?domain:string * ?ap:AuthenticationProviderType * ?outDir:string * ?jsLib:string * ?tsLib:string * ?entities:string [] * ?solutions:string [] * ?crmVersion:Version * ?skipForms:bool * ?oneFile:bool * ?restNs:string * ?webNs:string * ?formIntersects:FormIntersect [] -&gt; unit</div>
 
         </div>
         <div class="span3">
@@ -213,7 +205,7 @@ Example usage from a command prompt:</p>
             <img src="/Delegate.XrmDefinitelyTyped/img/delegate_xrmdefinitelytyped_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
           </a>
             <ul class="nav nav-list" id="menu" style="margin-top: 20px;">
-                <li class="nav-header">XrmDefinitelyTyped v.2.1.2</li>
+                <li class="nav-header">XrmDefinitelyTyped v.2.2.0</li>
                 <li><a href="/Delegate.XrmDefinitelyTyped/index.html">Home page</a></li>
                 <li class="divider"></li>
                 <li><a href="http://nuget.org/packages/Delegate.XrmDefinitelyTyped">Get the tool via NuGet</a></li>
