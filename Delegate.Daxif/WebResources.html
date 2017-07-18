@@ -61,7 +61,7 @@
 <div class="tip" id="fs2">Multiple items<br />type Uri =<br />&#160;&#160;new : uriString:string -&gt; Uri + 5 overloads<br />&#160;&#160;member AbsolutePath : string<br />&#160;&#160;member AbsoluteUri : string<br />&#160;&#160;member Authority : string<br />&#160;&#160;member DnsSafeHost : string<br />&#160;&#160;member Equals : comparand:obj -&gt; bool<br />&#160;&#160;member Fragment : string<br />&#160;&#160;member GetComponents : components:UriComponents * format:UriFormat -&gt; string<br />&#160;&#160;member GetHashCode : unit -&gt; int<br />&#160;&#160;member GetLeftPart : part:UriPartial -&gt; string<br />&#160;&#160;...<br /><br />Full name: System.Uri<br /><br />--------------------<br />Uri(uriString: string) : unit<br />Uri(uriString: string, uriKind: UriKind) : unit<br />Uri(baseUri: Uri, relativeUri: string) : unit<br />Uri(baseUri: Uri, relativeUri: Uri) : unit</div>
 <div class="tip" id="fs3">Multiple items<br />val string : value:&#39;T -&gt; string<br /><br />Full name: Microsoft.FSharp.Core.Operators.string<br /><br />--------------------<br />type string = String<br /><br />Full name: Microsoft.FSharp.Core.string</div>
 <div class="tip" id="fs4">type AuthenticationProviderType =<br />&#160;&#160;| None = 0<br />&#160;&#160;| ActiveDirectory = 1<br />&#160;&#160;| Federation = 2<br />&#160;&#160;| LiveId = 3<br />&#160;&#160;| OnlineFederation = 4<br /><br />Full name: Microsoft.Xrm.Sdk.Client.AuthenticationProviderType</div>
-<div class="tip" id="fs5">type LogLevel =<br />&#160;&#160;|  None  =  0<br />&#160;&#160;|  Info  =  1<br />&#160;&#160;|  Warning  =  3<br />&#160;&#160;|  Error  =  7<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  Debug  =  31<br />&#160;&#160;|  File  =  63<br /><br />Full name: DG.Daxif.LogLevel</div>
+<div class="tip" id="fs5">type LogLevel =<br />&#160;&#160;|  Error  =  1<br />&#160;&#160;|  Warning  =  3<br />&#160;&#160;|  Info  =  7<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  Debug  =  31<br /><br />Full name: DG.Daxif.LogLevel</div>
 <div class="tip" id="fs6">type unit = Unit<br /><br />Full name: Microsoft.FSharp.Core.unit</div>
 
             </div>
@@ -73,7 +73,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.4.1.0</li>
+                    <li class="nav-header">DAXIF# v.3.0.1.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
@@ -87,27 +87,7 @@
                     <li><a href="/Delegate.Daxif/plugin-reg-setup.html">Plugin Synchronization Setup</a></li>
 
                     <li class="nav-header">Example Scripts</li>
-                        <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.html">EnsureAssemblies</a></li>
-                        <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.Standalone.html">Standalone</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.AuthInfo.html">AuthInfo</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.Config.html">Config</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.CountEntities.html">CountEntities</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.DataExportSource.html">DataExportSource</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.DataImportTarget.html">DataImportTarget</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.DataInMemoryMigrate.html">DataInMemoryMigrate</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.PluginsSyncDev.html">PluginsSyncDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionCreateDev.html">SolutionCreateDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionDiff.html">SolutionDiff</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExportDev.html">SolutionExportDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExtract.html">SolutionExtract</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionImportDev.html">SolutionImportDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionImportTest.html">SolutionImportTest</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionPack.html">SolutionPack</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateContext.html">SolutionUpdateContext</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateCustomContext.html">SolutionUpdateCustomContext</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateTsContext.html">SolutionUpdateTsContext</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WebResourcesSyncDev.html">WebResourcesSyncDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WorkflowSyncDev.html">WorkflowSyncDev</a></li>
+                        <li><a href="/Delegate.Daxif/.html"></a></li>
 
                     <li class="nav-header">Documentation</li>
                     <li><a href="/Delegate.Daxif/reference/index.html">API Reference</a></li>

@@ -405,7 +405,7 @@ Adds the extra attributes given in <code>extraAttributes</code>.</p>
 <div class="tip" id="fs4">Multiple items<br />module Map<br /><br />from Microsoft.FSharp.Collections<br /><br />--------------------<br />type Map&lt;&#39;Key,&#39;Value (requires comparison)&gt; =<br />&#160;&#160;interface IEnumerable<br />&#160;&#160;interface IComparable<br />&#160;&#160;interface IEnumerable&lt;KeyValuePair&lt;&#39;Key,&#39;Value&gt;&gt;<br />&#160;&#160;interface ICollection&lt;KeyValuePair&lt;&#39;Key,&#39;Value&gt;&gt;<br />&#160;&#160;interface IDictionary&lt;&#39;Key,&#39;Value&gt;<br />&#160;&#160;new : elements:seq&lt;&#39;Key * &#39;Value&gt; -&gt; Map&lt;&#39;Key,&#39;Value&gt;<br />&#160;&#160;member Add : key:&#39;Key * value:&#39;Value -&gt; Map&lt;&#39;Key,&#39;Value&gt;<br />&#160;&#160;member ContainsKey : key:&#39;Key -&gt; bool<br />&#160;&#160;override Equals : obj -&gt; bool<br />&#160;&#160;member Remove : key:&#39;Key -&gt; Map&lt;&#39;Key,&#39;Value&gt;<br />&#160;&#160;...<br /><br />Full name: Microsoft.FSharp.Collections.Map&lt;_,_&gt;<br /><br />--------------------<br />new : elements:seq&lt;&#39;Key * &#39;Value&gt; -&gt; Map&lt;&#39;Key,&#39;Value&gt;</div>
 <div class="tip" id="fs5">type obj = Object<br /><br />Full name: Microsoft.FSharp.Core.obj</div>
 <div class="tip" id="fs6">type AuthenticationProviderType =<br />&#160;&#160;| None = 0<br />&#160;&#160;| ActiveDirectory = 1<br />&#160;&#160;| Federation = 2<br />&#160;&#160;| LiveId = 3<br />&#160;&#160;| OnlineFederation = 4<br /><br />Full name: Microsoft.Xrm.Sdk.Client.AuthenticationProviderType</div>
-<div class="tip" id="fs7">type LogLevel =<br />&#160;&#160;|  None  =  0<br />&#160;&#160;|  Info  =  1<br />&#160;&#160;|  Warning  =  3<br />&#160;&#160;|  Error  =  7<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  Debug  =  31<br />&#160;&#160;|  File  =  63<br /><br />Full name: DG.Daxif.LogLevel</div>
+<div class="tip" id="fs7">type LogLevel =<br />&#160;&#160;|  Error  =  1<br />&#160;&#160;|  Warning  =  3<br />&#160;&#160;|  Info  =  7<br />&#160;&#160;|  Verbose  =  15<br />&#160;&#160;|  Debug  =  31<br /><br />Full name: DG.Daxif.LogLevel</div>
 <div class="tip" id="fs8">Multiple items<br />type Guid =<br />&#160;&#160;struct<br />&#160;&#160;&#160;&#160;new : b:byte[] -&gt; Guid + 4 overloads<br />&#160;&#160;&#160;&#160;member CompareTo : value:obj -&gt; int + 1 overload<br />&#160;&#160;&#160;&#160;member Equals : o:obj -&gt; bool + 1 overload<br />&#160;&#160;&#160;&#160;member GetHashCode : unit -&gt; int<br />&#160;&#160;&#160;&#160;member ToByteArray : unit -&gt; byte[]<br />&#160;&#160;&#160;&#160;member ToString : unit -&gt; string + 2 overloads<br />&#160;&#160;&#160;&#160;static val Empty : Guid<br />&#160;&#160;&#160;&#160;static member NewGuid : unit -&gt; Guid<br />&#160;&#160;&#160;&#160;static member Parse : input:string -&gt; Guid<br />&#160;&#160;&#160;&#160;static member ParseExact : input:string * format:string -&gt; Guid<br />&#160;&#160;&#160;&#160;...<br />&#160;&#160;end<br /><br />Full name: System.Guid<br /><br />--------------------<br />Guid()<br />Guid(b: byte []) : unit<br />Guid(g: string) : unit<br />Guid(a: int, b: int16, c: int16, d: byte []) : unit<br />Guid(a: uint32, b: uint16, c: uint16, d: byte, e: byte, f: byte, g: byte, h: byte, i: byte, j: byte, k: byte) : unit<br />Guid(a: int, b: int16, c: int16, d: byte, e: byte, f: byte, g: byte, h: byte, i: byte, j: byte, k: byte) : unit</div>
 <div class="tip" id="fs9">val count : wsdl:Uri -&gt; entityNames:string [] -&gt; ap:AuthenticationProviderType -&gt; usr:string -&gt; pwd:string -&gt; domain:string -&gt; logLevel:LogLevel -&gt; unit<br /><br />Full name: DG.Daxif.Modules.Data.count<br /><em><br /><br />&#160;Count the entities of a certain type.</em></div>
 <div class="tip" id="fs10">type unit = Unit<br /><br />Full name: Microsoft.FSharp.Core.unit</div>
@@ -436,7 +436,7 @@ Adds the extra attributes given in <code>extraAttributes</code>.</p>
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.2.4.1.0</li>
+                    <li class="nav-header">DAXIF# v.3.0.1.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
@@ -450,27 +450,7 @@ Adds the extra attributes given in <code>extraAttributes</code>.</p>
                     <li><a href="/Delegate.Daxif/plugin-reg-setup.html">Plugin Synchronization Setup</a></li>
 
                     <li class="nav-header">Example Scripts</li>
-                        <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.html">EnsureAssemblies</a></li>
-                        <li><a href="/Delegate.Daxif/DG.EnsureAssemblies.Standalone.html">Standalone</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.AuthInfo.html">AuthInfo</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.Config.html">Config</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.CountEntities.html">CountEntities</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.DataExportSource.html">DataExportSource</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.DataImportTarget.html">DataImportTarget</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.DataInMemoryMigrate.html">DataInMemoryMigrate</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.PluginsSyncDev.html">PluginsSyncDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionCreateDev.html">SolutionCreateDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionDiff.html">SolutionDiff</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExportDev.html">SolutionExportDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionExtract.html">SolutionExtract</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionImportDev.html">SolutionImportDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionImportTest.html">SolutionImportTest</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionPack.html">SolutionPack</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateContext.html">SolutionUpdateContext</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateCustomContext.html">SolutionUpdateCustomContext</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.SolutionUpdateTsContext.html">SolutionUpdateTsContext</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WebResourcesSyncDev.html">WebResourcesSyncDev</a></li>
-                        <li><a href="/Delegate.Daxif/DG.XrmOrg.XrmSolution.WorkflowSyncDev.html">WorkflowSyncDev</a></li>
+                        <li><a href="/Delegate.Daxif/.html"></a></li>
 
                     <li class="nav-header">Documentation</li>
                     <li><a href="/Delegate.Daxif/reference/index.html">API Reference</a></li>
