@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>Environment - DAXIF# v.3.0.2.0</title>
+    <title>Environment - DAXIF# v.3.1.1.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -47,10 +47,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '172', 172)" onmouseover="showTip(event, '172', 172)">
+          <code onmouseout="hideTip(event, '166', 166)" onmouseover="showTip(event, '166', 166)">
             ap
           </code>
-          <div class="tip" id="172">
+          <div class="tip" id="166">
             <strong>Signature:</strong> AuthenticationProviderType option<br />
                       </div>
         </td>
@@ -61,10 +61,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '173', 173)" onmouseover="showTip(event, '173', 173)">
+          <code onmouseout="hideTip(event, '167', 167)" onmouseover="showTip(event, '167', 167)">
             creds
           </code>
-          <div class="tip" id="173">
+          <div class="tip" id="167">
             <strong>Signature:</strong> Credentials option<br />
                       </div>
         </td>
@@ -75,10 +75,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '174', 174)" onmouseover="showTip(event, '174', 174)">
+          <code onmouseout="hideTip(event, '168', 168)" onmouseover="showTip(event, '168', 168)">
             name
           </code>
-          <div class="tip" id="174">
+          <div class="tip" id="168">
             <strong>Signature:</strong> string<br />
                       </div>
         </td>
@@ -89,10 +89,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '175', 175)" onmouseover="showTip(event, '175', 175)">
+          <code onmouseout="hideTip(event, '169', 169)" onmouseover="showTip(event, '169', 169)">
             url
           </code>
-          <div class="tip" id="175">
+          <div class="tip" id="169">
             <strong>Signature:</strong> Uri<br />
                       </div>
         </td>
@@ -111,10 +111,10 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '190', 190)" onmouseover="showTip(event, '190', 190)">
+          <code onmouseout="hideTip(event, '193', 193)" onmouseover="showTip(event, '193', 193)">
             apToUse
           </code>
-          <div class="tip" id="190">
+          <div class="tip" id="193">
             <strong>Signature:</strong> AuthenticationProviderType<br />
                       </div>
         </td>
@@ -125,29 +125,49 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '191', 191)" onmouseover="showTip(event, '191', 191)">
+          <code onmouseout="hideTip(event, '194', 194)" onmouseover="showTip(event, '194', 194)">
             connect(?logger)
           </code>
-          <div class="tip" id="191">
+          <div class="tip" id="194">
             <strong>Signature:</strong> (logger:ConsoleLogger option) -&gt; Connection<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Connects to the given environment
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '192', 192)" onmouseover="showTip(event, '192', 192)">
+          <code onmouseout="hideTip(event, '195', 195)" onmouseover="showTip(event, '195', 195)">
+            executeProcess(...)
+          </code>
+          <div class="tip" id="195">
+            <strong>Signature:</strong> (exeLocation:string * args:&#39;?120776 option * urlParam:string option * usrParam:string option * pwdParam:string option * apParam:string option * dmnParam:string option * paramToString:(string * string -&gt; string) option) -&gt; unit<br />
+                          <strong>Type parameters:</strong> '?120776          </div>
+        </td>
+        <td class="xmldoc">
+        
+ Runs an executable with the given arguments and also passes on necessary login details for CRM if specified
+</br>
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '196', 196)" onmouseover="showTip(event, '196', 196)">
             getCreds()
           </code>
-          <div class="tip" id="192">
+          <div class="tip" id="196">
             <strong>Signature:</strong> unit -&gt; string * string * string<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Gets credentials for the given environment
+</br>
         </td>
       </tr>
     </tbody>
@@ -161,29 +181,33 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '199', 199)" onmouseover="showTip(event, '199', 199)">
+          <code onmouseout="hideTip(event, '206', 206)" onmouseover="showTip(event, '206', 206)">
             Create(name, url, ?ap, ?creds, ?args)
           </code>
-          <div class="tip" id="199">
+          <div class="tip" id="206">
             <strong>Signature:</strong> (name:string * url:string * ap:AuthenticationProviderType option * creds:Credentials option * args:string [] option) -&gt; Environment<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Creates a new environment using the credentials and arguments given
+</br>
         </td>
       </tr>
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '207', 207)" onmouseover="showTip(event, '207', 207)">
+          <code onmouseout="hideTip(event, '208', 208)" onmouseover="showTip(event, '208', 208)">
             Get(name)
           </code>
-          <div class="tip" id="207">
+          <div class="tip" id="208">
             <strong>Signature:</strong> name:string -&gt; Environment<br />
                       </div>
         </td>
         <td class="xmldoc">
         
+ Gets the environment with the given name, if one exists
+</br>
         </td>
       </tr>
     </tbody>
@@ -198,7 +222,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.3.0.2.0</li>
+                    <li class="nav-header">DAXIF# v.3.1.1.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
