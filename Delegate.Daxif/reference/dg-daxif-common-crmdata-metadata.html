@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="/Delegate.Daxif/img/favicon.ico" type="image/vnd.microsoft.icon" />
 
-    <title>Metadata - DAXIF# v.3.1.2.0</title>
+    <title>Metadata - DAXIF# v.3.1.6.0</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="Delegate A/S">
@@ -64,39 +64,11 @@
       <tr>
         <td class="member-name">
 
-          <code onmouseout="hideTip(event, '2', 2)" onmouseover="showTip(event, '2', 2)">
+          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
             entity proxy logicalName
           </code>
-          <div class="tip" id="2">
-            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; EntityMetadata<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '3', 3)" onmouseover="showTip(event, '3', 3)">
-            entityAll proxy logicalName
-          </code>
-          <div class="tip" id="3">
-            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; EntityMetadata<br />
-                      </div>
-        </td>
-        <td class="xmldoc">
-        
-        </td>
-      </tr>
-      <tr>
-        <td class="member-name">
-
-          <code onmouseout="hideTip(event, '4', 4)" onmouseover="showTip(event, '4', 4)">
-            entityAttributes proxy logicalName
-          </code>
           <div class="tip" id="4">
-            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; AttributeMetadata []<br />
+            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; EntityMetadata<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -107,10 +79,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '5', 5)" onmouseover="showTip(event, '5', 5)">
-            entityManyToManyRelationships (...)
+            entityAll proxy logicalName
           </code>
           <div class="tip" id="5">
-            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; ManyToManyRelationshipMetadata []<br />
+            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; EntityMetadata<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -121,10 +93,10 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '6', 6)" onmouseover="showTip(event, '6', 6)">
-            entityManyToOneRelationships (...)
+            entityAttributes proxy logicalName
           </code>
           <div class="tip" id="6">
-            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; OneToManyRelationshipMetadata []<br />
+            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; AttributeMetadata []<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -135,10 +107,52 @@
         <td class="member-name">
 
           <code onmouseout="hideTip(event, '7', 7)" onmouseover="showTip(event, '7', 7)">
-            entityOneToManyRelationships (...)
+            entityManyToManyRelationships (...)
           </code>
           <div class="tip" id="7">
+            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; ManyToManyRelationshipMetadata []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '8', 8)" onmouseover="showTip(event, '8', 8)">
+            entityManyToOneRelationships (...)
+          </code>
+          <div class="tip" id="8">
             <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; OneToManyRelationshipMetadata []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+            entityOneToManyRelationships (...)
+          </code>
+          <div class="tip" id="9">
+            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; logicalName:string -&gt; OneToManyRelationshipMetadata []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+        
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '10', 10)" onmouseover="showTip(event, '10', 10)">
+            getEntityLogicalNameFromId (...)
+          </code>
+          <div class="tip" id="10">
+            <strong>Signature:</strong> proxy:OrganizationServiceProxy -&gt; metadataId:Guid -&gt; string<br />
                       </div>
         </td>
         <td class="xmldoc">
@@ -157,7 +171,7 @@
                     <img src="/Delegate.Daxif/../img/delegate_daxif_logo.png" style="width:140px;height:140px;margin:10px 0px 0px 25px;border-style:none;" />
                 </a>
                 <ul class="nav nav-list" id="menu">
-                    <li class="nav-header">DAXIF# v.3.1.2.0</li>
+                    <li class="nav-header">DAXIF# v.3.1.6.0</li>
                     <li><a href="/Delegate.Daxif/index.html">Home page</a></li>
 
                     <li class="divider"></li>
@@ -186,6 +200,7 @@
                         <li><a href="/Delegate.Daxif/SolutionImportDev.html">SolutionImportDev</a></li>
                         <li><a href="/Delegate.Daxif/SolutionImportTest.html">SolutionImportTest</a></li>
                         <li><a href="/Delegate.Daxif/SolutionPack.html">SolutionPack</a></li>
+                        <li><a href="/Delegate.Daxif/ViewExtender.html">ViewExtender</a></li>
                         <li><a href="/Delegate.Daxif/WebResourceSyncDev.html">WebResourceSyncDev</a></li>
                         <li><a href="/Delegate.Daxif/WorkflowSyncDev.html">WorkflowSyncDev</a></li>
 
