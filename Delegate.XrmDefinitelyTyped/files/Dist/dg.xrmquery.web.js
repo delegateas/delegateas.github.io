@@ -174,7 +174,7 @@ var Filter;
     /**
      * Makes a string into a GUID that can be sent to the OData source
      */
-    function makeGuid(id) { return XQW.makeTag(id); }
+    function makeGuid(id) { return XQW.makeTag(XQW.stripGUID(id)); }
     Filter.makeGuid = makeGuid;
     /**
      * @internal
@@ -211,6 +211,9 @@ var Filter;
      */
     function nestedFilter(fs, conj) {
         var last = fs.pop();
+        if (last === undefined) {
+            return ('');
+        }
         return fs.reduceRight(function (acc, c) { return biFilter(c, conj, acc); }, last);
     }
 })(Filter || (Filter = {}));
@@ -266,6 +269,13 @@ var XQW;
     //  else if (m[1] && m[3]) { this[m[2] + "_guid"] = value; return; }
     //  else return value;
     //}
+    function stripGUID(guid) {
+        if (guid.startsWith("{") && guid.endsWith("}"))
+            return guid.substring(1, guid.length - 1);
+        else
+            return guid;
+    }
+    XQW.stripGUID = stripGUID;
     function parseRetrievedData(req) {
         return JSON.parse(req.response, reviver);
     }
@@ -449,6 +459,7 @@ var XQW;
              * @internal
              */
             _this.topAmount = null;
+            _this.id = id !== undefined ? stripGUID(id) : id;
             return _this;
         }
         RetrieveMultipleRecords.Get = function (entityPicker) {
@@ -597,6 +608,7 @@ var XQW;
              * @internal
              */
             _this.expandKeys = [];
+            _this.id = stripGUID(id);
             return _this;
         }
         RetrieveRecord.Related = function (entityPicker, id, relatedPicker) {
@@ -690,6 +702,7 @@ var XQW;
         function DeleteRecord(entityPicker, id) {
             var _this = _super.call(this, "DELETE") || this;
             _this.id = id;
+            _this.id = id !== undefined ? stripGUID(id) : id;
             _this.entitySetName = taggedExec(entityPicker).toString();
             return _this;
         }
@@ -697,7 +710,7 @@ var XQW;
             successCallback();
         };
         DeleteRecord.prototype.setId = function (id) {
-            this.id = id;
+            this.id = stripGUID(id);
             return this;
         };
         DeleteRecord.prototype.getQueryString = function () {
@@ -716,6 +729,7 @@ var XQW;
             _this.id = id;
             _this.record = record;
             _this.getObjectToSend = function () { return JSON.stringify(transformObject(_this.record)); };
+            _this.id = id !== undefined ? stripGUID(id) : id;
             _this.entitySetName = taggedExec(entityPicker).toString();
             return _this;
         }
@@ -723,7 +737,7 @@ var XQW;
             successCallback();
         };
         UpdateRecord.prototype.setData = function (id, record) {
-            this.id = id;
+            this.id = stripGUID(id);
             this.record = record;
             return this;
         };
@@ -733,6 +747,12 @@ var XQW;
         return UpdateRecord;
     }(Query));
     XQW.UpdateRecord = UpdateRecord;
+    /**
+     * @internal
+     */
+    function startsWith(needle, haystack) {
+        return haystack.lastIndexOf(needle, 0) === 0;
+    }
     /**
      * @internal
      */
@@ -839,7 +859,13 @@ var XQW;
      * @param obj
      */
     function transformObject(obj) {
-        if (obj instanceof Object) {
+        if (obj instanceof Date) {
+            return obj;
+        }
+        else if (typeof (obj) === 'string' && startsWith("{", obj) && obj.endsWith("}")) {
+            return obj.substring(1, obj.length - 1);
+        }
+        else if (obj instanceof Object) {
             var newObj = {};
             Object.keys(obj).forEach(function (key) { return parseAttribute(key, transformObject(obj[key]), newObj); });
             return newObj;
