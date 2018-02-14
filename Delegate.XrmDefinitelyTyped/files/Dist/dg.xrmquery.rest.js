@@ -70,9 +70,6 @@ var Filter;
          */
         function NestedFilter(fs, conj) {
             var last = fs.pop();
-            if (last === undefined) {
-                return ('');
-            }
             return fs.reduceRight(function (acc, c) { return BiFilter(c, conj, acc); }, last);
         }
     })(REST = Filter.REST || (Filter.REST = {}));
@@ -81,15 +78,8 @@ var XrmQuery;
 (function (XrmQuery) {
     var REST;
     (function (REST) {
-        function stripGUID(guid) {
-            if (guid.startsWith("{") && guid.endsWith("}"))
-                return guid.substring(1, guid.length - 1);
-            else
-                return guid;
-        }
-        REST.stripGUID = stripGUID;
         function retrieveRecord(entityPicker, id) {
-            return new XQR.RetrieveRecord(entityPicker, stripGUID(id));
+            return new XQR.RetrieveRecord(entityPicker, id);
         }
         REST.retrieveRecord = retrieveRecord;
         function retrieveMultipleRecords(entityPicker) {
@@ -101,11 +91,11 @@ var XrmQuery;
         }
         REST.createRecord = createRecord;
         function updateRecord(entityPicker, id, record) {
-            return new XQR.UpdateRecord(entityPicker, stripGUID(id), record);
+            return new XQR.UpdateRecord(entityPicker, id, record);
         }
         REST.updateRecord = updateRecord;
         function deleteRecord(entityPicker, id) {
-            return new XQR.DeleteRecord(entityPicker, stripGUID(id));
+            return new XQR.DeleteRecord(entityPicker, id);
         }
         REST.deleteRecord = deleteRecord;
     })(REST = XrmQuery.REST || (XrmQuery.REST = {}));
